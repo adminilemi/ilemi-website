@@ -1,0 +1,144 @@
+.services {
+  overflow-x: hidden;
+
+  .servicesHero {
+    background: var(--mainColor);
+    color: var(--white);
+    padding: 4em 0;
+    margin: 2em 0;
+    position: relative;
+    overflow: hidden;
+
+    .shape {
+      position: absolute;
+
+      left: -50px;
+      //   bottom: 0;
+      width: 20%;
+    }
+
+    .heroContents {
+      p {
+        color: var(--white);
+        line-height: 1.7;
+      }
+
+      h2 {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  .think {
+    margin: 5em auto;
+    p {
+      color: var(--black);
+      line-height: 1.7;
+    }
+
+    .clipImage {
+      height: 440px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  .design {
+    .designCard {
+      display: grid;
+      place-items: center;
+      background: var(--mainColor);
+      border-radius: 4px;
+      padding: 3em 1em;
+      width: 100%;
+      p {
+        color: var(--white);
+      }
+    }
+
+    .devCard {
+      display: grid;
+      place-items: center;
+      background: var(--black);
+      border-radius: 4px;
+      padding: 3em 1em;
+      width: 100%;
+      p {
+        color: var(--white);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .servicesHero {
+      padding: 8em 0;
+
+      .shape {
+        position: absolute;
+
+        left: -20px;
+        //   bottom: 0;
+        width: 10%;
+      }
+
+      .heroContents {
+        p {
+          color: var(--white);
+          line-height: 1.7;
+        }
+
+        h2 {
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    .servicesHero {
+      padding: 8em 0;
+
+      .shape {
+        position: absolute;
+
+        left: 0;
+        //   bottom: 0;
+        width: 7%;
+      }
+
+      .heroContents {
+        p {
+          color: var(--white);
+          line-height: 1.7;
+        }
+
+        h2 {
+          margin-bottom: 1em;
+        }
+      }
+    }
+    .design {
+      .designCard {
+        padding: 3em 1em;
+        width: 33%;
+        p {
+          color: var(--white);
+        }
+      }
+
+      .devCard {
+        padding: 3em 1em;
+        width: 24%;
+        p {
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
