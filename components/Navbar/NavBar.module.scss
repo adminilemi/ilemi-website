@@ -40,6 +40,14 @@
       font-weight: 700;
     }
 
+    .drop {
+      width: 100%;
+      background: var(--mainDark);
+      margin-top: 0.7em;
+      border-radius: 10px;
+      padding: 0.5em 1em;
+    }
+
     .navItems {
       color: var(--black);
       cursor: pointer;
@@ -126,7 +134,7 @@
           position: absolute;
           height: 4px;
           width: 30px;
-          background: var(--mainColor);
+          background: var(--white);
           border-radius: 9px;
           opacity: 1;
           left: 0;
@@ -170,7 +178,9 @@
 
       .displayNav {
         display: flex;
-        align-items: flex-end;
+        // align-items: flex-end;
+        justify-content: flex-end;
+
         position: fixed;
         //   width: 100%;
         top: 0;
@@ -187,10 +197,10 @@
 
         aside {
           justify-content: space-between;
-          width: 80%;
+          width: 90%;
           height: 100vh;
           overflow-x: scroll;
-          background: var(--white);
+          background: var(--mainColor);
 
           section {
             height: auto;
@@ -202,7 +212,8 @@
 
       .navMove {
         display: flex;
-        align-items: flex-end;
+        // align-items: flex-end;
+        justify-content: flex-end;
         position: fixed;
         //   width: 100%;
         top: 0;
@@ -218,7 +229,7 @@
 
         aside {
           // justify-content: space-between;
-          width: 80%;
+          width: 90%;
           height: 100vh;
           background: var(--mainColor);
           overflow-x: scroll;

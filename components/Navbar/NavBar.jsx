@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 
 // styles
 import styles from './NavBar.module.scss';
@@ -12,8 +12,10 @@ import BrandLogo from '../BrandLogo';
 import Buttons from '@/utils/Button';
 
 function NavBar() {
-  const { handleToggle, toggle } = useGlobalHooks();
+  const { handleToggle, toggle, setToggle } = useGlobalHooks();
   const currentRoute = usePathname();
+
+  const [drop, setDrop] = useState(false);
 
   const linkList = [
     { id: 1, title: 'Rent', url: '/rent' },
@@ -35,12 +37,12 @@ function NavBar() {
         <nav className='d-flex container flex-row align-items-center justify-content-between'>
           {/* Logo */}
           <div
-            className={`col-8 col-md-4 col-lg-2 d-flex flex-row align-items-center`}
+            className={`col-2 col-md-1 d-flex flex-row align-items-center`}
             data-aos='zoom-out'
             data-aos-duration='1500'
           >
-            <div className={styles.logo}>
-              <BrandLogo color='var(--mainColor)' />
+            <div>
+              <BrandLogo />
             </div>
           </div>
           <div
@@ -56,7 +58,7 @@ function NavBar() {
                 data-aos-duration='1500'
                 className={` ${styles.navItems} d-flex flex-column flex-lg-row  col-12 justify-content-between align-items-center `}
               >
-                <ul className='d-flex flex-column flex-lg-row col-12 col-lg-6 mx-auto justify-content-between text-center text-lg-start'>
+                <ul className='d-flex flex-column flex-lg-row col-12 col-lg-7 mx-auto justify-content-between text-center text-lg-start '>
                   {linkList.map(({ id, title, url, dropwDown }) => (
                     <li
                       key={id}
@@ -65,10 +67,15 @@ function NavBar() {
                       }
                     >
                       {dropwDown ? (
-                        <a onClick={() => handleToggle('drop')}>
+                        <a
+                          onClick={() => setDrop(!drop)}
+                          className='position-relative'
+                        >
                           Manage Property <FaChevronDown />
-                          {toggle['drop'] && (
-                            <div className='d-flex flex-column'>
+                          {drop && (
+                            <div
+                              className={`${styles.drop} d-flex flex-column `}
+                            >
                               {dropwDown.map(({ id, title, url }) => (
                                 <div key={id}>
                                   <Link
@@ -91,9 +98,9 @@ function NavBar() {
                   ))}
                 </ul>
                 <li className='d-flex justify-content-center justify-content-lg-end col-11 col-md-6 col-lg-3'>
-                  <div className='d-flex flex-column flex-lg-row gap-2'>
-                    <button className={`${styles.login}`}>Login </button>
-                    <button className={`${styles.signup}`}>Signup </button>
+                  <div className='d-flex flex-column flex-lg-row gap-2 col-12'>
+                    <button className={`${styles.login} `}>Login </button>
+                    <button className={`${styles.signup} `}>Signup </button>
                   </div>
                 </li>
               </ul>

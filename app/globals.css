@@ -363,27 +363,26 @@ button:disabled {
   font-weight: 600;
 }
 
-.active {
-  color: var(--pryColor);
-  padding: 1em 1.5em;
-  border-left: solid 2px var(--mainColor);
-  border-bottom: solid 1px var(--Line);
+.isActive {
+  color: var(--mainColor);
+  padding: 0.7em 1em;
+  background: var(--white);
+  border-radius: 4px;
 }
 
-.active h4 {
+.isActive a {
   color: var(--mainColor);
   font-weight: 700;
 }
 
 .notActive {
-  color: var(--Grey6);
-  padding: 1em 1.5em;
-  border-bottom: solid 2px var(--Line);
+  color: var(--white);
+  padding: 0.7em 1em;
 }
 
-.notActive h4 {
-  color: var(--Grey6);
-  font-weight: 500;
+.notActive a {
+  color: var(--white);
+  font-weight: 700;
 }
 
 input::placeholder {
