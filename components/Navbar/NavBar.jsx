@@ -20,11 +20,11 @@ function NavBar() {
   const linkList = [
     { id: 1, title: 'Rent', url: '/rent' },
     { id: 2, title: 'Buy', url: '/buy' },
-    { id: 3, title: 'shortlets', url: 'shortlets' },
+    { id: 3, title: 'Shortlets', url: 'shortlets' },
     {
       dropwDown: [
         { id: 4, title: 'Prop1', url: 'shortlets' },
-        { id: 4, title: 'Prop2', url: 'shortlets' },
+        { id: 5, title: 'Prop2', url: 'shortlets' },
       ],
     },
   ];
