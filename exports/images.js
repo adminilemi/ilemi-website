@@ -4,9 +4,18 @@ import bestDeal from '@/public/assets/bestDeal.svg';
 import bestPrice from '@/public/assets/bestPrice.svg';
 import vHome from '@/public/assets/vHome.svg';
 import getReady from '@/public/assets/getReady.svg';
+import control from '@/public/assets/control.svg';
+import propInsurance from '@/public/assets/propInsurance.svg';
+import lowest from '@/public/assets/lowest.svg';
+
+import gif from '@/public/assets/ilemiAdBanner.gif';
 
 export const images = {
   bestDeal,
+  control,
+  propInsurance,
+  lowest,
+  gif,
   propSearch,
   rentals,
   bestPrice,

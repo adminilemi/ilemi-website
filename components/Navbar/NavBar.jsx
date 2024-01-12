@@ -22,10 +22,11 @@ function NavBar() {
     { id: 3, title: 'Shortlets', url: '/shortlets' },
     {
       dropwDown: [
-        { id: 4, title: 'Prop1', url: 'shortlets' },
-        { id: 5, title: 'Prop2', url: 'shortlets' },
+        { id: 4, title: 'Create Properties', url: 'shortlets' },
+        { id: 5, title: 'Listing', url: 'shortlets' },
       ],
     },
+    { id: 3, title: 'Pricing', url: '/shortlets' },
   ];
 
   return (

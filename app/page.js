@@ -4,12 +4,13 @@ import Image from 'next/image';
 import { images } from '@/exports/images';
 import AreYourALandord from '@/components/AreYourALandord';
 import MakeItEasy from '@/components/MakeItEasy';
+import AddGifBanner from '@/components/AddGifBanner';
 
 export default function Home() {
   return (
     <main className={styles.home}>
       <HomeHero styles={styles} />
-
+      <AddGifBanner />
       <section className={styles.BG}>
         <section
           className={`${styles.findSection} container d-flex flex-column flex-md-row justify-content-between`}
@@ -36,7 +37,7 @@ export default function Home() {
           >
             <div data-aos='fade-in' className='col-12 col-md-5'>
               <figure className='col-3'>
-                <Image src={images.rentals} alt='' />
+                <Image src={images.propInsurance} alt='' />
               </figure>
               <h4 className='my-2'>Property Insurance</h4>
               <p>
@@ -46,7 +47,7 @@ export default function Home() {
             </div>
             <div data-aos='fade-in' className='col-12 col-md-5'>
               <figure className='col-3'>
-                <Image src={images.propSearch} alt='' />
+                <Image src={images.bestPrice} alt='' />
               </figure>
               <h4 className='my-2'>Best Price</h4>
               <p>
@@ -56,7 +57,7 @@ export default function Home() {
             </div>
             <div data-aos='fade-in' className='col-12 col-md-5'>
               <figure className='col-3'>
-                <Image src={images.rentals} alt='' />
+                <Image src={images.lowest} alt='' />
               </figure>
               <h4 className='my-2'>Lowest Commission</h4>
               <p>
@@ -66,7 +67,7 @@ export default function Home() {
             </div>
             <div data-aos='fade-in' className='col-12 col-md-5'>
               <figure className='col-3'>
-                <Image src={images.propSearch} alt='' />
+                <Image src={images.control} alt='' />
               </figure>
               <h4 className='my-2'>Overall Control</h4>
               <p>
