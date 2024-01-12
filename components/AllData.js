@@ -1,3 +1,4 @@
+import { images } from '@/exports/images';
 import BuySearch from './HomeComps/SearchTab/BuySearch/BuySearch';
 import RentSearch from './HomeComps/SearchTab/RentSearch/RentSearch';
 import SellSearch from './HomeComps/SearchTab/SellSearch/SellSearch';
@@ -64,4 +65,25 @@ export const nigeriaStates = [
   { name: 'Taraba', capital: 'Jalingo', region: 'North East' },
   { name: 'Yobe', capital: 'Damaturu', region: 'North East' },
   { name: 'Zamfara', capital: 'Gusau', region: 'North West' },
+];
+
+export const makeItEasyData = [
+  {
+    id: 1,
+    title: 'Virtual home tour',
+    icon: images.vHome,
+    desc: 'You can communicate directly with landlords and we provide you with virtual tour before you buy or rent the property.',
+  },
+  {
+    id: 2,
+    title: 'Find the best deal',
+    icon: images.bestDeal,
+    desc: 'Browse thousands of properties, save your favorites and set up search alerts so you don’t miss the best home deal!',
+  },
+  {
+    id: 3,
+    title: 'Get ready to apply',
+    icon: images.getReady,
+    desc: 'Find your dream house? You just need to do a little to no effort and you can start move in to your new dream property!',
+  },
 ];

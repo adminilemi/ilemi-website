@@ -3,6 +3,7 @@ import styles from './page.module.scss';
 import Image from 'next/image';
 import { images } from '@/exports/images';
 import AreYourALandord from '@/components/AreYourALandord';
+import MakeItEasy from '@/components/MakeItEasy';
 
 export default function Home() {
   return (
@@ -76,34 +77,7 @@ export default function Home() {
           </article>
         </section>
 
-        <section className={styles.makeItEasy}>
-          <article className='container d-flex flex-column flex-md-row justify-content-between'>
-            <h3 className='col-12 col-md-5'>
-              We make it easy for <em> tenants </em>and<em> landlords.</em>
-            </h3>
-
-            <p className='col-12 col-md-5'>
-              Whether it&apos;s selling your current property, getting fan
-              office space, or buying a new property, we make it easy and
-              efficient. The best part? you&apos;ll save a bunch of money and
-              time with our services.
-            </p>
-          </article>
-          <article className='container d-flex justify-content-center gap-5 text-center my-5'>
-            <div>
-              <h4>7.4%</h4>
-              <p>Property Return Rate</p>
-            </div>
-            <div>
-              <h4>3,856</h4>
-              <p>Property in Sell & Rent</p>
-            </div>
-            <div>
-              <h4>2,540</h4>
-              <p>Daily Completed Transactions</p>
-            </div>
-          </article>
-        </section>
+        <MakeItEasy styles={styles} />
 
         <section className={styles.newsLetter}>
           <AreYourALandord styles={styles} />
