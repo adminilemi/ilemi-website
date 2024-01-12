@@ -1,29 +1,47 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const userAuthSlice = createSlice({
-  name: 'buyerDatas',
-  initialState: {
-    userData: null,
+const initialState = {
+  authUser: {
+    userId: null,
+    userEmail: null,
+    userName: null,
   },
+  avatar: null,
+  coyName: null,
+  isLoggedIn: false,
+};
+
+export const userAuthSlice = createSlice({
+  name: 'userDatas',
+  initialState: initialState,
 
   reducers: {
-    buyerSignUpData: (state, action) => {
-      state.userData = action.payload;
+    userAuthData: (state, action) => {
+      state.authUser = action.payload;
+      state.isLoggedIn = true;
     },
 
-    merchantSignUpData: (state, action) => {
-      state.userData = action.payload;
+    getUserAvatar: (state, action) => {
+      state.avatar = action.payload;
     },
 
-    currentUserData: (state, action) => {
-      state.userData = action.payload;
+    getAgentCoyName: (state, action) => {
+      state.coyName = action.payload;
+    },
+
+    userLogOut: (state) => {
+      state.authUser.userId = null;
+      state.authUser.userEmail = null;
+      state.isLoggedIn = false;
     },
   },
 });
 
-export const { buyerSignUpData, currentUserData, merchantSignUpData } =
+export const { userAuthData, userLogOut, getUserAvatar, getAgentCoyName } =
   userAuthSlice.actions;
 
 export const selectUserData = (state) => state.userAuthSlice;
+export const selectUserName = (state) => state.userAuthSlice.coyName;
+export const selectUserAvatar = (state) => state.userAuthSlice.avatar;
 
 export default userAuthSlice.reducer;

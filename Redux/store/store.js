@@ -13,15 +13,24 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 // slices
-import globalSlice from '@/Redux/features/globalSlice';
-import userAuthSlice from '@/Redux/features/userAuthSlice';
-import forgotPasswordSlice from '@/Redux/features/forgotPasswordSlice';
+
+import globalSlice from '../Features/globalSlice';
+import createPropertySlice from '../Features/createPropertySlice';
+import userAuthSlice from '../Features/userAuthSlice';
+import userDatasSlice from '../Features/userDatasSlice';
+import jobSlice from '../Features/jobsSlice';
+import notifsSlice from '../Features/notifsSlice';
+import onboardingSlice from '../Features/onboardingSlice';
 import { apiSLice } from '@/Api/apiSlice';
 
 const allReducers = combineReducers({
+  onboardingSlice,
+  notifsSlice,
   globalSlice,
+  jobSlice,
+  createPropertySlice,
   userAuthSlice,
-  forgotPasswordSlice,
+  userDatasSlice,
   [apiSLice.reducerPath]: apiSLice.reducer,
 });
 

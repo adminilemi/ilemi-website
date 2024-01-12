@@ -1,0 +1,61 @@
+.searchTab {
+  .tabTitleContainer {
+    background: var(--white);
+    border-radius: 10px 10px 0 0;
+    .activeClass {
+      padding: 1em 1.5em;
+      border-bottom: solid 2px var(--mainColor);
+      h4 {
+        color: var(--mainColor);
+      }
+    }
+    .notActiveClass {
+      padding: 1em 1.5em;
+
+      h4 {
+        color: var(--black);
+      }
+    }
+    box-shadow: 0 6px 10px 5px #0000001a;
+  }
+
+  .RentSearch {
+    box-shadow: 0 6px 10px 5px #0000001a;
+    background: var(--white);
+    border-radius: 0 10px 10px 10px;
+    padding: 0.5em 1.5em;
+
+    section {
+      div {
+        border-bottom: solid 1px var(--Line);
+      }
+    }
+    label {
+      color: var(--Grey6);
+    }
+    select,
+    input {
+      border: none;
+      padding: 0.77em 0 !important;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .RentSearch {
+      section {
+        div {
+          border-right: solid 1px var(--Line);
+          border-bottom: solid 0px var(--Line);
+        }
+      }
+    }
+  }
+
+  //   @media screen and (min-width: 900px) {
+  //     section {
+  //       div {
+  //         border-right: solid 1px var(--Line);
+  //       }
+  //     }
+  //   }
+}

@@ -2,387 +2,155 @@
   min-height: 100vh;
   overflow-x: hidden;
 
-  .heroSection {
-    background: var(--mainColor);
-    padding: 3em 0;
-    color: var(--white);
-    text-align: center;
+  p {
+    font-size: 0.9rem;
+  }
 
-    .heroTop {
-      margin-top: 3.5em;
+  .homeHero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // height: 100vh;
+    background: linear-gradient(
+      180deg,
+      #e0def7 0%,
+      rgba(224, 222, 247, 0) 100%
+    );
+
+    .tabs {
+      position: absolute;
+      width: 100%;
+      bottom: 45%;
+      z-index: 9;
+    }
+
+    article {
+      padding: 0 1.5em;
     }
 
     h1 {
-      font-size: 3rem;
-      letter-spacing: -2.2px;
+      color: var(--black);
+      padding: 0;
+      font-size: 2rem;
+      font-weight: 700;
     }
 
-    p {
-      color: var(--white);
-    }
-
-    button {
-      background: var(--white) !important;
-      color: var(--mainColor);
-    }
-
-    em {
-      font-weight: 300;
+    .noSpam {
+      h4 {
+        color: var(--mainColor);
+      }
     }
   }
+  .BG {
+    padding: 6em 0;
+    background: linear-gradient(180deg, #fff 0%, #f0effb 100%);
 
-  .forYou {
-    padding-top: 6em;
-    padding-bottom: 6em;
+    .findSection {
+      margin: 9em auto;
 
-    .forYouCard {
-      position: relative;
+      .homeBg {
+        h3 {
+          font-size: 1.3rem;
+        }
 
-      .forYouCardContent {
-        position: relative;
-        border-radius: 4px;
-        background: #f3f3f3;
-        padding: 2em 3em;
-        transition: transform 0.3s ease;
-        z-index: 3;
+        height: 500px;
+        border-radius: 8px;
+        padding: 1em;
+        border: 1.5px solid var(--Line);
+        background: var(--Line) url('../public/assets/browsePropBG.svg') bottom
+          right no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .makeItEasy {
+      padding: 5em 0;
+      background: var(--mainDark);
+
+      h4,
+      h3,
+      p {
+        color: var(--white);
+      }
+
+      em {
+        color: var(--mainColor);
+      }
+    }
+
+    .newsLetter {
+      .landLord {
+        // background: #100a55;
+        padding: 2em 1.5em;
+        color: var(--white);
+
+        h2 {
+          font-size: 2rem;
+          font-weight: 700;
+        }
 
         h4 {
-          margin-bottom: 29px;
-          margin-top: 1em;
+          font-size: 1.5em;
+          color: var(--mainColor);
+          margin-bottom: 1em;
+        }
+
+        strong {
           color: var(--mainColor);
         }
 
-        p {
-          margin-bottom: 5em;
-          line-height: 2;
-        }
-      }
-
-      .forYouCardShape {
-        content: ''; /* Add content for the shape */
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: transparent;
-        border-radius: 4px;
-        box-sizing: border-box;
-      }
-
-      &:hover {
-        .forYouCardContent {
-          background: var(--mainColor);
-
-          p,
-          h4 {
-            color: var(--white) !important;
-          }
-
-          transform: translate(
-            -10px,
-            -10px
-          ); /* Move the card up and right on hover */
-          // background-color: black;
+        input {
+          border: none;
         }
 
-        .forYouCardShape {
-          border: 2px solid var(--mainColor);
-        }
-      }
-    }
-  }
-
-  .chooseUs {
-    padding-top: 6em;
-    padding-bottom: 6em;
-    .whyUs {
-      width: 100%;
-    }
-  }
-
-  .recentWork {
-    padding-top: 6em;
-    padding-bottom: 6em;
-
-    .workList {
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .medicWork {
-      border-radius: 4px;
-      background: #f5f8f8;
-      background-size: cover;
-      // padding: 2em 0;
-      height: 373px;
-
-      position: relative;
-      overflow: hidden;
-
-      .medicApp {
-        position: relative;
-        z-index: 2;
-        margin: 7em 0 2em 0;
-        padding: 0 1em;
-      }
-
-      .appImage {
-        position: absolute;
-        width: 110%;
-        top: 10px;
-        right: -80px;
-      }
-    }
-
-    .cryptoWork {
-      border-radius: 4px;
-      background: #f5f8f8;
-      background-size: cover;
-      // padding: 2em 0;
-      height: 373px;
-
-      position: relative;
-      overflow: hidden;
-
-      .medicApp {
-        position: relative;
-        z-index: 2;
-        margin: 7em 0 2em 0;
-        padding: 0 1em;
-      }
-
-      .appImage {
-        position: absolute;
-        width: 120%;
-        top: 0;
-        right: -80px;
-      }
-    }
-
-    .foodDelivery {
-      border-radius: 4px;
-      background: #ffe5cb;
-      background-size: cover;
-      // padding: 2em 0;
-
-      position: relative;
-      overflow: hidden;
-
-      .medicApp {
-        position: relative;
-        z-index: 2;
-        margin: 7em 0 2em 0;
-        padding: 0 1em;
-      }
-
-      .appImage {
-        position: absolute;
-        width: 110%;
-        top: 0;
-        right: -50px;
-      }
-    }
-
-    .emdoWork {
-      border-radius: 4px;
-      background: #dec9ff;
-      background-size: cover;
-      // padding: 2em 0;
-      height: 373px;
-
-      position: relative;
-      overflow: hidden;
-
-      .medicApp {
-        position: relative;
-        z-index: 2;
-        margin: 7em 0 2em 0;
-        padding: 0 1em;
-      }
-
-      .appImage {
-        position: absolute;
-        width: 80%;
-        top: -50px;
-        right: -10px;
-      }
-    }
-  }
-
-  .reviewContainer {
-    padding-top: 3em;
-    padding-bottom: 3em;
-    margin: 3em auto;
-    border-radius: 4px;
-    background: #f1f1f0;
-
-    .sliders {
-      // width: 100%;
-      margin-bottom: 5em;
-
-      .contents {
-        // padding: 2em 3em;
-        border-radius: 20px;
-
-        p {
-          font-size: 1rem;
-          font-weight: 400;
-          color: var(--black);
-          line-height: 1.5;
-        }
-
-        h6 {
-          font-size: 1rem;
-          font-weight: 600;
-        }
-
-        small {
-          font-size: 0.7rem;
-          color: var(--Grey2);
-        }
-      }
-    }
-  }
-
-  .sliders {
-    position: relative;
-
-    .sliderBtns {
-      position: absolute;
-      bottom: -7%;
-      left: 1%;
-    }
-  }
-
-  @media screen and (min-width: 900px) {
-    .sliders {
-      position: relative;
-
-      .sliderBtns {
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-      }
-    }
-
-    .heroSection {
-      h1 {
-        font-size: 6.8rem;
-      }
-    }
-
-    .chooseUs {
-      .whyUs {
-        width: 45%;
-      }
-    }
-
-    .recentWork {
-      padding-top: 6em;
-      padding-bottom: 6em;
-      .workList {
-        width: 49%;
-      }
-    }
-
-    .reviewContainer {
-      padding: 3em 5em;
-
-      .sliders {
-        .contents {
-          p {
-            font-size: 1.5rem;
-          }
+        .newsletterForm {
+          background: var(--white);
+          padding: 0.5em;
+          border-radius: 9px;
         }
       }
     }
   }
 
   @media screen and (min-width: 768px) {
-    .recentWork {
-      .foodDelivery {
-        height: 575px;
-        position: relative;
+    .homeHero {
+      // h1 {
+      //   font-size: 4rem;
+      // }
 
-        .medicApp {
-          z-index: 2;
-          margin: 7em 0 2em 0;
-          padding: 0 3em;
-        }
-
-        .appImage {
-          position: absolute;
-          width: 107%;
-          top: 0;
-          right: -100px;
-        }
+      .tabs {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 50%;
+        z-index: 9;
       }
+    }
+  }
 
-      .emdoWork {
-        height: 575px;
-
-        position: relative;
-        .medicApp {
-          z-index: 2;
-          margin: 7em 0 2em 0;
-          padding: 0 1em;
-        }
-
-        .appImage {
-          position: absolute;
-          width: 70%;
-          top: 0;
-          right: 0;
-        }
-      }
-
-      .medicWork {
-        height: 575px;
-        position: relative;
-
-        .medicApp {
-          z-index: 2;
-          margin: 7em 0 2em 0;
-          padding: 0 3em;
-        }
-
-        .appImage {
-          position: absolute;
-          width: 110%;
-          top: 50px;
-          right: -150px;
-        }
-      }
-
-      .cryptoWork {
-        height: 575px;
-        position: relative;
-
-        .medicApp {
-          z-index: 2;
-          margin: 7em 0 2em 0;
-          padding: 0 3em;
-        }
-
-        .appImage {
-          position: absolute;
-          width: 110%;
-          top: 0;
-          right: -100px;
+  @media screen and (min-width: 900px) {
+    .BG {
+      .findSection {
+        .homeBg {
+          h3 {
+            font-size: 2rem;
+          }
         }
       }
     }
 
-    // .sliders {
-    //   position: relative;
+    .homeHero {
+      h1 {
+        font-size: 4rem;
+      }
 
-    //   .sliderBtns {
-    //     position: absolute;
-    //     bottom: -5%;
-    //     right: 0;
-    //     left: 2%;
-    //   }
-    // }
+      .tabs {
+        position: absolute;
+        width: 60%;
+        left: 5%;
+        bottom: 25%;
+        z-index: 9;
+      }
+    }
   }
 }

@@ -8,7 +8,7 @@ import ReduxProvider from '@/utils/Provider';
 const PJS = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Ilemi',
+  title: 'Ile-Mi',
   description:
     'A great platform to buy, sell, or even rent your properties without any commisions.',
 };

@@ -9,7 +9,6 @@ import Link from 'next/link';
 import { useGlobalHooks } from '@/Hooks/globalHooks';
 import { usePathname } from 'next/navigation';
 import BrandLogo from '../BrandLogo';
-import Buttons from '@/utils/Button';
 
 function NavBar() {
   const { handleToggle, toggle, setToggle } = useGlobalHooks();
@@ -20,7 +19,7 @@ function NavBar() {
   const linkList = [
     { id: 1, title: 'Rent', url: '/rent' },
     { id: 2, title: 'Buy', url: '/buy' },
-    { id: 3, title: 'Shortlets', url: 'shortlets' },
+    { id: 3, title: 'Shortlets', url: '/shortlets' },
     {
       dropwDown: [
         { id: 4, title: 'Prop1', url: 'shortlets' },

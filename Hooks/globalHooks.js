@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { toggleShow } from '@/Redux/Features/globalSlice';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 export const useGlobalHooks = () => {
   const [toggle, setToggle] = useState(false);
@@ -14,10 +16,11 @@ export const useGlobalHooks = () => {
     setToggle((prev) => ({ [id]: !prev[id] }));
   };
 
-  return {
-    handleToggle,
-    toggle,
-    setToggle,
-    btnTaps,
+  const dispatch = useDispatch();
+
+  const handleShow = (id) => {
+    dispatch(toggleShow(id));
   };
+
+  return { handleShow, handleToggle, toggle, setToggle, btnTaps };
 };
