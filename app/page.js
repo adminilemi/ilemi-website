@@ -5,6 +5,7 @@ import { images } from '@/exports/images';
 import AreYourALandord from '@/components/AreYourALandord';
 import MakeItEasy from '@/components/MakeItEasy';
 import AddGifBanner from '@/components/AddGifBanner';
+import ProductTabs from '@/components/HomeComps/Products/ProductTabs';
 
 export default function Home() {
   return (
@@ -77,7 +78,15 @@ export default function Home() {
             </div>
           </article>
         </section>
-
+        <section className='container d-flex flex-column my-5 py-5'>
+          <div className='text-center my-5'>
+            <h3>Based on your location</h3>
+            <p className='my-2'>
+              Some of our picked properties near you location.
+            </p>
+          </div>
+          <ProductTabs />
+        </section>
         <MakeItEasy styles={styles} />
 
         <section className={styles.newsLetter}>
