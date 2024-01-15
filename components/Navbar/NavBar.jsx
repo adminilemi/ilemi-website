@@ -26,7 +26,7 @@ function NavBar() {
         { id: 5, title: 'Listing', url: 'shortlets' },
       ],
     },
-    { id: 3, title: 'Pricing', url: '/shortlets' },
+    { id: 7, title: 'Pricing', url: '/shortlets' },
   ];
 
   return (

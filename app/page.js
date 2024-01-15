@@ -7,7 +7,7 @@ import MakeItEasy from '@/components/MakeItEasy';
 import AddGifBanner from '@/components/AddGifBanner';
 import ProductTabs from '@/components/HomeComps/Products/ProductTabs';
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className={styles.home}>
       <HomeHero styles={styles} />

@@ -1,13 +1,34 @@
-'use client';
+import { getPropByType } from '@/Api/Apis';
+import PropertyCard from '@/components/HomeComps/ProductCard/PropertyCard';
+import Link from 'next/link';
+import React from 'react';
 
-import React, { useState } from 'react';
+const Buy = async () => {
+  const reqData = {
+    propertyType: 'Buy',
+    skip: 0,
+    limit: 6,
+  };
 
-const Buy = () => {
+  const data = await getPropByType(reqData);
+
   return (
-    <section>
-      <h2>Buy</h2>
+    <section
+      className={` d-flex flex-column justify-content-between align-items-center `}
+    >
+      <section className='d-flex flex-wrap gap-3 my-5'>
+        {data.slice(0, 6).map((item, idx) => (
+          <PropertyCard property={item} />
+        ))}
+      </section>
+
+      <div className='my-3'>
+        <Link href='buy' className='main-btn'>
+          {' '}
+          Browse more properties
+        </Link>
+      </div>
     </section>
   );
 };
-
 export default Buy;

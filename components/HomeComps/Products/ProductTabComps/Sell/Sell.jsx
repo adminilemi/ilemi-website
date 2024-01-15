@@ -1,20 +1,33 @@
-'use client';
-import React, { useState } from 'react';
+import { getPropByType } from '@/Api/Apis';
+import PropertyCard from '@/components/HomeComps/ProductCard/PropertyCard';
+import Link from 'next/link';
+import React from 'react';
 
-const Sell = () => {
-  const [formData, setFormData] = useState({ state: '', city: '' });
-
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setFormData((prev) => ({ ...prev, [id]: value }));
+const Sell = async () => {
+  const reqData = {
+    propertyType: 'Sell',
+    skip: 0,
+    limit: 6,
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  const data = await getPropByType(reqData);
+
   return (
-    <section>
-      <h2>Sell</h2>
+    <section
+      className={` d-flex flex-column justify-content-between align-items-center `}
+    >
+      <section className='d-flex flex-wrap gap-3 my-5'>
+        {data.slice(0, 6).map((item, idx) => (
+          <PropertyCard property={item} />
+        ))}
+      </section>
+
+      <div className='my-3'>
+        <Link href='sell' className='main-btn'>
+          {' '}
+          Browse more properties
+        </Link>
+      </div>
     </section>
   );
 };

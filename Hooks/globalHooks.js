@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 
 export const useGlobalHooks = () => {
   const [toggle, setToggle] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const btnTaps = () => {
     setToggle(true);
@@ -22,5 +23,13 @@ export const useGlobalHooks = () => {
     dispatch(toggleShow(id));
   };
 
-  return { handleShow, handleToggle, toggle, setToggle, btnTaps };
+  return {
+    handleShow,
+    handleToggle,
+    toggle,
+    setToggle,
+    btnTaps,
+    loading,
+    setLoading,
+  };
 };
