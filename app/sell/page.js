@@ -54,7 +54,7 @@ export default function Sell() {
         <article className='my-5'>
           {state.search.sell && data.length === 0 ? (
             <div>
-              <p> There's no match to your search</p>
+              <p> There&apos;s no match to your search</p>
             </div>
           ) : (
             <section className='d-flex flex-wrap gap-3 '>
