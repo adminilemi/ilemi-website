@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'aos/dist/aos.css';
+import 'react-datepicker/dist/react-datepicker.css';
 import 'animate.css';
 
 export default function AOSAnimation({ children }) {

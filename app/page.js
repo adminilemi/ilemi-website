@@ -11,7 +11,7 @@ export default async function Home() {
   return (
     <main className={styles.home}>
       <HomeHero styles={styles} />
-      <AddGifBanner />
+      <AddGifBanner images={images.gif} />
       <section className={styles.BG}>
         <section
           className={`${styles.findSection} container d-flex flex-column flex-md-row justify-content-between`}

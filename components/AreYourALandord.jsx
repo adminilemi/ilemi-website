@@ -9,7 +9,8 @@ function AreYourALandord({ styles }) {
         <h4>No Spam Promise</h4>
         <h2>Are you a landlord or Looking for an apartment?</h2>
         <p className='my-4'>
-          Discover ways to increase your home's value and get listed. No Spam.
+          Discover ways to increase your home&apos;s value and get listed. No
+          Spam.
         </p>
 
         <form

@@ -3,7 +3,6 @@ import './globals.css';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import NavBar from '@/components/Navbar/NavBar';
 import Footer from '@/components/Footer/Footer';
-import ReduxProvider from '@/utils/Provider';
 
 const PJS = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
@@ -17,11 +16,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={PJS.className}>
-        <ReduxProvider>
-          <NavBar />
-          <AOSAnimation>{children}</AOSAnimation>
-          <Footer />
-        </ReduxProvider>
+        {/* <ReduxProvider> */}
+        <NavBar />
+        <AOSAnimation>{children}</AOSAnimation>
+        <Footer />
+        {/* </ReduxProvider> */}
       </body>
     </html>
   );

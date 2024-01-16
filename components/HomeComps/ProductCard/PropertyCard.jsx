@@ -5,6 +5,7 @@ import styles from './PropertyCard.module.scss';
 import Image from 'next/image';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import Link from 'next/link';
+import { useGlobalHooks } from '@/Hooks/globalHooks';
 function PropertyCard({
   url,
   property: {
@@ -20,6 +21,7 @@ function PropertyCard({
   },
 }) {
   const [click, setClick] = useState(false);
+  const { formatNumInThousands } = useGlobalHooks();
 
   return (
     <Link
@@ -42,7 +44,7 @@ function PropertyCard({
         <div className='flex-fill'>
           <div className='d-flex justify-content-between align-items-center'>
             <h3 className='viewMore'>
-              ₦{MonthlyRent} <span>/month</span>{' '}
+              ₦{formatNumInThousands(MonthlyRent)} <span>/month</span>{' '}
             </h3>
             <div className={styles.heart} onClick={() => setClick(!click)}>
               {click ? (

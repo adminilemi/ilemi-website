@@ -17,7 +17,7 @@ const Shortlets = async () => {
     >
       <section className='d-flex flex-wrap gap-3 my-5'>
         {data.slice(0, 6).map((item, idx) => (
-          <PropertyCard property={item} />
+          <PropertyCard key={item._id} property={item} />
         ))}
       </section>
 

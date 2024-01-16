@@ -1,11 +1,10 @@
-import { images } from '@/exports/images';
 import Image from 'next/image';
 import React from 'react';
 
-const AddGifBanner = () => {
+const AddGifBanner = ({ images }) => {
   return (
     <div>
-      <Image src={images.gif} alt=' ' />
+      <Image src={images} alt=' ' />
     </div>
   );
 };

@@ -10,10 +10,13 @@ import lowest from '@/public/assets/lowest.svg';
 
 import gif from '@/public/assets/ilemiAdBanner.gif';
 
+import sidebarAdGif from '@/public/assets/sidebarAds.gif';
+
 import listedOn from '@/public/assets/listedOn.png';
 
 export const images = {
   bestDeal,
+  sidebarAdGif,
   listedOn,
   control,
   propInsurance,

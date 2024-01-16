@@ -23,7 +23,7 @@ export const ImageSlider = ({ styles, imageData, settings }) => {
             <Image
               fill
               sizes='100%'
-              src={url}
+              src={url !== '' ? url : ''}
               alt='Ilemi product image'
               placeholder='blur'
               blurDataURL='data:image/jpeg...'

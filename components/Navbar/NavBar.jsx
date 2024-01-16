@@ -11,7 +11,7 @@ import { usePathname } from 'next/navigation';
 import BrandLogo from '../BrandLogo';
 
 function NavBar() {
-  const { handleToggle, toggle, setToggle } = useGlobalHooks();
+  const { handleToggle, toggle } = useGlobalHooks();
   const currentRoute = usePathname();
 
   const [drop, setDrop] = useState(false);
@@ -19,8 +19,12 @@ function NavBar() {
   const linkList = [
     { id: 1, title: 'Rent', url: '/rent' },
     { id: 2, title: 'Buy', url: '/buy' },
-    { id: 3, title: 'Shortlets', url: '/shortlets' },
+    { id: 8, title: 'Sell', url: '/sell' },
     {
+      id: 3,
+      title: 'Shortlets',
+      url: '/shortlets',
+
       dropwDown: [
         { id: 4, title: 'Create Properties', url: 'shortlets' },
         { id: 5, title: 'Listing', url: 'shortlets' },
@@ -67,11 +71,14 @@ function NavBar() {
                       }
                     >
                       {dropwDown ? (
-                        <a
+                        <p
                           onClick={() => setDrop(!drop)}
                           className='position-relative'
                         >
-                          Manage Property <FaChevronDown />
+                          <a href='#'>
+                            Manage Property
+                            <FaChevronDown />
+                          </a>
                           {drop && (
                             <div
                               className={`${styles.drop} d-flex flex-column `}
@@ -88,7 +95,7 @@ function NavBar() {
                               ))}
                             </div>
                           )}
-                        </a>
+                        </p>
                       ) : (
                         <Link onClick={() => handleToggle('navbar')} href={url}>
                           {title}

@@ -17,7 +17,7 @@ const Rent = async () => {
     >
       <section className='d-flex flex-wrap gap-3 my-5'>
         {data.slice(0, 6).map((item) => (
-          <PropertyCard url='rent' property={item} />
+          <PropertyCard key={item._id} url='rent' property={item} />
         ))}
       </section>
 

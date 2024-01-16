@@ -1,19 +1,19 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BiSearch } from 'react-icons/bi';
-import { useDispatch } from 'react-redux';
-import { setSearchQuery } from '@/Redux/Features/globalSlice';
+// import { useDispatch } from 'react-redux';
+// import { setSearchQuery } from '@/Redux/Features/globalSlice';
 
 function Search({ placeholder }) {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const handleSearchInputChange = (e) => {
-    const query = e.target.value;
-    dispatch(setSearchQuery(query));
-  };
+  // const handleSearchInputChange = (e) => {
+  //   const query = e.target.value;
+  //   dispatch(setSearchQuery(query));
+  // };
 
-  useEffect(() => {
-    dispatch(setSearchQuery(''));
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(setSearchQuery(''));
+  // }, [dispatch]);
 
   return (
     <div className='search d-flex flex-row align-items-center col-12'>
@@ -22,7 +22,7 @@ function Search({ placeholder }) {
         type='text'
         placeholder={placeholder}
         className='form-control'
-        onChange={handleSearchInputChange}
+        // onChange={handleSearchInputChange}
       />
     </div>
   );
