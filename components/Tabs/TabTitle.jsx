@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { useGlobalHooks } from '@/Hooks/globalHooks';
 
 function TabTitle({
   id,
@@ -15,7 +14,6 @@ function TabTitle({
   const handTabSwitch = () => {
     setActiveTab(id);
   };
-  const { handleShow } = useGlobalHooks();
 
   return (
     <main
@@ -23,13 +21,7 @@ function TabTitle({
       className={activeTab === id ? activeClass : notActiveClass}
     >
       <ul className=' tabTitle'>
-        <li
-          onClick={() => {
-            handleShow(id);
-          }}
-          id={id}
-          className='d-flex flex-row align-items-center '
-        >
+        <li id={id} className='d-flex flex-row align-items-center '>
           {icon && <h4 className='me-2 '>{icon}</h4>}
           <h4>{title}</h4>
         </li>

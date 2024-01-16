@@ -1,17 +1,36 @@
-import { getPropByType } from '@/Api/Apis';
+'use client';
 import AddGifBanner from '@/components/AddGifBanner';
 import FilterForm from '@/components/FilterForm/FilterForm';
 import PropertyCard from '@/components/HomeComps/ProductCard/PropertyCard';
 import { images } from '@/exports/images';
+import { useMyContext } from '@/utils/ContextProvider';
+import { useClientFetch } from '@/utils/fetchDataOnCLient';
 import React from 'react';
+import { Spinner } from 'react-bootstrap';
 
-export default async function Buy() {
-  const reqData = {
+export default function Buy() {
+  const { state } = useMyContext();
+
+  const homeSearchData = {
+    ...state.search.buy,
     propertyType: 'Buy',
     skip: 0,
     limit: 6,
   };
-  const data = await getPropByType(reqData);
+
+  const reqData = state.search.buy
+    ? homeSearchData
+    : {
+        propertyType: 'Buy',
+        skip: 0,
+        limit: 6,
+      };
+
+  const { data, isLoading } = useClientFetch(reqData);
+
+  if (isLoading) {
+    return <Spinner />;
+  }
 
   return (
     <main>
@@ -31,11 +50,17 @@ export default async function Buy() {
         </article>
 
         <article className='my-5'>
-          <section className='d-flex flex-wrap gap-3 '>
-            {data.slice(0, 9).map((item) => (
-              <PropertyCard key={item._id} url='buy' property={item} />
-            ))}
-          </section>
+          {state.search.buy && data.length === 0 ? (
+            <div>
+              <p> There's no match to your search</p>
+            </div>
+          ) : (
+            <section className='d-flex flex-wrap gap-3 '>
+              {data.map((item) => (
+                <PropertyCard key={item._id} url='buy' property={item} />
+              ))}
+            </section>
+          )}
         </article>
       </section>
       <AddGifBanner images={images.gif} />

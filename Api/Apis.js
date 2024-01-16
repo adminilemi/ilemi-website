@@ -2,8 +2,14 @@ const baseUrl = 'https://ile-mi-app.onrender.com';
 
 export const getPropByType = async (formData) => {
   const rentData = await fetch(
-    `${baseUrl}/property/all-filter/property-all-filter`,
-    { method: 'POST', body: JSON.stringify(formData) },
+    `${baseUrl}/property/special-filter/property-special-filter`,
+    {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'content-type': 'application/json',
+      },
+    },
   );
 
   if (!rentData.ok) {

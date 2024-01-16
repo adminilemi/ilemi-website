@@ -1,18 +1,25 @@
+'use client';
 import React from 'react';
 import styles from './Services.module.scss';
 import AddGifBanner from '@/components/AddGifBanner';
 import { images } from '@/exports/images';
 import FilterForm from '@/components/FilterForm/FilterForm';
 import PropertyCard from '@/components/HomeComps/ProductCard/PropertyCard';
-import { getPropByType } from '@/Api/Apis';
+import { useClientFetch } from '@/utils/fetchDataOnCLient';
+import { Spinner } from 'react-bootstrap';
 
-export default async function Shortlets() {
+export default function Shortlets() {
   const reqData = {
     propertyType: 'Shortlets',
     skip: 0,
     limit: 6,
   };
-  const data = await getPropByType(reqData);
+
+  const { data, isLoading } = useClientFetch(reqData);
+
+  if (isLoading) {
+    return <Spinner />;
+  }
 
   return (
     <main className={styles.services}>

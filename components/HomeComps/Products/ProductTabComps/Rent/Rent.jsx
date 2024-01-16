@@ -11,12 +11,14 @@ const Rent = async () => {
   };
   const data = await getPropByType(reqData);
 
+  console.log(data);
+
   return (
     <section
       className={` d-flex flex-column justify-content-between align-items-center `}
     >
-      <section className='d-flex flex-wrap gap-3 my-5'>
-        {data.slice(0, 6).map((item) => (
+      <section className='d-flex flex-wrap gap-3 justify-content-between my-5 col-12'>
+        {data.map((item) => (
           <PropertyCard key={item._id} url='rent' property={item} />
         ))}
       </section>

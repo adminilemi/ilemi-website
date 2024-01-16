@@ -488,3 +488,184 @@ export const propertyType = [
     ),
   },
 ];
+
+export const pricingPlan = {
+  Monthly: [
+    {
+      id: 'MonthlyBasic',
+      title: 'Basic',
+      desc: 'Our basic package covers:',
+      price: 0,
+
+      benefits: [
+        {
+          id: 1,
+          li: '1 Listing',
+        },
+        {
+          id: 2,
+          li: '1 Property Picture Uploads',
+        },
+        {
+          id: 3,
+          li: '0 Video Upload',
+        },
+      ],
+    },
+    {
+      id: 'MonthlySilver',
+      title: 'Silver',
+      desc: 'Our silver package covers:',
+      price: 2500,
+      planNumber: 1,
+
+      benefits: [
+        {
+          id: 1,
+          li: '15 Listing',
+        },
+        {
+          id: 2,
+          li: '4 Property Picture Uploads',
+        },
+        {
+          id: 3,
+          li: '1 Video Upload',
+        },
+      ],
+    },
+    {
+      id: 'MonthlyGold',
+      title: 'Gold',
+      desc: 'Our gold package covers:',
+      price: 3500,
+      planNumber: 2,
+
+      benefits: [
+        {
+          id: 1,
+          li: '25 Listing',
+        },
+        {
+          id: 2,
+          li: '8 Property Picture Uploads',
+        },
+        {
+          id: 3,
+          li: '1 Video Upload',
+        },
+      ],
+    },
+    {
+      id: 'MonthlyPlatinum',
+      title: 'Platinum',
+      desc: 'Our platinum package covers:',
+      price: 5000,
+      planNumber: 3,
+
+      benefits: [
+        {
+          id: 1,
+          li: 'Unlimited',
+        },
+        {
+          id: 2,
+          li: '15 Property Picture Uploads',
+        },
+        {
+          id: 3,
+          li: '2 Video Upload',
+        },
+      ],
+    },
+  ],
+
+  Yearly: [
+    {
+      id: 'YearlyBasic',
+      title: 'Basic',
+      desc: 'Our basic package covers:',
+      price: 0,
+
+      benefits: [
+        {
+          id: 1,
+          li: '1 Listing',
+        },
+        {
+          id: 2,
+          li: '1 Property Picture Uploads',
+        },
+        {
+          id: 3,
+          li: '0 Video Upload',
+        },
+      ],
+    },
+    {
+      id: 'YearlySilver',
+      title: 'Silver',
+      desc: 'Our silver package covers:',
+      price: 25500,
+      planNumber: 4,
+
+      benefits: [
+        {
+          id: 1,
+          li: '15 Listing',
+        },
+        {
+          id: 2,
+          li: '4 Property Picture Uploads',
+        },
+        {
+          id: 3,
+          li: '1 Video Upload',
+        },
+      ],
+    },
+    {
+      id: 'YearlyGold',
+      title: 'Gold',
+      desc: 'Our gold package covers:',
+      price: 37000,
+      planNumber: 5,
+
+      benefits: [
+        {
+          id: 1,
+          li: '25 Listing',
+        },
+        {
+          id: 2,
+          li: '8 Property Picture Uploads',
+        },
+        {
+          id: 3,
+          li: '1 Video Upload',
+        },
+      ],
+    },
+    {
+      id: 'YearlyPlatinum',
+      title: 'Platinum',
+      desc: 'Our platinum package covers:',
+      price: 55000,
+      planNumber: 6,
+      benefits: [
+        {
+          id: 1,
+          li: 'Unlimited',
+        },
+        {
+          id: 2,
+          li: '15 Property Picture Uploads',
+        },
+        {
+          id: 3,
+          li: '2 Video Upload',
+        },
+      ],
+    },
+  ],
+};

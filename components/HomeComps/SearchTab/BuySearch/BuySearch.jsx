@@ -3,9 +3,13 @@
 import React, { useState } from 'react';
 import styles from '../SearhTab.module.scss';
 import { nigeriaStates } from '@/components/AllData';
+import { useMyContext } from '@/utils/ContextProvider';
+import { useRouter } from 'next/navigation';
 
 const BuySearch = () => {
   const [formData, setFormData] = useState({ state: '', city: '' });
+  const { searchDataDispatch } = useMyContext();
+  const route = useRouter();
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -14,7 +18,13 @@ const BuySearch = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (formData.state !== '' && formData.city !== '') {
+      searchDataDispatch({ type: 'BUY', payload: formData });
+      route.push('/buy');
+    }
   };
+
   return (
     <form
       onSubmit={handleSubmit}

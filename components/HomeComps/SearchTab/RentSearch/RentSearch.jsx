@@ -2,9 +2,13 @@
 import { nigeriaStates } from '@/components/AllData';
 import React, { useState } from 'react';
 import styles from '../SearhTab.module.scss';
+import { useMyContext } from '@/utils/ContextProvider';
+import { useRouter } from 'next/navigation';
 
 const RentSearch = () => {
   const [formData, setFormData] = useState({ state: '', city: '' });
+  const { searchDataDispatch } = useMyContext();
+  const route = useRouter();
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -13,6 +17,11 @@ const RentSearch = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (formData.state !== '' && formData.city !== '') {
+      searchDataDispatch({ type: 'RENT', payload: formData });
+      route.push('/rent');
+    }
   };
 
   return (

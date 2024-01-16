@@ -8,6 +8,7 @@ import TabTitle from '@/components/Tabs/TabTitle';
 
 const SearchTab = () => {
   const [activeTab, setActiveTab] = useState('tab1');
+
   return (
     <main className={`${styles.searchTab} d-fle flex-column col-11 mx-auto`}>
       <section

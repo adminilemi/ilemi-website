@@ -63,7 +63,7 @@ function NavBar() {
                 data-aos-duration='1500'
                 className={` ${styles.navItems} d-flex flex-column flex-lg-row  col-12 justify-content-between align-items-center `}
               >
-                <ul className='d-flex flex-column flex-lg-row col-12 col-lg-7 mx-auto justify-content-between text-center text-lg-start '>
+                <ul className='d-flex flex-column flex-lg-row col-12 col-lg-8 mx-auto justify-content-between text-center text-lg-start '>
                   {linkList.map(({ id, title, url, dropwDown }) => (
                     <li
                       key={id}
