@@ -16,8 +16,8 @@ const Shortlets = async () => {
       className={` d-flex flex-column justify-content-between align-items-center `}
     >
       <section className='d-flex flex-wrap gap-3 my-5'>
-        {data.slice(0, 6).map((item, idx) => (
-          <PropertyCard key={item._id} property={item} />
+        {data.slice(0, 6).map((item) => (
+          <PropertyCard key={item._id} url='shortlets' property={item} />
         ))}
       </section>
 

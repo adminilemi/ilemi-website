@@ -20,17 +20,18 @@ function NavBar() {
     { id: 1, title: 'Rent', url: '/rent' },
     { id: 2, title: 'Buy', url: '/buy' },
     { id: 8, title: 'Sell', url: '/sell' },
+    { id: 9, title: 'Shortlets', url: '/shortlets' },
     {
       id: 3,
       title: 'Shortlets',
-      url: '/shortlets',
+      url: '#',
 
       dropwDown: [
         { id: 4, title: 'Create Properties', url: 'shortlets' },
         { id: 5, title: 'Listing', url: 'shortlets' },
       ],
     },
-    { id: 7, title: 'Pricing', url: '/shortlets' },
+    { id: 7, title: 'Pricing', url: '/pricing' },
   ];
 
   return (
