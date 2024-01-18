@@ -3,6 +3,7 @@ import styles from './Footer.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '../../public/assets/ilemi-logo.svg';
+import LogoForYou from '../../public/assets/propertyForYou.png';
 import { images } from '@/exports/images';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
@@ -18,6 +19,9 @@ function Footer() {
           >
             <figure>
               <Image src={Logo} alt='Ilemi logo' />
+            </figure>
+            <figure className='mt-3 col-12'>
+              <Image src={LogoForYou} alt='Ilemi logo' />
             </figure>
           </div>
         </article>
