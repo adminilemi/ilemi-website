@@ -110,14 +110,14 @@ function NavBar() {
                     <a
                       href='https://propmanager-dashboard.vercel.app/signin'
                       target='_blank'
-                      className={`${styles.login} `}
+                      className={`${styles.login} text-center`}
                     >
                       Login{' '}
                     </a>
                     <a
                       href='https://propmanager-dashboard.vercel.app/signup'
                       target='_blank'
-                      className={`${styles.signup} `}
+                      className={`${styles.signup} text-center`}
                     >
                       Signup{' '}
                     </a>
