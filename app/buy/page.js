@@ -5,7 +5,7 @@ import PropertyCard from '@/components/HomeComps/ProductCard/PropertyCard';
 import { images } from '@/exports/images';
 import { useMyContext } from '@/utils/ContextProvider';
 import { useClientFetch } from '@/utils/fetchDataOnCLient';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 
 export default function Buy() {
@@ -18,15 +18,23 @@ export default function Buy() {
     limit: 6,
   };
 
-  const reqData = state.search.buy
-    ? homeSearchData
-    : {
-        propertyType: 'Buy',
-        skip: 0,
-        limit: 6,
-      };
+  const [pageFilterData, setPageFilterData] = useState(
+    state.search.buy
+      ? homeSearchData
+      : {
+          propertyType: 'Buy',
+          skip: 0,
+          limit: 6,
+        },
+  );
 
-  const { data, isLoading } = useClientFetch(reqData);
+  const reqData = pageFilterData;
+
+  const { data, isLoading, refetch } = useClientFetch(reqData);
+
+  useEffect(() => {
+    refetch();
+  }, [reqData, refetch]);
 
   if (isLoading) {
     return <Spinner />;
@@ -46,11 +54,11 @@ export default function Buy() {
         </hgroup>
 
         <article>
-          <FilterForm />
+          <FilterForm setPageFilterData={setPageFilterData} />
         </article>
 
         <article className='my-5'>
-          {state.search.buy && data.length === 0 ? (
+          {data.length === 0 ? (
             <div>
               <p> There&apos;s no match to your search</p>
             </div>

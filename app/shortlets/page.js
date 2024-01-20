@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Services.module.scss';
 import AddGifBanner from '@/components/AddGifBanner';
 import { images } from '@/exports/images';
@@ -9,13 +9,17 @@ import { useClientFetch } from '@/utils/fetchDataOnCLient';
 import { Spinner } from 'react-bootstrap';
 
 export default function Shortlets() {
-  const reqData = {
+  const [pageFilterData, setPageFilterData] = useState({
     propertyType: 'Shortlets',
     skip: 0,
     limit: 6,
-  };
+  });
 
-  const { data, isLoading } = useClientFetch(reqData);
+  const { data, isLoading, refetch } = useClientFetch(pageFilterData);
+
+  useEffect(() => {
+    refetch();
+  }, [pageFilterData, refetch]);
 
   if (isLoading) {
     return <Spinner />;
@@ -35,15 +39,21 @@ export default function Shortlets() {
         </hgroup>
 
         <article>
-          <FilterForm />
+          <FilterForm setPageFilterData={setPageFilterData} />
         </article>
 
         <article className='my-5'>
-          <section className='d-flex flex-wrap gap-3 '>
-            {data.slice(0, 9).map((item) => (
-              <PropertyCard key={item._id} url='shortlets' property={item} />
-            ))}
-          </section>
+          {data.length === 0 ? (
+            <div>
+              <p> There&apos;s no match to your search</p>
+            </div>
+          ) : (
+            <section className='d-flex flex-wrap gap-3 '>
+              {data.slice(0, 9).map((item) => (
+                <PropertyCard key={item._id} url='shortlets' property={item} />
+              ))}
+            </section>
+          )}
         </article>
       </section>
       <AddGifBanner images={images.gif} />

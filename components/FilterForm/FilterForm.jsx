@@ -1,32 +1,78 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import { propertyType } from '../AllData';
 import styles from './FilterForm.module.scss';
+import { useGlobalHooks } from '@/Hooks/globalHooks';
 
-const FilterForm = ({ handleChange }) => {
+const FilterForm = ({ setPageFilterData }) => {
+  const { formatNumInThousands } = useGlobalHooks();
+  const [formData, setFormData] = useState({
+    state: '',
+    city: '',
+    minPrice: '',
+    maxPrice: '',
+    propertyType: '',
+    skip: 0,
+    limit: 6,
+  });
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setPageFilterData(formData);
+  };
+
   return (
-    <form className={styles.filterForm}>
+    <form className={styles.filterForm} onSubmit={handleSubmit}>
       <div>
         <input
-          id='State'
-          name='State'
+          id='state'
+          name='state'
           type='text'
           placeholder='State'
           onChange={handleChange}
         />
       </div>
       <div>
-        <input id='State' name='State' type='text' placeholder='City' />
+        <input
+          id='city'
+          name='city'
+          type='text'
+          placeholder='City'
+          onChange={handleChange}
+        />
       </div>
       <div>
-        <select id='' onChange={handleChange}>
-          <option value='2,000 - 10,000'>₦2,000 - 10,000</option>
-          <option value='2,000 - 10,000'>₦11,000 - 20,000</option>
-          <option value='2,000 - 10,000'>₦21,000 - 30,000</option>
-          <option value='2,000 - 10,000'>₦31,000 - 40,000</option>
+        <select id='minPrice' name='minPrice' onChange={handleChange}>
+          <option value=''>Min Price</option>
+
+          {[2000, 11000, 21000, 31000].map((item, idx) => (
+            <option key={idx} value={item}>
+              {formatNumInThousands(item)}
+            </option>
+          ))}
         </select>
       </div>
+
       <div>
-        <select>
+        <select id='maxPrice' name='maxPrice' onChange={handleChange}>
+          <option value=''>Max Price</option>
+
+          {[10000, 20000, 30000, 40000].map((item, idx) => (
+            <option key={idx} value={item}>
+              {formatNumInThousands(item)}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <select id='propertyType' name='propertyType' onChange={handleChange}>
+          <option value=''>Property type</option>
+
           {propertyType.map(({ id, title }) => (
             <option key={id} value={title}>
               {title}

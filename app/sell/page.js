@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './About.module.scss';
 import AddGifBanner from '@/components/AddGifBanner';
 import { images } from '@/exports/images';
@@ -20,15 +20,22 @@ export default function Sell() {
     limit: 6,
   };
 
-  const reqData = state.search.sell
-    ? homeSearchData
-    : {
-        propertyType: 'Sell',
-        skip: 0,
-        limit: 6,
-      };
+  const [pageFilterData, setPageFilterData] = useState(
+    state.search.sell
+      ? homeSearchData
+      : {
+          propertyType: 'Sell',
+          skip: 0,
+          limit: 6,
+        },
+  );
 
-  const { data, isLoading } = useClientFetch(reqData);
+  const reqData = pageFilterData;
+  const { data, isLoading, refetch } = useClientFetch(reqData);
+
+  useEffect(() => {
+    refetch();
+  }, [reqData, refetch]);
 
   if (isLoading) {
     return <Spinner />;
@@ -48,11 +55,11 @@ export default function Sell() {
         </hgroup>
 
         <article>
-          <FilterForm />
+          <FilterForm setPageFilterData={setPageFilterData} />
         </article>
 
         <article className='my-5'>
-          {state.search.sell && data.length === 0 ? (
+          {data.length === 0 ? (
             <div>
               <p> There&apos;s no match to your search</p>
             </div>

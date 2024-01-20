@@ -67,6 +67,8 @@ export default function ProductDetails() {
     CreationDate,
     Description,
     InteriorImages,
+    City,
+    State,
     // LeaseDuration,
     MonthlyRent,
     // PriceHistory,
@@ -114,8 +116,6 @@ export default function ProductDetails() {
     WhatsappNumber,
   } = agentData;
 
-  console.log(agentData);
-
   const rentalFeatures = [
     {
       id: 1,
@@ -123,8 +123,8 @@ export default function ProductDetails() {
       icon: images.listedOn,
       val: getCreationDate(CreationDate),
     },
-    // {id: 2, title: 'City' , val: ''},
-    // {id: 3, title: 'City' , val: ''},
+    { id: 2, title: 'City', val: City },
+    { id: 3, title: 'City', val: State },
     { id: 4, title: 'Date available', val: getDate() },
     { id: 5, title: 'Type', val: PropertyType },
     { id: 6, title: 'Size', val: `${formatNumInThousands(SquareFoot)} sqft` },
