@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { propertyType } from '../AllData';
+import { nigeriaStates, propertyType } from '../AllData';
 import styles from './FilterForm.module.scss';
 import { useGlobalHooks } from '@/Hooks/globalHooks';
 
@@ -16,8 +16,27 @@ const FilterForm = ({ setPageFilterData }) => {
     limit: 6,
   });
 
+  const renderCity =
+    formData.state !== '' &&
+    nigeriaStates.find(({ name }) => name === formData.state);
+
   const handleChange = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+    const { id, value } = e.target;
+
+    // If the selected field is 'state'
+    if (id === 'state') {
+      // Find the selected state object
+      const selectedState = nigeriaStates.find((state) => state.name === value);
+
+      // Update the city with the first LGA from the selected state
+      const defaultCity = selectedState ? selectedState.lgas[0] : '';
+
+      // Update the form data
+      setFormData((prev) => ({ ...prev, [id]: value, city: defaultCity }));
+    } else {
+      // For other fields, simply update the form data
+      setFormData((prev) => ({ ...prev, [id]: value }));
+    }
   };
 
   const handleSubmit = (e) => {
@@ -27,24 +46,32 @@ const FilterForm = ({ setPageFilterData }) => {
 
   return (
     <form className={styles.filterForm} onSubmit={handleSubmit}>
-      <div>
-        <input
-          id='state'
-          name='state'
-          type='text'
-          placeholder='State'
-          onChange={handleChange}
-        />
+      <div className=''>
+        <select id='state' name='state' onChange={handleChange} required>
+          <option>State</option>
+          {nigeriaStates.map(({ name }) => (
+            <option key={name} value={name}>
+              {name}{' '}
+            </option>
+          ))}
+        </select>
       </div>
-      <div>
-        <input
-          id='city'
-          name='city'
-          type='text'
-          placeholder='City'
-          onChange={handleChange}
-        />
+
+      <div className=''>
+        <select id='city' name='city' onChange={handleChange}>
+          {/* Just a placeholder */}
+          {formData.state === '' && <option>City</option>}
+
+          {/* This should render inplace of the placeholder when it's true */}
+          {formData.state !== '' &&
+            renderCity?.lgas?.map((item) => (
+              <option key={item} value={item}>
+                {item}{' '}
+              </option>
+            ))}
+        </select>
       </div>
+
       <div>
         <select id='minPrice' name='minPrice' onChange={handleChange}>
           <option value=''>Min Price</option>

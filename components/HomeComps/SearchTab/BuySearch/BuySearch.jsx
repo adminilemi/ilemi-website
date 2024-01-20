@@ -9,11 +9,29 @@ import { useRouter } from 'next/navigation';
 const BuySearch = () => {
   const [formData, setFormData] = useState({ state: '', city: '' });
   const { searchDataDispatch } = useMyContext();
+  const renderCity =
+    formData.state !== '' &&
+    nigeriaStates.find(({ name }) => name === formData.state);
+
   const route = useRouter();
 
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setFormData((prev) => ({ ...prev, [id]: value }));
+
+    // If the selected field is 'state'
+    if (id === 'state') {
+      // Find the selected state object
+      const selectedState = nigeriaStates.find((state) => state.name === value);
+
+      // Update the city with the first LGA from the selected state
+      const defaultCity = selectedState ? selectedState.lgas[0] : '';
+
+      // Update the form data
+      setFormData((prev) => ({ ...prev, [id]: value, city: defaultCity }));
+    } else {
+      // For other fields, simply update the form data
+      setFormData((prev) => ({ ...prev, [id]: value }));
+    }
   };
 
   const handleSubmit = (e) => {
@@ -41,7 +59,7 @@ const BuySearch = () => {
             onChange={handleChange}
             required
           >
-            <option>Select State</option>
+            <option>State</option>
             {nigeriaStates.map(({ name }) => (
               <option key={name} value={name}>
                 {name}{' '}
@@ -52,16 +70,25 @@ const BuySearch = () => {
 
         <div className=' pe-5 col-12 col-md-5'>
           <label htmlFor='city'> City</label>
-          <input
+          <select
             id='city'
             name='city'
-            type='text'
             defaultValue={formData.city}
             className='col-12'
             onChange={handleChange}
-            placeholder='Enter city'
             required
-          />
+          >
+            {/* Just a placeholder */}
+            {formData.state === '' && <option>City</option>}
+
+            {/* This should render inplace of the placeholder when it's true */}
+            {formData.state !== '' &&
+              renderCity?.lgas?.map((item) => (
+                <option key={item} value={item}>
+                  {item}{' '}
+                </option>
+              ))}
+          </select>
         </div>
       </section>
 
