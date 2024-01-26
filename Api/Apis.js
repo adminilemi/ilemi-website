@@ -9,6 +9,10 @@ export const getPropByType = async (formData) => {
       headers: {
         'content-type': 'application/json',
       },
+
+      next: {
+        revalidate: 0, // don't cache this data at all
+      },
     },
   );
 
