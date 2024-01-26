@@ -44,7 +44,7 @@ function PropertyCard({
         <div className='flex-fill'>
           <div className='d-flex justify-content-between align-items-center'>
             <h3 className='viewMore'>
-              ₦{formatNumInThousands(MonthlyRent)} <span>/month</span>{' '}
+              ₦{formatNumInThousands(MonthlyRent)} <span>/Yearly</span>{' '}
             </h3>
             <div className={styles.heart} onClick={() => setClick(!click)}>
               {click ? (

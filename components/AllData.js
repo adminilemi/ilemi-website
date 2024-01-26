@@ -1231,13 +1231,9 @@ export const TabsData = {
 };
 
 export const propertyType = [
-  // {
-  //   id: 1,
-  //   title: 'Select type',
-  // },
   {
     id: 2,
-    title: 'Rent',
+    title: 'Bungalow',
     icon: (
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -1282,7 +1278,7 @@ export const propertyType = [
   },
   {
     id: 3,
-    title: 'Sell',
+    title: 'Duplex',
     icon: (
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -1352,7 +1348,7 @@ export const propertyType = [
   },
   {
     id: 4,
-    title: 'Buy',
+    title: 'Serviced Apartment',
     icon: (
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -1414,7 +1410,7 @@ export const propertyType = [
   },
   {
     id: 5,
-    title: 'Shortlets',
+    title: '1 Storey',
     icon: (
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -1473,6 +1469,18 @@ export const propertyType = [
         />
       </svg>
     ),
+  },
+  {
+    id: 6,
+    title: '2 Storey',
+  },
+  {
+    id: 7,
+    title: '3 Storey',
+  },
+  {
+    id: 8,
+    title: '5 Storey',
   },
 ];
 

@@ -10,7 +10,7 @@ import { Spinner } from 'react-bootstrap';
 
 export default function Shortlets() {
   const [pageFilterData, setPageFilterData] = useState({
-    propertyType: 'Shortlets',
+    Property_Category: 'Shortlets',
     skip: 0,
     limit: 6,
   });

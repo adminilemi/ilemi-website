@@ -77,6 +77,7 @@ export default function ProductDetails() {
     SecurityDeposit,
     SquareFoot,
     StreetAddress,
+    YearBuilt,
     // TotalApplicants,
     // UnitNumber,
     // Vacancy,
@@ -335,7 +336,7 @@ export default function ProductDetails() {
                             </clipPath>
                           </defs>
                         </svg>
-                        <span>{SquareFoot}</span>
+                        <span>{SquareFoot ? SquareFoot : 'Nill'}</span>
                       </h6>
                     </div>
                   </li>
@@ -424,7 +425,7 @@ export default function ProductDetails() {
                             strokeLinejoin='round'
                           />
                         </svg>
-                        <span>Nill</span>
+                        <span>Nill</span>{' '}
                         {/* <span>{YearBuilt ? YearBuilt : 'Nill'}</span> */}
                       </h6>
                     </div>
@@ -578,7 +579,7 @@ export default function ProductDetails() {
                   <div>
                     <small> {PropertyType} Price </small>
                     <h3 className='viewMore'>
-                      ₦{formatNumInThousands(MonthlyRent)} <span>/month</span>{' '}
+                      ₦{formatNumInThousands(MonthlyRent)} <span>/Yearly</span>{' '}
                     </h3>
 
                     <a

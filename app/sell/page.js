@@ -15,7 +15,7 @@ export default function Sell() {
 
   const homeSearchData = {
     ...state.search.sell,
-    propertyType: 'Sell',
+    Property_Category: 'Sell',
     skip: 0,
     limit: 6,
   };
@@ -24,7 +24,7 @@ export default function Sell() {
     state.search.sell
       ? homeSearchData
       : {
-          propertyType: 'Sell',
+          Property_Category: 'Sell',
           skip: 0,
           limit: 6,
         },

@@ -14,7 +14,7 @@ export default function Rent() {
 
   const homeSearchData = {
     ...state.search.rent,
-    propertyType: 'Rent',
+    Property_Category: 'Rent',
     skip: 0,
     limit: 6,
   };
@@ -23,7 +23,7 @@ export default function Rent() {
     state.search.rent
       ? homeSearchData
       : {
-          propertyType: 'Rent',
+          Property_Category: 'Rent',
           skip: 0,
           limit: 6,
         },

@@ -77,7 +77,7 @@ function NavBar() {
                           className='position-relative'
                         >
                           <a href='#'>
-                            Manage Property
+                            <span className='me-1'>Manage Property</span>
                             <FaChevronDown />
                           </a>
                           {drop && (

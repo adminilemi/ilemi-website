@@ -5,7 +5,7 @@ import React from 'react';
 
 const Shortlets = async () => {
   const reqData = {
-    propertyType: 'Shortlets',
+    Property_Category: 'Shortlets',
     skip: 0,
     limit: 6,
   };

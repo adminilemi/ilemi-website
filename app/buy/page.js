@@ -13,7 +13,7 @@ export default function Buy() {
 
   const homeSearchData = {
     ...state.search.buy,
-    propertyType: 'Buy',
+    Property_Category: 'Buy',
     skip: 0,
     limit: 6,
   };
@@ -22,7 +22,7 @@ export default function Buy() {
     state.search.buy
       ? homeSearchData
       : {
-          propertyType: 'Buy',
+          Property_Category: 'Buy',
           skip: 0,
           limit: 6,
         },

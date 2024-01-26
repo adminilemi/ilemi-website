@@ -5,7 +5,7 @@ import React from 'react';
 
 const Sell = async () => {
   const reqData = {
-    propertyType: 'Sell',
+    Property_Category: 'Sell',
     skip: 0,
     limit: 6,
   };

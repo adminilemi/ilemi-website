@@ -335,7 +335,7 @@ export default function ProductDetails() {
                             </clipPath>
                           </defs>
                         </svg>
-                        <span>{SquareFoot}</span>
+                        <span>{SquareFoot ? SquareFoot : 'Nill'}</span>
                       </h6>
                     </div>
                   </li>
@@ -578,7 +578,7 @@ export default function ProductDetails() {
                   <div>
                     <small> {PropertyType} Price </small>
                     <h3 className='viewMore'>
-                      ₦{formatNumInThousands(MonthlyRent)} <span>/month</span>{' '}
+                      ₦{formatNumInThousands(MonthlyRent)} <span>/Yearly</span>{' '}
                     </h3>
 
                     <a

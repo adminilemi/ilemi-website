@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Rent = async () => {
   const reqData = {
-    propertyType: 'Rent',
+    Property_Category: 'Rent',
     skip: 0,
     limit: 6,
   };
