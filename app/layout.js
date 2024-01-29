@@ -17,6 +17,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={PJS.className}>
+        <script
+          src='//code.tidio.co/3lq6hmnhq8hcynm5vr6nkcuyessvzkvh.js'
+          async
+        ></script>
         <ContextProvider>
           <NavBar />
           <AOSAnimation>{children}</AOSAnimation>
