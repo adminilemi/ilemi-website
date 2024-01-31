@@ -1,0 +1,29 @@
+.forLandlords {
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .hero {
+    background-image: url('../../public/assets/forLandlordBG.svg');
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin-bottom: 7em;
+  }
+
+  .contents {
+    hgroup {
+      border-radius: 10px;
+      border: 1px solid rgba(160, 156, 156, 0.2);
+      background: #fff;
+      padding: 0.8em;
+      text-align: center;
+      h4 {
+        color: var(--mainColor);
+        font-size: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.advertise {
+  background: var(--white) url('../../public/assets/comingSoonBG.svg') top
+    center no-repeat;
+  background-size: cover;
+  padding: 5em 0;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    color: #828282;
+    margin: 1em 0;
+  }
+
+  form {
+    input {
+      border: none;
+    }
+    border-radius: 9px;
+    border: solid 1px var(--Line);
+  }
+}

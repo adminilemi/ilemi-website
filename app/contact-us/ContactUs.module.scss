@@ -1,0 +1,77 @@
+.contact {
+  background-color: #f7f6fd;
+  span {
+    color: var(--mainColor);
+  }
+
+  h2 {
+    font-weight: 700;
+  }
+
+  .contactContent {
+    padding: 3em 2em;
+    .inputWrapper {
+      margin-bottom: 1em;
+    }
+  }
+
+  img {
+    height: auto;
+  }
+  aside {
+    img {
+      height: 100%;
+    }
+  }
+
+  .moreInfo {
+    p {
+      font-size: 0.7rem;
+      line-height: 20px;
+    }
+    span,
+    a {
+      font-size: 0.7rem;
+      color: var(--mainColor);
+      line-height: 15px;
+    }
+  }
+
+  .newsLetter {
+    .landLord {
+      background: #100a55;
+      padding: 2em 1.5em;
+      color: var(--white);
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--white);
+      }
+
+      p {
+        color: var(--white);
+      }
+
+      h4 {
+        font-size: 1.5em;
+        color: var(--mainColor);
+        margin-bottom: 1em;
+      }
+
+      strong {
+        color: var(--mainColor);
+      }
+
+      input {
+        border: none;
+      }
+
+      .newsletterForm {
+        background: var(--white);
+        padding: 0.5em;
+        border-radius: 9px;
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "@reduxjs/toolkit": "^1.9.5",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",

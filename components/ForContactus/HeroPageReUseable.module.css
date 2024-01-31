@@ -1,0 +1,19 @@
+.mainDiv {
+  background-image: url('../../public/assets/HeroPageImageWithFamily.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+
+  /* width: 100%; */
+}
+
+.mainDiv h1 {
+  color: white;
+  padding: 9%;
+}
+.heroText {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 72.61px;
+}

@@ -1,0 +1,139 @@
+.About {
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .aboutHero {
+    background-image: url('../../public/assets/aboutHero.svg');
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin-bottom: 7em;
+  }
+
+  .createChange,
+  .findNew,
+  .everyOne {
+    margin: 7em auto;
+  }
+
+  .createChange,
+  .everyOne {
+    figure {
+      height: 70vh;
+      overflow: hidden;
+      border-radius: 10px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .findNew {
+    border-radius: 10px;
+    border: 1px solid rgba(160, 156, 156, 0.2);
+    background: #f7f7fd;
+    width: 95%;
+    overflow: hidden;
+    position: relative;
+    // padding-bottom: 15em;
+    padding-top: 1em;
+
+    h2 {
+      color: var(--black);
+    }
+
+    .content {
+      padding: 0.5em 1em;
+    }
+
+    .mobileHome {
+      // height: 70vh;
+      position: relative;
+      //   overflow: hidden;
+      width: 100%;
+      padding: 8em 1em;
+      height: inherit;
+      margin-top: 1em;
+      border-radius: 10px;
+      //   background: red;
+
+      img {
+        position: absolute;
+        top: 20px;
+        right: -90px;
+        width: 140%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+      }
+    }
+  }
+  .newsLetter {
+    .landLord {
+      background: #100a55;
+      padding: 2em 1.5em;
+      color: var(--white);
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--white);
+      }
+
+      p {
+        color: var(--white);
+      }
+
+      h4 {
+        font-size: 1.5em;
+        color: var(--mainColor);
+        margin-bottom: 1em;
+      }
+
+      strong {
+        color: var(--mainColor);
+      }
+
+      input {
+        border: none;
+      }
+
+      .newsletterForm {
+        background: var(--white);
+        padding: 0.5em;
+        border-radius: 9px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    h2 {
+      font-size: 2.5rem;
+    }
+    .findNew,
+    .beTheFirst {
+      text-align: start;
+    }
+
+    .findNew {
+      padding-bottom: 0;
+      width: 88%;
+      padding-top: 0;
+
+      .content {
+        padding: 2em 3em;
+      }
+
+      .homeImage {
+        padding: 2em 3em;
+      }
+    }
+  }
+}

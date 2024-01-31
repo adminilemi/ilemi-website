@@ -40,20 +40,20 @@ function Footer() {
             </li>
 
             <li>
-              <Link href='shortlets'>Shortlets</Link>
+              <Link href='/shortlets'>Shortlets</Link>
             </li>
           </ul>
 
           <ul className='d-flex flex-column gap-3'>
             <h5>ABOUT</h5>
             <li>
-              <Link href='#'>Company</Link>
+              <Link href='/about-us'>Company</Link>
             </li>
             <li>
               <Link href='/pricing'>Pricing</Link>
             </li>
             <li>
-              <Link href='#'>Place Ads</Link>
+              <Link href='/advertise'>Place Ads</Link>
             </li>
           </ul>
 
@@ -63,7 +63,7 @@ function Footer() {
               <Link href='#'>News</Link>
             </li>
             <li>
-              <Link href='#'>Contact us</Link>
+              <Link href='/contact-us'>Contact us</Link>
             </li>
             <li>
               <Link href='#'>FAQ</Link>
@@ -92,26 +92,26 @@ function Footer() {
         <small style={{ color: 'var(--Grey6)' }}>
           © 2023 Thistle Technologies
         </small>{' '}
-        <div>
+        <div className='d-flex gap-2 align-items-center'>
           <a
             href='https://web.facebook.com/profile.php?id=61553724364511'
             target='_blank'
             rel='noreferrer'
           >
-            <FaFacebook color='var(--Grey6)' />
+            <FaFacebook color='var(--Grey3)' />
           </a>
           <a
             href='https://www.instagram.com/ilemi.ng_?igsh=bjdldTJmNnY5bTlh'
             target='_blank'
             rel='noreferrer'
           >
-            <FaInstagram color='var(--Grey6)' />
+            <FaInstagram color='var(--Grey3)' />
           </a>
           {/* <a target='_blank' rel='noreferrer'>
-            <FaTwitter color='var(--Grey6)' />{' '}
+            <FaTwitter color='var(--Grey3)' />{' '}
           </a>
           <a target='_blank' rel='noreferrer'>
-            <FaLinkedin color='var(--Grey6)' />
+            <FaLinkedin color='var(--Grey3)' />
           </a> */}
         </div>
       </section>

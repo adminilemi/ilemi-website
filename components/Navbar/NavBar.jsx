@@ -21,8 +21,12 @@ function NavBar() {
     { id: 2, title: 'Buy', url: '/buy' },
     // { id: 8, title: 'Sell', url: '/sell' },
     { id: 3, title: 'Shortlets', url: '/shortlets' },
-    { id: 4, title: 'Post a Property', url: '#' },
-    { id: 5, title: 'Advertise with Us', url: '#' },
+    {
+      id: 4,
+      title: 'Post a Property',
+      url: 'https://propmanager-dashboard.vercel.app/addproperty',
+    },
+    { id: 5, title: 'Advertise with Us', url: '/advertise' },
     // {
     //   id: 3,
     //   title: 'Shortlets',
@@ -34,7 +38,7 @@ function NavBar() {
     //   // ],
     // },
     { id: 6, title: 'Packages', url: '/pricing' },
-    { id: 7, title: 'For Landlords', url: '#' },
+    { id: 7, title: 'For Landlords', url: '/forlandlords' },
   ];
 
   return (
