@@ -19,19 +19,22 @@ function NavBar() {
   const linkList = [
     { id: 1, title: 'Rent', url: '/rent' },
     { id: 2, title: 'Buy', url: '/buy' },
-    { id: 8, title: 'Sell', url: '/sell' },
-    { id: 9, title: 'Shortlets', url: '/shortlets' },
-    {
-      id: 3,
-      title: 'Shortlets',
-      url: '#',
+    // { id: 8, title: 'Sell', url: '/sell' },
+    { id: 3, title: 'Shortlets', url: '/shortlets' },
+    { id: 4, title: 'Post a Property', url: '#' },
+    { id: 5, title: 'Advertise with Us', url: '#' },
+    // {
+    //   id: 3,
+    //   title: 'Shortlets',
+    //   url: '#',
 
-      dropwDown: [
-        { id: 4, title: 'Create Properties', url: 'shortlets' },
-        { id: 5, title: 'Listing', url: 'shortlets' },
-      ],
-    },
-    { id: 7, title: 'Pricing', url: '/pricing' },
+    //   // dropwDown: [
+    //   //   { id: 4, title: 'Create Properties', url: 'shortlets' },
+    //   //   { id: 5, title: 'Listing', url: 'shortlets' },
+    //   // ],
+    // },
+    { id: 6, title: 'Packages', url: '/pricing' },
+    { id: 7, title: 'For Landlords', url: '#' },
   ];
 
   return (
@@ -51,7 +54,7 @@ function NavBar() {
             </div>
           </div>
           <div
-            className={` col-12 col-lg-10 ${
+            className={` col-12  ${
               toggle['navbar'] ? styles.navMove : styles.displayNav
             }`}
           >

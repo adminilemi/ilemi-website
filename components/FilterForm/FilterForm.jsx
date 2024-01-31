@@ -76,9 +76,30 @@ const FilterForm = ({ setPageFilterData }) => {
         <select id='minPrice' name='minPrice' onChange={handleChange}>
           <option value=''>Min Price</option>
 
-          {[2000, 11000, 21000, 31000].map((item, idx) => (
+          {[
+            '50,000',
+            '100,000',
+            '200,000',
+            '300,000',
+            '400,000',
+            '500,000',
+            '600,000',
+            '700,000',
+            '800,000',
+            '900,000',
+            '1 million',
+            '2 million',
+            '3 Millon',
+            '5 Million',
+            '10 Million',
+            '20 Million',
+            '30 Million',
+            '40 Million',
+            '50 Million',
+            '100 million',
+          ].map((item, idx) => (
             <option key={idx} value={item}>
-              {formatNumInThousands(item)}
+              {item}
             </option>
           ))}
         </select>
@@ -88,9 +109,17 @@ const FilterForm = ({ setPageFilterData }) => {
         <select id='maxPrice' name='maxPrice' onChange={handleChange}>
           <option value=''>Max Price</option>
 
-          {[10000, 20000, 30000, 40000].map((item, idx) => (
+          {[
+            '200 Millon',
+            '300 Million',
+            '500 Million',
+            '1 Billion',
+            '2 Billion',
+            '5 Billion',
+            '10 Billion',
+          ].map((item, idx) => (
             <option key={idx} value={item}>
-              {formatNumInThousands(item)}
+              {item}
             </option>
           ))}
         </select>

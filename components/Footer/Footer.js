@@ -33,14 +33,14 @@ function Footer() {
           <ul className='d-flex flex-column gap-3'>
             <h5>BUY, RENT AND SELL</h5>
             <li>
-              <Link href='#'>Buy and sell properties</Link>
+              <Link href='/buy'>Buy and sell properties</Link>
             </li>
             <li>
-              <Link href='#'>Rent home</Link>
+              <Link href='/rent'>Rent home</Link>
             </li>
 
             <li>
-              <Link href='#'>Shortlets</Link>
+              <Link href='shortlets'>Shortlets</Link>
             </li>
           </ul>
 
@@ -50,7 +50,7 @@ function Footer() {
               <Link href='#'>Company</Link>
             </li>
             <li>
-              <Link href='#'>Pricing</Link>
+              <Link href='/pricing'>Pricing</Link>
             </li>
             <li>
               <Link href='#'>Place Ads</Link>
@@ -63,7 +63,7 @@ function Footer() {
               <Link href='#'>News</Link>
             </li>
             <li>
-              <Link href='#'>Guides</Link>
+              <Link href='#'>Contact us</Link>
             </li>
             <li>
               <Link href='#'>FAQ</Link>
@@ -75,9 +75,9 @@ function Footer() {
 
           <ul className='d-flex flex-column gap-3'>
             <h5>TERMS & PRIVACY</h5>
-            <li>
+            {/* <li>
               <Link href='#'>Trust & Safety</Link>
-            </li>
+            </li> */}
             <li>
               <Link href='#'>Terms of Service</Link>
             </li>
@@ -93,9 +93,26 @@ function Footer() {
           © 2023 Thistle Technologies
         </small>{' '}
         <div>
-          <FaFacebook color='var(--Grey6)' />{' '}
-          <FaInstagram color='var(--Grey6)' />{' '}
-          <FaTwitter color='var(--Grey6)' /> <FaLinkedin color='var(--Grey6)' />
+          <a
+            href='https://web.facebook.com/profile.php?id=61553724364511'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <FaFacebook color='var(--Grey6)' />
+          </a>
+          <a
+            href='https://www.instagram.com/ilemi.ng_?igsh=bjdldTJmNnY5bTlh'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <FaInstagram color='var(--Grey6)' />
+          </a>
+          {/* <a target='_blank' rel='noreferrer'>
+            <FaTwitter color='var(--Grey6)' />{' '}
+          </a>
+          <a target='_blank' rel='noreferrer'>
+            <FaLinkedin color='var(--Grey6)' />
+          </a> */}
         </div>
       </section>
     </footer>

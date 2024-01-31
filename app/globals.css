@@ -364,6 +364,7 @@ button:disabled {
 .isActive a {
   color: var(--mainColor);
   font-weight: 700;
+  font-size: 0.9rem;
 }
 
 .notActive {
@@ -374,6 +375,7 @@ button:disabled {
 .notActive a {
   color: var(--white);
   font-weight: 700;
+  font-size: 0.9rem;
 }
 
 input::placeholder {
