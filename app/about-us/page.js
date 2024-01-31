@@ -3,8 +3,8 @@ import styles from './AboutUs.module.scss';
 import everyOneImage from '@/public/assets/sittingRoomImage.svg';
 import craftiingImage from '@/public/assets/familyAndGroundBuilding.svg';
 import creatingChangeImage from '@/public/assets/familyImage.svg';
-import AreYourALandord from '@/Components/AreYourALandord';
 import Image from 'next/image';
+import AreYourALandord from '@/components/AreYourALandord';
 
 export default function AboutUs() {
   return (
@@ -31,13 +31,13 @@ export default function AboutUs() {
             Aplace of comfort, belonging, and joy. We strive to make the dream
             of finding that perfect home a reality for everyone. At the core of
             this belief is the understanding that home is more than just a
-            physical space; it's a haven where memories are created, dreams take
-            root, and life unfolds. Regardless of background or circumstance,
-            the right to a home that resonates with one's heart is a fundamental
-            human need. It's a place where individuals find solace, belonging,
-            and the freedom to express their unique identity. Creating spaces
-            that inspire love and joy contributes to a richer, more inclusive
-            world for all.
+            physical space; it&apos;s a haven where memories are created, dreams
+            take root, and life unfolds. Regardless of background or
+            circumstance, the right to a home that resonates with one&apos;s
+            heart is a fundamental human need. It&apos;s a place where
+            individuals find solace, belonging, and the freedom to express their
+            unique identity. Creating spaces that inspire love and joy
+            contributes to a richer, more inclusive world for all.
           </p>
         </div>
       </section>

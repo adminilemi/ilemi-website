@@ -2,6 +2,7 @@ import HeroPageReUseable from '@/components/ForContactus/HeroPageReUseable';
 import styles from './SubscribeForm.module.scss';
 import succ from '@/public/assets/success.gif';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function Success() {
   return (
@@ -12,7 +13,7 @@ function Success() {
         className={`container ${styles.pageContent}  mt-5 d-flex flex-column`}
       >
         <figure className='col-12 col-md-4 mx-auto'>
-          <img src={succ} alt='' />
+          <Image src={succ} alt='' />
         </figure>
         <p
           className={`col-12 col-md-7 mx-auto text-center my-5 ${styles.success} `}

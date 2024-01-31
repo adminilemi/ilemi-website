@@ -45,7 +45,7 @@ export default function Buy() {
       <AddGifBanner images={images.gif} />
       <section className='container'>
         <hgroup className='mt-5 d-flex flex-column flex-md-row justify-content-between align-items-center'>
-          <h2 className='pageTitle'> Search properties for sell</h2>
+          <h2 className='pageTitle'> Search properties for sale</h2>
           <div className='col-12 col-md-4'>
             <select className='form-select'>
               <option>Search with Search Bar</option>

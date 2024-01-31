@@ -31,7 +31,7 @@ export default function ContactUs() {
             Get in <span>Touch</span>
           </h2>
           <p>
-            Connect with us; your dream home is just a message away. Let's
+            Connect with us; your dream home is just a message away. Let&apos;s
             discuss how we can turn your vision into reality.
           </p>
           <section className='mt-5'>
