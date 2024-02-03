@@ -21,10 +21,7 @@ function AreYourALandord({ styles }) {
             Submit
           </button>
         </form>
-        <p>
-          Join <strong>10,000</strong>
-          +other landlords in our Ile-Mi Waiting List
-        </p>
+        <p>Join other satisfied landlords using ile-mi.ng</p>
       </article>
     </section>
   );
