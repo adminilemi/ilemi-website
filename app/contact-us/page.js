@@ -94,6 +94,17 @@ export default function ContactUs() {
                   <option value='Word of mouth'>Word of mouth</option>
                 </select>
               </div>
+
+              <div className={styles.inputWrapper}>
+                <textarea
+                  id='message'
+                  name='message'
+                  placeholder='Message'
+                  className='form-control'
+                  rows={5}
+                  required
+                ></textarea>
+              </div>
               <div className={styles.inputWrapper}>
                 <button type='submit' className='main-btn col-12'>
                   Send

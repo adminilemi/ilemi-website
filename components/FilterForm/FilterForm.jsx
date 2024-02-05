@@ -77,29 +77,29 @@ const FilterForm = ({ setPageFilterData }) => {
           <option value=''>Min Price</option>
 
           {[
-            '50,000',
-            '100,000',
-            '200,000',
-            '300,000',
-            '400,000',
-            '500,000',
-            '600,000',
-            '700,000',
-            '800,000',
-            '900,000',
-            '1 million',
-            '2 million',
-            '3 Millon',
-            '5 Million',
-            '10 Million',
-            '20 Million',
-            '30 Million',
-            '40 Million',
-            '50 Million',
-            '100 million',
-          ].map((item, idx) => (
-            <option key={idx} value={item}>
-              {item}
+            { title: '50,000', value: 500000 },
+            { title: '100,000', value: 100000 },
+            { title: '200,000', value: 200000 },
+            { title: '300,000', value: 300000 },
+            { title: '400,000', value: 400000 },
+            { title: '500,000', value: 500000 },
+            { title: '600,000', value: 600000 },
+            { title: '700,000', value: 700000 },
+            { title: '800,000', value: 800000 },
+            { title: '900,000', value: 900000 },
+            { title: '1 million', value: 1000000 },
+            { title: '2 million', value: 2000000 },
+            { title: '3 Millon', value: 3000000 },
+            { title: '5 Million', value: 5000000 },
+            { title: '10 Million', value: 10000000 },
+            { title: '20 Million', value: 20000000 },
+            { title: '30 Million', value: 30000000 },
+            { title: '40 Million', value: 40000000 },
+            { title: '50 Million', value: 50000000 },
+            { title: '100 million', value: 100000000 },
+          ].map(({ title, value }, idx) => (
+            <option key={idx} value={value}>
+              {title}
             </option>
           ))}
         </select>
@@ -110,16 +110,35 @@ const FilterForm = ({ setPageFilterData }) => {
           <option value=''>Max Price</option>
 
           {[
-            '200 Millon',
-            '300 Million',
-            '500 Million',
-            '1 Billion',
-            '2 Billion',
-            '5 Billion',
-            '10 Billion',
-          ].map((item, idx) => (
-            <option key={idx} value={item}>
-              {item}
+            { title: '500,000', value: 500000 },
+            { title: '600,000', value: 600000 },
+            { title: '700,000', value: 700000 },
+            { title: '800,000', value: 800000 },
+            { title: '900,000', value: 900000 },
+            { title: '1 million', value: 1000000 },
+            { title: '2 million', value: 2000000 },
+            { title: '3 Millon', value: 3000000 },
+            { title: '5 Million', value: 5000000 },
+            { title: '10 Million', value: 10000000 },
+            { title: '20 Million', value: 20000000 },
+            { title: '30 Million', value: 30000000 },
+            { title: '40 Million', value: 40000000 },
+            { title: '50 Million', value: 50000000 },
+            { title: '100 Millon', value: 100000000 },
+            { title: '200 Millon', value: 200000000 },
+            { title: '300 Millon', value: 300000000 },
+            { title: '500 Millon', value: 500000000 },
+            { title: '600 Million', value: 600000000 },
+            { title: '700 Million', value: 700000000 },
+            { title: '800 Million', value: 800000000 },
+            { title: '900 Million', value: 900000000 },
+            { title: '1 Billion', value: 1000000000 },
+            { title: '2 Billion', value: 2000000000 },
+            { title: '5 Billion', value: 5000000000 },
+            { title: '10 Billion', value: 10000000000 },
+          ].map(({ title, value }, idx) => (
+            <option key={idx} value={value}>
+              {title}
             </option>
           ))}
         </select>

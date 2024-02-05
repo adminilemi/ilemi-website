@@ -10,13 +10,10 @@ import { BiSearch } from 'react-icons/bi';
 import { BsShare } from 'react-icons/bs';
 import Image from 'next/image';
 import { ImageSlider } from '@/components/ImageSlider';
-import { LuClipboardList } from 'react-icons/lu';
 import { MdOutlineHelpOutline } from 'react-icons/md';
-import { MdShareLocation } from 'react-icons/md';
-import { BiHomeAlt2 } from 'react-icons/bi';
-import { FiPlayCircle } from 'react-icons/fi';
+
 import { images } from '@/exports/images';
-import AddGifBanner from '@/components/AddGifBanner';
+import { PropDeetsAside } from '@/components/PropDeetsAside/PropDeetsAside';
 // import ReactDatePicker from 'react-datepicker';
 
 const settings = {
@@ -574,70 +571,13 @@ export default function ProductDetails() {
                 </section>
               </article>
               <aside className='col-12 col-md-3 mt-5 mt-md-0'>
-                <section className={`${styles.applyNow} card p-3 mb-4`}>
-                  <div>
-                    <small> {PropertyType} Price </small>
-                    <h3 className='viewMore'>
-                      ₦{formatNumInThousands(MonthlyRent)} <span>/Yearly</span>{' '}
-                    </h3>
-
-                    <a
-                      href={`https://wa.me/${WhatsappNumber}`}
-                      className='main-btn d-flex gap-2 justify-content-center align-items-center my-3'
-                    >
-                      {' '}
-                      <LuClipboardList size={20} />
-                      <span>Apply Now</span>
-                    </a>
-                  </div>
-
-                  <hr />
-
-                  <div className='mt-3'>
-                    <h4> Request a home tour</h4>
-
-                    <div className='d-flex flex-column flex-lg-row justify-content-between align-items-center mt-3'>
-                      <div className='col-12 col-lg-5'>
-                        <button
-                          className={`${styles.selected}  d-flex gap-2 align-items-center  justify-content-center col-12 `}
-                        >
-                          {' '}
-                          <BiHomeAlt2 size={20} /> In Person
-                        </button>
-                      </div>
-                      <div className='col-12 col-lg-5 mt-2 mt-lg-0'>
-                        <button
-                          className={`${styles.selected}  d-flex gap-2 align-items-center  justify-content-center col-12`}
-                        >
-                          <FiPlayCircle size={20} /> Virtual
-                        </button>
-                      </div>
-                    </div>
-
-                    <div className='col-12 mt-3'>
-                      {/* <ReactDatePicker
-                      className='form-control'
-                        selected={startDate}
-                        onChange={(date) => setStartDate(date)}
-                      /> */}
-
-                      <input type='date' className='form-control' />
-                    </div>
-
-                    <a
-                      href={`tel: ${phoneNumber}`}
-                      className='main-btn d-flex gap-2 justify-content-center align-items-center my-3'
-                    >
-                      {' '}
-                      <MdShareLocation size={20} />
-                      <span>Request a tour</span>
-                    </a>
-                  </div>
-                </section>
-                <section>
-                  <AddGifBanner images={images.sidebarAdGif} />
-                  <AddGifBanner images={images.sidebarAdGif} />
-                </section>
+                <PropDeetsAside
+                  styles={styles}
+                  PropertyType={PropertyType}
+                  MonthlyRent={MonthlyRent}
+                  WhatsappNumber={WhatsappNumber}
+                  phoneNumber={phoneNumber}
+                />
               </aside>
             </section>
           </section>

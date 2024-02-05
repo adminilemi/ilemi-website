@@ -77,7 +77,7 @@ export default function ForLandLords() {
         className='text-center my-5 col-12 container '
       >
         <h2 className='my-5 col-12 col-md-10 mx-auto'>
-          Joint Venture development of your property Speak to us now.
+          For Joint Venture development of your property Speak to us now.
         </h2>
 
         <div className=' col-12 col-md-3 mx-auto'>

@@ -48,6 +48,7 @@ body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   background-color: var(--Grey7);
   color: #000929;
+  overflow-x: hidden;
 }
 
 .greenBg {
@@ -776,4 +777,16 @@ input {
   margin: 0.9em 0;
 }
 
+.safetyTips {
+  background: var(--Grey7);
+  padding: 0.6em 0.4em;
+  border-radius: 9px;
+  margin-bottom: 1em;
+}
+
+.safetyTips ol li {
+  list-style: decimal;
+  font-size: 0.8rem;
+  margin: 0.5em 0;
+}
 /* ==== Dashboard Inner taabs header End==== */

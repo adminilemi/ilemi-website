@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 function AreYourALandord({ styles }) {
   return (
@@ -8,6 +9,13 @@ function AreYourALandord({ styles }) {
       <article className='container'>
         <h4>No Spam Promise</h4>
         <h2>Are you a landlord or Looking for an apartment?</h2>
+
+        <div className='mt-4'>
+          <Link href='/contact-us' className='main-btn'>
+            {' '}
+            Contact Us
+          </Link>
+        </div>
         <p className='my-4'>
           Discover ways to increase your home&apos;s value and get listed. No
           Spam.
