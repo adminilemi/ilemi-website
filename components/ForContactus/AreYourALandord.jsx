@@ -16,7 +16,7 @@ function AreYourALandord() {
         </div>
         <p>
           Join <strong>10,000</strong>
-          +other landlords in our Ile-Mi Waiting List
+          +other landlords in our Property4u Waiting List
         </p>
       </article>
     </section>

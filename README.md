@@ -20,7 +20,7 @@
   - [Run Linters](#run-linters)
 - [🤝 Contributing](#contributing)
 
-# 📖 A Ile-Mi created with Vite & React <a name="about-project"></a>
+# 📖 A Property4u website created with Vite & React <a name="about-project"></a>
 
 A great platform to buy, sell, or even rent your properties without any commisions.
 

@@ -29,7 +29,7 @@ function AreYourALandord({ styles }) {
             Submit
           </button>
         </form>
-        <p>Join other satisfied landlords using ile-mi.ng</p>
+        <p>Join other satisfied landlords using Property4u.ng</p>
       </article>
     </section>
   );

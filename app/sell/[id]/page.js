@@ -563,11 +563,11 @@ export default function ProductDetails() {
 
                 <section className='my-3'>
                   <small>
-                    You agree to Ile-Mi Terms of Use & Privacy Policy. By
-                    choosing to contact a property, you also agree that Ile-Mi
-                    Group, landlords, and property managers may call or text you
-                    about any inquiries you submit through our services, which
-                    may involve use of automated means and
+                    You agree to Property4u Terms of Use & Privacy Policy. By
+                    choosing to contact a property, you also agree that
+                    Property4u Group, landlords, and property managers may call
+                    or text you about any inquiries you submit through our
+                    services, which may involve use of automated means and
                     pre-recorded/artificial voices. You don&apos;t need to
                     consent as a condition of renting any property, or buying
                     any other goods or services. Message/data rates may apply.

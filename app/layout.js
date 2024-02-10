@@ -8,7 +8,7 @@ import { ContextProvider } from '@/utils/ContextProvider';
 const PJS = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Ile-Mi',
+  title: 'Property4u',
   description:
     'A great platform to buy, sell, or even rent your properties without any commisions.',
 };
