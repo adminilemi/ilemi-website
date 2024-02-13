@@ -49,7 +49,7 @@ function NavBar() {
         <nav className='d-flex container flex-row align-items-center justify-content-between'>
           {/* Logo */}
           <div
-            className={`col-2 col-md-1 d-flex flex-row align-items-center`}
+            className={`col-5 col-md-3 col-lg-1 d-flex flex-row align-items-center`}
             data-aos='zoom-out'
             data-aos-duration='1500'
           >

@@ -24,7 +24,12 @@ function AreYourALandord({ styles }) {
         <form
           className={`${styles.newsletterForm} col-12 col-md-6 mx-auto d-flex justify-content-between my-3`}
         >
-          <input type='email' placeholder='Enter your email address' required />{' '}
+          <input
+            type='email'
+            placeholder='Enter your email address'
+            className='form-control'
+            required
+          />{' '}
           <button type='submit' className='main-btn'>
             Submit
           </button>
