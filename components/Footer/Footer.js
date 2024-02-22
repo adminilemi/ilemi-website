@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 import Link from 'next/link';
-import Image from 'next/image';
-import Logo from '../../public/assets/ilemi-logo.svg';
+// import Image from 'next/image';
+// import Logo from '../../public/assets/ilemi-logo.svg';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import IlemiLogo from '../SVGs/IlemiLogo';
 
 function Footer() {
   return (
@@ -15,9 +16,11 @@ function Footer() {
             data-aos='zoom-out'
             data-aos-duration='1500'
           >
-            <figure>
+            {/* <figure>
               <Image src={Logo} alt='Ilemi logo' />
-            </figure>
+            </figure> */}
+
+            <IlemiLogo />
           </div>
         </article>
 
@@ -60,12 +63,12 @@ function Footer() {
             <li>
               <Link href='/contact-us'>Contact us</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href='#'>FAQ</Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link href='#'>Help Center</Link>
-            </li>
+            </li> */}
           </ul>
 
           <ul className='d-flex flex-column gap-3'>
@@ -74,11 +77,11 @@ function Footer() {
               <Link href='#'>Trust & Safety</Link>
             </li> */}
             <li>
-              <Link href='#'>Terms of Service</Link>
+              <Link href='/tos'>Terms of Service</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href='#'>Privacy Policy</Link>
-            </li>
+            </li> */}
           </ul>
         </article>
       </main>

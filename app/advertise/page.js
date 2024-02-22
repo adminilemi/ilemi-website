@@ -9,7 +9,7 @@ export default function Advertise() {
       <section className='container  text-center'>
         <article className='d-flex flex-column'>
           <div className='my-4'>
-            <h2>WE ARE COMING SOON!!</h2>
+            <h2>COMING SOON!!</h2>
             <p>Stay tuned for something amazing</p>
           </div>
 

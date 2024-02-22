@@ -117,7 +117,7 @@ export default function ContactUs() {
             <p className='my-3'>For more information reach out to us via: </p>
 
             <div className={`d-flex flex-column ${styles.moreInfo}`}>
-              <div className='d-flex gap-1 col-12 my-3'>
+              {/* <div className='d-flex gap-1 col-12 my-3'>
                 <figure className='col-1 '>
                   <Image src={addressImage} className='' alt='logo' />
                 </figure>
@@ -125,7 +125,7 @@ export default function ContactUs() {
                   <p>ADDRESS</p>
                   <span>17 Olujobi Street, Gbagada Shomolu, Lagos Nigeria</span>
                 </div>
-              </div>
+              </div> */}
               <div className='d-flex flex-column flex-lg-row gap-2'>
                 <div className='d-flex gap-1 col-12 col-lg-5  my-3 my-lg-0'>
                   <figure className='col-1 col-lg-2'>
@@ -146,7 +146,9 @@ export default function ContactUs() {
                   <div className='d-flex flex-column'>
                     <p>EMAIL</p>
 
-                    <a href='mailto:enquires@ile-mi.ng'>enquires@ile-mi.ng</a>
+                    <a href='mailto:enquiries@property4u.ng'>
+                      enquiries@property4u.ng
+                    </a>
                   </div>
                 </div>
               </div>
