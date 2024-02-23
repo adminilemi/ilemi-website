@@ -31,9 +31,9 @@ export default function ForLandLords() {
               <h4>SELL MY PROPERTY</h4>
             </hgroup>
             <p className=' my-4'>
-              Unlock peace of mind for landlords with our expert property
-              management services. Trust us to take care of every detail,
-              ensuring your property is managed with precision and care.
+              Our experts are with you from Valuation to completion,ensuring
+              your sale stays on track and delivering the best possible price in
+              the shortest possible time.
             </p>
 
             <div>
@@ -52,10 +52,11 @@ export default function ForLandLords() {
               <h4>RENT MY PROPERTY</h4>
             </hgroup>
             <p className=' my-4'>
-              Whether it&apos;s selling your current home, getting financing,
-              renting or buying a new home, we make it easy and efficient. The
-              best part? you&apos;ll save a bunch of money and time with our
-              services.
+              We take the stress out of Letting your property. <br /> <br />
+              Our experts will handle all processes of letting your property
+              from Managing your property, it's maintenance, getting the right
+              tenant and rental value for your property to ensuring all
+              regulatory dues are met.
             </p>
 
             <div>

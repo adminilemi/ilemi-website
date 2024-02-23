@@ -1,11 +1,12 @@
 import React from 'react';
 import AddGifBanner from '../AddGifBanner';
 import { images } from '@/exports/images';
-import { MdShareLocation } from 'react-icons/md';
+import { MdCall, MdShareLocation } from 'react-icons/md';
 import { FiPlayCircle } from 'react-icons/fi';
 import { BiHomeAlt2 } from 'react-icons/bi';
 import { LuClipboardList } from 'react-icons/lu';
 import { useGlobalHooks } from '@/Hooks/globalHooks';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export const PropDeetsAside = ({
   styles,
@@ -29,9 +30,17 @@ export const PropDeetsAside = ({
             className='main-btn d-flex gap-2 justify-content-center align-items-center my-3'
           >
             {' '}
+            <FaWhatsapp size={20} />
+            <span>{WhatsappNumber}</span>
+          </a>
+          {/* <a
+            href={`https://wa.me/${WhatsappNumber}`}
+            className='main-btn d-flex gap-2 justify-content-center align-items-center my-3'
+          >
+            {' '}
             <LuClipboardList size={20} />
             <span>Apply Now</span>
-          </a>
+          </a> */}
         </div>
 
         <hr />
@@ -72,27 +81,44 @@ export const PropDeetsAside = ({
             className='main-btn d-flex gap-2 justify-content-center align-items-center my-3'
           >
             {' '}
+            <MdCall size={20} />
+            <span>{phoneNumber}</span>
+          </a>
+          {/* <a
+            href={`tel: ${phoneNumber}`}
+            className='main-btn d-flex gap-2 justify-content-center align-items-center my-3'
+          >
+            {' '}
             <MdShareLocation size={20} />
             <span>Request a tour</span>
-          </a>
+          </a> */}
         </div>
       </section>
       <section className='safetyTips'>
-        <h4 className='text-center my-2'> Safety Tips</h4>
+        <h4 className='text-center my-2'> Rental Tips</h4>
         <ol>
           <li>
-            Do not make any inspection fee without seeing the agent and
-            property.
+            Do not make any payment for inspection till you meet with the
+            Property Agent.
           </li>
           <li>
             Only pay Rental fee, Sales fee or any upfront payment after you
             verify the Landlord.
           </li>
-          <li>Ensure you meet the Agent in an open location.</li>
           <li>
-            The Agent does not represent PropertyPro and PropertyPro is not
-            liable for any monetary transaction between you and the Agent.
+            Only make Payments , deposits or other Sales or Rental fees after
+            you have met with the property owners or their representatives and
+            have agreed terms. .
           </li>
+          <li>
+            Ensure you met the Property Agent at an open location and preferably
+            in company of someone else.
+          </li>
+          <li>
+            Property4u is not liable for any agreement or financial transactions
+            reached by parties involved.
+          </li>
+          <li>Always insist on a receipt for all payments made.</li>
         </ol>
       </section>
       <section>
