@@ -54,8 +54,8 @@ export default function ForLandLords() {
             <p className=' my-4'>
               We take the stress out of Letting your property. <br /> <br />
               Our experts will handle all processes of letting your property
-              from Managing your property, it's maintenance, getting the right
-              tenant and rental value for your property to ensuring all
+              from Managing your property, it&apos;s maintenance, getting the
+              right tenant and rental value for your property to ensuring all
               regulatory dues are met.
             </p>
 
