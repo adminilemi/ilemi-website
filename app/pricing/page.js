@@ -103,10 +103,7 @@ export default function Pricing() {
                             : `${styles.subBtn} text-center`
                         }
                       >
-                        <a
-                          href='https://propmanager-dashboard.vercel.app/'
-                          className=' my-3'
-                        >
+                        <a href='https://agent.property4u.ng' className=' my-3'>
                           Subscribe
                         </a>
                       </section>
@@ -160,10 +157,7 @@ export default function Pricing() {
                             : `${styles.subBtn} text-center`
                         }
                       >
-                        <a
-                          href='https://propmanager-dashboard.vercel.app/'
-                          className='my-3'
-                        >
+                        <a href='https://agent.property4u.ng' className='my-3'>
                           Subscribe
                         </a>
                       </section>

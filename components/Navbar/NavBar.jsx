@@ -24,7 +24,7 @@ function NavBar() {
     {
       id: 4,
       title: 'Post a Property',
-      url: 'https://propmanager-dashboard.vercel.app/addproperty',
+      url: 'https://agent.property4u.ng/addproperty',
     },
     { id: 5, title: 'Advertise with Us', url: '/advertise' },
     // {
@@ -115,14 +115,14 @@ function NavBar() {
                 <li className='d-flex justify-content-center justify-content-lg-end col-11 col-md-6 col-lg-3'>
                   <div className='d-flex flex-column flex-lg-row gap-2 col-12'>
                     <a
-                      href='https://propmanager-dashboard.vercel.app/signin'
+                      href='https://agent.property4u.ng/signin'
                       target='_blank'
                       className={`${styles.login} text-center`}
                     >
                       Login{' '}
                     </a>
                     <a
-                      href='https://propmanager-dashboard.vercel.app/signup'
+                      href='https://agent.property4u.ng/signup'
                       target='_blank'
                       className={`${styles.signup} text-center`}
                     >
