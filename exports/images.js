@@ -8,9 +8,9 @@ import control from '@/public/assets/control.svg';
 import propInsurance from '@/public/assets/propInsurance.svg';
 import lowest from '@/public/assets/lowest.svg';
 
-import gif from '@/public/assets/ilemiAdBanner.gif';
+import gif from '@/public/assets/newBanner.gif';
 
-import sidebarAdGif from '@/public/assets/sidebarAds.gif';
+import sidebarAdGif from '@/public/assets/newSmallBanner.gif';
 
 import listedOn from '@/public/assets/listedOn.png';
 
