@@ -59,7 +59,7 @@ export default function Pricing() {
 
           <article className={`${styles.contentTabs} my-5`}>
             <h3 className='text-center mb-5'>
-              Pay for any Package and get 1 Month's Subscription Free !
+              Pay for any Package and get 1 Month&apos;s Subscription Free !
             </h3>
 
             {plans === 'Monthly' && (
