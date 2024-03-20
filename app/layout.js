@@ -7,6 +7,9 @@ import { ContextProvider } from '@/utils/ContextProvider';
 
 const PJS = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
+// This is for cloudflare
+export const runtime = 'edge';
+
 export const metadata = {
   title: 'Property4u',
   description:
