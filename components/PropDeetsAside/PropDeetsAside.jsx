@@ -1,12 +1,11 @@
 import React from 'react';
 import AddGifBanner from '../AddGifBanner';
 import { images } from '@/exports/images';
-import { MdCall, MdShareLocation } from 'react-icons/md';
+import { MdCall } from 'react-icons/md';
 import { FiPlayCircle } from 'react-icons/fi';
 import { BiHomeAlt2 } from 'react-icons/bi';
-import { LuClipboardList } from 'react-icons/lu';
-import { useGlobalHooks } from '@/Hooks/globalHooks';
 import { FaWhatsapp } from 'react-icons/fa';
+import { formatNumInThousands } from '@/utils/ReUseAblefunctions';
 
 export const PropDeetsAside = ({
   styles,
@@ -15,7 +14,6 @@ export const PropDeetsAside = ({
   WhatsappNumber,
   phoneNumber,
 }) => {
-  const { formatNumInThousands } = useGlobalHooks();
   return (
     <main>
       <section className={`${styles.applyNow} card p-3 mb-4`}>

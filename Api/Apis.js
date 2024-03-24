@@ -42,3 +42,17 @@ export const getAgentById = async (id) => {
 
   return await singleProp.json();
 };
+
+export const getPropertiesByAgentId = async (id) => {
+  const agentsProperties = await fetch(`${baseUrl}/property/${id}`, {
+    next: {
+      revalidate: 0, // don't cache this data at all
+    },
+  });
+
+  if (!agentsProperties.ok) {
+    throw new Error(`Failed to fetch the data`);
+  }
+
+  return await agentsProperties.json();
+};
