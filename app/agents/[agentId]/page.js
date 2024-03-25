@@ -9,7 +9,7 @@ export default async function page({ params }) {
 
   const agentData = await getAgentById(params?.agentId);
 
-  const { CompanyName, lastName, firstName } = agentData?.data;
+  const { CompanyName } = agentData?.data;
 
   return (
     <main>
@@ -19,10 +19,7 @@ export default async function page({ params }) {
           <small>Listed properties by: </small>
 
           <div className='d-flex flex-column justify-content-between my-3 col-12 text-center'>
-            <h5>
-              {firstName} {lastName}{' '}
-            </h5>
-            <small>{CompanyName} </small>
+            <h5>{CompanyName}</h5>
           </div>
         </section>
 
