@@ -44,12 +44,12 @@ function NavBar() {
   return (
     <div>
       <section
-        className={`${styles.navContainer} d-flex flex-row align-items-center justify-content-between`}
+        className={`${styles.navContainer} flex flex-row items-center justify-between`}
       >
-        <nav className='d-flex container flex-row align-items-center justify-content-between'>
+        <nav className='flex container flex-row items-center justify-between'>
           {/* Logo */}
           <div
-            className={`col-5 col-md-3 col-lg-1 d-flex flex-row align-items-center`}
+            className={`w-5/12 md:w-3/12/12 lg:w-1/12 flex flex-row items-center`}
             data-aos='zoom-out'
             data-aos-duration='1500'
           >
@@ -58,19 +58,19 @@ function NavBar() {
             </div>
           </div>
           <div
-            className={` col-12  ${
+            className={` w-full  ${
               toggle['navbar'] ? styles.navMove : styles.displayNav
             }`}
           >
-            <aside className='col-12 d-flex flex-column  align-items-center justify-content-center '>
+            <aside className='w-full flex flex-col  items-center justify-center '>
               {/* nav Links */}
 
               <ul
                 data-aos='fade-right'
                 data-aos-duration='1500'
-                className={` ${styles.navItems} d-flex flex-column flex-lg-row  col-12 justify-content-between align-items-center `}
+                className={` ${styles.navItems} flex flex-col lg:flex-row  w-full justify-between items-center `}
               >
-                <ul className='d-flex flex-column flex-lg-row col-12 col-lg-8 mx-auto justify-content-between text-center text-lg-start '>
+                <ul className='flex flex-col lg:flex-row w-full lg:w-9/12 mx-auto justify-between text-center lg:text-start '>
                   {linkList.map(({ id, title, url, dropwDown }) => (
                     <li
                       key={id}
@@ -79,18 +79,13 @@ function NavBar() {
                       }
                     >
                       {dropwDown ? (
-                        <p
-                          onClick={() => setDrop(!drop)}
-                          className='position-relative'
-                        >
+                        <p onClick={() => setDrop(!drop)} className='relative'>
                           <a href='#'>
-                            <span className='me-1'>Manage Property</span>
+                            <span className='ml-1'>Manage Property</span>
                             <FaChevronDown />
                           </a>
                           {drop && (
-                            <div
-                              className={`${styles.drop} d-flex flex-column `}
-                            >
+                            <div className={`${styles.drop} flex flex-col `}>
                               {dropwDown.map(({ id, title, url }) => (
                                 <div key={id}>
                                   <Link
@@ -112,8 +107,8 @@ function NavBar() {
                     </li>
                   ))}
                 </ul>
-                <li className='d-flex justify-content-center justify-content-lg-end col-11 col-md-6 col-lg-3'>
-                  <div className='d-flex flex-column flex-lg-row gap-2 col-12'>
+                <li className='flex justify-center lg:justify-end w-11/12 md:w-6/12 lg:w-2/12'>
+                  <div className='flex flex-col lg:flex-row gap-2 w-full'>
                     <a
                       href='https://agent.property4u.ng/signin'
                       target='_blank'

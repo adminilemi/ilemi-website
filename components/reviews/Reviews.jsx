@@ -56,13 +56,13 @@ function Reviews({ styles }) {
       <Slider ref={sliderRef} {...settings}>
         {reviews.map(({ id, name, job, comment, imageUrl }) => (
           <section
-            className={`${styles.contents} col-12 d-flex flex-column flex-lg-row justify-content-between  p-3`}
+            className={`${styles.contents} w-11/12 flex flex-col lg:flex-row justify-between  p-3`}
             key={id}
           >
-            <figure className='col-12 col-lg-5 my-5 my-lg-0'>
+            <figure className='w-11/12 lg:w-5 my-5 lg:my-0'>
               <Image src={imageUrl} alt='Emdo Review user' />
             </figure>
-            <div className='col-12 col-lg-6 mt-3 mt-lg-4'>
+            <div className='w-11/12 lg:w-6 mt-3 mt-lg-4'>
               <p className='mb-5'> {comment} </p>
               <h6> {name} </h6>
               <small> {job} </small>
@@ -70,7 +70,7 @@ function Reviews({ styles }) {
           </section>
         ))}
       </Slider>
-      <div className={`${styles.sliderBtns} mt-5 d-flex gap-3`}>
+      <div className={`${styles.sliderBtns} mt-5 flex gap-3`}>
         <button type='button' onClick={previous}>
           <svg
             width='59'

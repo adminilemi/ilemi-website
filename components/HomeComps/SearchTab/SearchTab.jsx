@@ -10,9 +10,9 @@ const SearchTab = () => {
   const [activeTab, setActiveTab] = useState('tab1');
 
   return (
-    <main className={`${styles.searchTab} d-fle flex-column col-11 mx-auto`}>
+    <main className={`${styles.searchTab} flex flex-col w-11/12 mx-auto`}>
       <section
-        className={`${styles.tabTitleContainer} d-flex gap-2 col-12 col-md-7 `}
+        className={`${styles.tabTitleContainer} flex gap-2 w-11/12 md:w-7/12 `}
       >
         {searchTabData.tabTitle.map(({ id, title }) => (
           <div key={id} className={`${styles.tabTitle}`}>

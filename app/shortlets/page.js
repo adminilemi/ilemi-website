@@ -29,9 +29,9 @@ export default function Shortlets() {
     <main className={styles.services}>
       <AddGifBanner images={images.gif} />
       <section className='container'>
-        <hgroup className='mt-5 d-flex flex-column flex-md-row justify-content-between align-items-center'>
+        <hgroup className='mt-5 flex flex-col md:flex-row justify-between items-center'>
           <h2 className='pageTitle'> Search properties for shortlets</h2>
-          <div className='col-12 col-md-4'>
+          <div className='w-11/12 md:w-4'>
             <select className='form-select'>
               <option>Search with Search Bar</option>
             </select>
@@ -48,7 +48,7 @@ export default function Shortlets() {
               <p> There&apos;s no match to your search</p>
             </div>
           ) : (
-            <section className='d-flex flex-wrap gap-3 '>
+            <section className='flex flex-wrap gap-3 '>
               {data.slice(0, 9).map((item) => (
                 <PropertyCard key={item._id} url='shortlets' property={item} />
               ))}

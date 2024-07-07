@@ -16,7 +16,7 @@ function Search({ placeholder }) {
   // }, [dispatch]);
 
   return (
-    <div className='search d-flex flex-row align-items-center col-12'>
+    <div className='search flex flex-row items-center w-11/12'>
       <BiSearch className='searchIcon' />
       <input
         type='text'

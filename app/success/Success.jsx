@@ -10,13 +10,13 @@ function Success() {
       <HeroPageReUseable text='Subscribe Form' />
 
       <section
-        className={`container ${styles.pageContent}  mt-5 d-flex flex-column`}
+        className={`container ${styles.pageContent}  mt-5 flex flex-col`}
       >
-        <figure className='col-12 col-md-4 mx-auto'>
+        <figure className='w-11/12 md:w-4 mx-auto'>
           <Image src={succ} alt='' />
         </figure>
         <p
-          className={`col-12 col-md-7 mx-auto text-center my-5 ${styles.success} `}
+          className={`w-11/12 md:w-7 mx-auto text-center my-5 ${styles.success} `}
         >
           Thank you for registering! Expect regular updates on our products. We
           appreciate your connection and look forward to staying in touch.

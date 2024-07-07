@@ -8,26 +8,26 @@ export default function ForLandLords() {
   return (
     <main className={styles.forLandlords}>
       <section
-        className={`${styles.hero} d-flex justify-content-center align-items-center p-3`}
+        className={`${styles.hero} flex justify-center items-center p-3`}
       ></section>
 
       <section
-        className={`container mt-5 d-flex flex-column flex-md-row justify-content-between ${styles.everyOne}  align-items-center`}
+        className={`container mt-5 flex flex-col md:flex-row justify-between ${styles.everyOne}  items-center`}
       >
-        <figure data-aos='zoom-in' className='col-12 col-md-5 my-5 my-md-0'>
+        <figure data-aos='zoom-in' className='w-11/12 md:w-5/12 my-5 my-md-0'>
           <Image src={manageProp} alt='' />
         </figure>
 
         <article
-          className={` ${styles.contents} col-12 col-md-6 content text-center text-md-start`}
+          className={` ${styles.contents} w-11/12 md:w-6 content text-center text-md-start`}
         >
           <h3 className='my-5'>
             Your investment, our expertise – a perfect partnership for property
             success.
           </h3>
 
-          <div data-aos='fade-in' className='col-12 col-md-8 '>
-            <hgroup className='col-12 col-md-7 '>
+          <div data-aos='fade-in' className='w-11/12 md:w-8 '>
+            <hgroup className='w-11/12 md:w-7 '>
               <h4>SELL MY PROPERTY</h4>
             </hgroup>
             <p className=' my-4'>
@@ -39,7 +39,7 @@ export default function ForLandLords() {
             <div>
               <a
                 href='https://wa.me/+2349045005000'
-                className='main-btn d-flex gap-2 justify-content-center align-items-center my-3'
+                className='main-btn flex gap-2 justify-center items-center my-3'
               >
                 {' '}
                 <FaWhatsapp size={20} />
@@ -47,8 +47,8 @@ export default function ForLandLords() {
               </a>
             </div>
           </div>
-          <div data-aos='fade-right' className='col-12 col-md-8 mt-5'>
-            <hgroup className='col-12 col-md-7 '>
+          <div data-aos='fade-right' className='w-11/12 md:w-8 mt-5'>
+            <hgroup className='w-11/12 md:w-7 '>
               <h4>RENT MY PROPERTY</h4>
             </hgroup>
             <p className=' my-4'>
@@ -62,7 +62,7 @@ export default function ForLandLords() {
             <div>
               <a
                 href='https://wa.me/+2349045005000'
-                className='main-btn d-flex gap-2 justify-content-center align-items-center my-3'
+                className='main-btn flex gap-2 justify-center items-center my-3'
               >
                 {' '}
                 <FaWhatsapp size={20} />
@@ -75,16 +75,16 @@ export default function ForLandLords() {
 
       <section
         data-aos='zoom-out'
-        className='text-center my-5 col-12 container '
+        className='text-center my-5 w-11/12 container '
       >
-        <h2 className='my-5 col-12 col-md-10 mx-auto'>
+        <h2 className='my-5 w-11/12 md:w-10/12 mx-auto'>
           For Joint Venture development of your property Speak to us now.
         </h2>
 
-        <div className=' col-12 col-md-3 mx-auto'>
+        <div className=' w-11/12 md:w-3/12 mx-auto'>
           <a
             href='https://wa.me/+2349045005000'
-            className='main-btn d-flex gap-2 justify-content-center align-items-center my-3'
+            className='main-btn flex gap-2 justify-center items-center my-3'
           >
             {' '}
             <FaWhatsapp size={20} />

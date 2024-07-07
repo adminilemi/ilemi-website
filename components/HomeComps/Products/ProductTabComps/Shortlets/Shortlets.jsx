@@ -12,10 +12,8 @@ const Shortlets = async () => {
   const data = await getPropByType(reqData);
 
   return (
-    <section
-      className={` d-flex flex-column justify-content-between align-items-center `}
-    >
-      <section className='d-flex flex-wrap gap-3 justify-content-between my-5 col-12'>
+    <section className={` flex flex-col justify-between items-center `}>
+      <section className='flex flex-wrap gap-3 justify-between my-5 w-11/12'>
         {data.map((item) => (
           <PropertyCard key={item._id} url='shortlets' property={item} />
         ))}

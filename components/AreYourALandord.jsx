@@ -4,7 +4,7 @@ import Link from 'next/link';
 function AreYourALandord({ styles }) {
   return (
     <section
-      className={`${styles.landLord} mx-auto d-flex flex-column  justify-content-between align-items-center mt-5 text-center`}
+      className={`${styles.landLord} mx-auto flex flex-col  justify-between items-center mt-5 text-center`}
     >
       <article className='container'>
         <h4>No Spam Promise</h4>
@@ -22,7 +22,7 @@ function AreYourALandord({ styles }) {
         </p>
 
         <form
-          className={`${styles.newsletterForm} col-12 col-md-6 mx-auto d-flex justify-content-between my-3`}
+          className={`${styles.newsletterForm} w-11/12 md:w-6 mx-auto flex justify-between my-3`}
         >
           <input
             type='email'

@@ -44,16 +44,16 @@ const SellSearch = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`${styles.RentSearch} d-flex flex-column flex-md-row justify-content-between align-items-center `}
+      className={`${styles.RentSearch} flex flex-col md:flex-row justify-between items-center `}
     >
-      <section className='d-flex flex-wrap gap-3'>
-        <div className=' pe-5 col-12 col-md-5'>
+      <section className='flex flex-wrap gap-3'>
+        <div className=' pe-5 w-11/12 md:w-5/12'>
           <label htmlFor='State'> State</label>
           <select
             id='state'
             name='state'
             defaultValue={formData.state}
-            className='col-12'
+            className='w-11/12'
             onChange={handleChange}
             required
           >
@@ -66,13 +66,13 @@ const SellSearch = () => {
           </select>
         </div>
 
-        <div className=' pe-5 col-12 col-md-5'>
+        <div className=' pe-5 w-11/12 md:w-5/12'>
           <label htmlFor='city'> City</label>
           <select
             id='city'
             name='city'
             defaultValue={formData.city}
-            className='col-12'
+            className='w-11/12'
             onChange={handleChange}
             required
           >

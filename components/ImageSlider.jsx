@@ -16,7 +16,7 @@ export const ImageSlider = ({ styles, imageData, settings }) => {
   };
 
   return (
-    <div className='position-relative'>
+    <div className='relative'>
       <Slider ref={sliderRef} className='' {...settings}>
         {imageData?.map(({ _id, url }) => (
           <figure key={_id}>
@@ -33,9 +33,7 @@ export const ImageSlider = ({ styles, imageData, settings }) => {
         ))}
       </Slider>
 
-      <div
-        className={`${styles.sliderBtn} d-flex justify-content-between align-items-center `}
-      >
+      <div className={`${styles.sliderBtn} flex justify-between items-center `}>
         <button onClick={next}>
           <FaChevronLeft />
         </button>

@@ -8,11 +8,11 @@ import IlemiLogo from '../SVGs/IlemiLogo';
 
 function Footer() {
   return (
-    <footer className='d-flex flex-column'>
-      <main className='container d-flex flex-column flex-lg-row   justify-content-between  py-5 my-5'>
-        <article className={`${styles.logo}  d-flex flex-column col-3 `}>
+    <footer className='flex flex-col'>
+      <main className='container flex flex-col lg:flex-row   justify-between  py-5 my-5'>
+        <article className={`${styles.logo}  flex flex-col w-3/12 `}>
           <div
-            className='col-12 col-md-4 mb-5'
+            className='w-11/12 md:w-4 mb-5'
             data-aos='zoom-out'
             data-aos-duration='1500'
           >
@@ -25,10 +25,10 @@ function Footer() {
         </article>
 
         <article
-          className='d-flex flex-column flex-md-row col-12 col-lg-8 mx-auto justify-content-between'
+          className='flex flex-col md:flex-row w-11/12 lg:w-8 mx-auto justify-between'
           data-aos='fade-in'
         >
-          <ul className='d-flex flex-column gap-3'>
+          <ul className='flex flex-col gap-3'>
             <h5>BUY, RENT AND SELL</h5>
             <li>
               <Link href='/buy'>Buy and sell properties</Link>
@@ -42,7 +42,7 @@ function Footer() {
             </li>
           </ul>
 
-          <ul className='d-flex flex-column gap-3'>
+          <ul className='flex flex-col gap-3'>
             <h5>ABOUT</h5>
             <li>
               <Link href='/about-us'>Company</Link>
@@ -55,7 +55,7 @@ function Footer() {
             </li>
           </ul>
 
-          <ul className='d-flex flex-column gap-3'>
+          <ul className='flex flex-col gap-3'>
             <h5>RESOURCES</h5>
             <li>
               <Link href='#'>News</Link>
@@ -71,7 +71,7 @@ function Footer() {
             </li> */}
           </ul>
 
-          <ul className='d-flex flex-column gap-3'>
+          <ul className='flex flex-col gap-3'>
             <h5>TERMS & PRIVACY</h5>
             {/* <li>
               <Link href='#'>Trust & Safety</Link>
@@ -86,11 +86,11 @@ function Footer() {
         </article>
       </main>
       <hr />
-      <section className=' container my-5 d-flex justify-content-between'>
+      <section className=' container my-5 flex justify-between'>
         <small style={{ color: 'var(--Grey6)' }}>
           © 2023 Thistle Technologies
         </small>{' '}
-        <div className='d-flex gap-2 align-items-center'>
+        <div className='flex gap-2 items-center'>
           <a
             href='https://web.facebook.com/profile.php?id=61553724364511'
             target='_blank'

@@ -25,7 +25,7 @@ export const PropDeetsAside = ({
 
           <a
             href={`https://wa.me/${WhatsappNumber}`}
-            className='main-btn d-flex gap-2 justify-content-center align-items-center my-3'
+            className='main-btn flex gap-2 justify-center items-center my-3'
           >
             {' '}
             <FaWhatsapp size={20} />
@@ -33,7 +33,7 @@ export const PropDeetsAside = ({
           </a>
           {/* <a
             href={`https://wa.me/${WhatsappNumber}`}
-            className='main-btn d-flex gap-2 justify-content-center align-items-center my-3'
+            className='main-btn flex gap-2 justify-center items-center my-3'
           >
             {' '}
             <LuClipboardList size={20} />
@@ -46,25 +46,25 @@ export const PropDeetsAside = ({
         <div className='mt-3'>
           <h4> Request a home tour</h4>
 
-          <div className='d-flex flex-column flex-lg-row justify-content-between align-items-center mt-3'>
-            <div className='col-12 col-lg-5'>
+          <div className='flex flex-col lg:flex-row justify-between items-center mt-3'>
+            <div className='w-11/12 lg:w-5'>
               <button
-                className={`${styles.selected}  d-flex gap-2 align-items-center  justify-content-center col-12 `}
+                className={`${styles.selected}  flex gap-2 items-center  justify-center w-11/12 `}
               >
                 {' '}
                 <BiHomeAlt2 size={20} /> In Person
               </button>
             </div>
-            <div className='col-12 col-lg-5 mt-2 mt-lg-0'>
+            <div className='w-11/12 lg:w-5 mt-2 mt-lg-0'>
               <button
-                className={`${styles.selected}  d-flex gap-2 align-items-center  justify-content-center col-12`}
+                className={`${styles.selected}  flex gap-2 items-center  justify-center w-11/12`}
               >
                 <FiPlayCircle size={20} /> Virtual
               </button>
             </div>
           </div>
 
-          <div className='col-12 mt-3'>
+          <div className='w-11/12 mt-3'>
             {/* <ReactDatePicker
                       className='form-control'
                         selected={startDate}
@@ -76,7 +76,7 @@ export const PropDeetsAside = ({
 
           <a
             href={`tel: ${phoneNumber}`}
-            className='main-btn d-flex gap-2 justify-content-center align-items-center my-3'
+            className='main-btn flex gap-2 justify-center items-center my-3'
           >
             {' '}
             <MdCall size={20} />
@@ -84,7 +84,7 @@ export const PropDeetsAside = ({
           </a>
           {/* <a
             href={`tel: ${phoneNumber}`}
-            className='main-btn d-flex gap-2 justify-content-center align-items-center my-3'
+            className='main-btn flex gap-2 justify-center items-center my-3'
           >
             {' '}
             <MdShareLocation size={20} />

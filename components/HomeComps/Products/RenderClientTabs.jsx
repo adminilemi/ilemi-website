@@ -9,9 +9,9 @@ const RenderClientTabs = ({ TabsData, styles }) => {
 
   return (
     <div>
-      <section className='d-flex flex-column flex-md-row justify-content-between'>
+      <section className='flex flex-col md:flex-row justify-between'>
         <article
-          className={`${styles.tabTitleContainer} d-flex flex-wrap justify-content-between col-12 col-md-6 align-items-center`}
+          className={`${styles.tabTitleContainer} flex flex-wrap justify-between w-11/12 md:w-6 items-center`}
         >
           {TabsData.TabTitle.map(({ id, title, icon }) => (
             <div key={id}>
@@ -28,11 +28,11 @@ const RenderClientTabs = ({ TabsData, styles }) => {
           ))}
         </article>
 
-        <article className='my-3 my-lg-0'>
+        <article className='my-3 lg:my-0'>
           <Search placeholder='Search' />
         </article>
       </section>
-      <section className='tabContents d-flex flex-column'>
+      <section className='tabContents flex flex-col'>
         {TabsData.TabContents.map(({ id, comps }) => (
           <section key={id} className='tabContents'>
             <TabContents id={id} activeTab={activeTab} comps={comps} />

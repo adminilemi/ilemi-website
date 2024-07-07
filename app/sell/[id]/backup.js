@@ -144,13 +144,13 @@ export default function ProductDetails() {
         ) : (
           <section>
             <section>
-              <article className='d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-end '>
+              <article className='flex flex-col lg:flex-row justify-between items-start lg:items-end '>
                 <div>
                   <h2> {Property_Name}</h2>
                   <p className='my-2'> {StreetAddress}</p>
                 </div>
                 <div
-                  className={`${styles.propDeetsBtns} d-flex flex-wrap gap-2 my-4 my-lg-0`}
+                  className={`${styles.propDeetsBtns} flex flex-wrap gap-2 my-4 lg:my-0`}
                 >
                   <div>
                     <button>
@@ -183,15 +183,15 @@ export default function ProductDetails() {
               </article>
             </section>
 
-            <section className='d-flex flex-column flex-md-row justify-content-between'>
-              <article className='col-12 col-md-8'>
+            <section className='flex flex-col md:flex-row justify-between'>
+              <article className='w-11/12 md:w-8'>
                 <ul
-                  className={`${styles.propBanner}  mt-4 py-2 px-3 d-flex flex-wrap gap-2 justify-content-between col-12`}
+                  className={`${styles.propBanner}  mt-4 py-2 px-3 flex flex-wrap gap-2 justify-between w-11/12`}
                 >
                   <li>
                     <h5> Property Type</h5>
                     <div>
-                      <h6 className='d-flex gap-2'>
+                      <h6 className='flex gap-2'>
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
                           width='24'
@@ -221,7 +221,7 @@ export default function ProductDetails() {
                   <li>
                     <h5> BedRooms</h5>
                     <div>
-                      <h6 className='d-flex gap-2'>
+                      <h6 className='flex gap-2'>
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
                           width='24'
@@ -260,7 +260,7 @@ export default function ProductDetails() {
                   <li>
                     <h5> BathRooms</h5>
                     <div>
-                      <h6 className='d-flex gap-2'>
+                      <h6 className='flex gap-2'>
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
                           width='24'
@@ -299,7 +299,7 @@ export default function ProductDetails() {
                   <li>
                     <h5> Square Area</h5>
                     <div>
-                      <h6 className='d-flex gap-2'>
+                      <h6 className='flex gap-2'>
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
                           width='24'
@@ -343,7 +343,7 @@ export default function ProductDetails() {
                   <li>
                     <h5> Year Built</h5>
                     <div>
-                      <h6 className='d-flex gap-2'>
+                      <h6 className='flex gap-2'>
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
                           width='20'
@@ -433,7 +433,7 @@ export default function ProductDetails() {
                   <li>
                     <h5> Status</h5>
                     <div>
-                      <h6 className='d-flex gap-2'>
+                      <h6 className='flex gap-2'>
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
                           width='24'
@@ -473,11 +473,11 @@ export default function ProductDetails() {
                 <section className={`${styles.agentDeets} my-4`}>
                   <small>Listed by property owner</small>
 
-                  <div className='d-flex flex-column flex-lg-row justify-content-between my-3'>
-                    <div className='d-flex gap-3'>
-                      <div className='col-3'>
+                  <div className='flex flex-col lg:flex-row justify-between my-3'>
+                    <div className='flex gap-3'>
+                      <div className='w-3/12'>
                         <figure
-                          className='position-relative '
+                          className='relative '
                           style={{ width: '48px', height: '48px' }}
                         >
                           <Image
@@ -500,7 +500,7 @@ export default function ProductDetails() {
                       </div>
                     </div>
 
-                    <div className={`${styles.propDeetsBtns} d-flex gap-2`}>
+                    <div className={`${styles.propDeetsBtns} flex gap-2`}>
                       <div>
                         <button> Ask a question</button>{' '}
                       </div>
@@ -518,19 +518,19 @@ export default function ProductDetails() {
                 <section className={styles.rentalFeatures}>
                   <h4>Rental features</h4>
 
-                  <article className='d-flex flex-column justify-content-between mt-3'>
-                    <div className='d-flex flex-wrap justify-content-between'>
+                  <article className='flex flex-col justify-between mt-3'>
+                    <div className='flex flex-wrap justify-between'>
                       {rentalFeatures.map(({ id, title, icon, val }) => (
-                        <div key={id} className={` col-12 col-md-5`}>
-                          <div className='d-flex justify-content-between my-2 border-bottom pb-1'>
-                            <small className='d-flex justify-content-between col-7 col-md-8 align-items-center'>
+                        <div key={id} className={` w-11/12 md:w-5/12`}>
+                          <div className='flex justify-between my-2 border-bottom pb-1'>
+                            <small className='flex justify-between w-7/12 md:w-8 items-center'>
                               <span>{title}</span>
                               {icon && (
                                 <div>
                                   {' '}
                                   <div>
                                     <Image
-                                      className='col-5'
+                                      className='w-5/12'
                                       src={icon}
                                       alt=''
                                     />{' '}
@@ -544,11 +544,11 @@ export default function ProductDetails() {
                       ))}{' '}
                     </div>
 
-                    <div className='d-flex flex-column border-bottom border-top py-2'>
+                    <div className='flex flex-col border-bottom border-top py-2'>
                       <h6> Amenities</h6>
-                      <div className='d-flex flex-wrap justify-content-between mt-2'>
+                      <div className='flex flex-wrap justify-between mt-2'>
                         {Amenities?.map(({ _id, title }) => (
-                          <div key={_id} className={`d-flex flex-wrap gap-2`}>
+                          <div key={_id} className={`flex flex-wrap gap-2`}>
                             <div className={`${styles.propDeetsBtns} `}>
                               <button className=''>{title}</button>{' '}
                             </div>
@@ -574,7 +574,7 @@ export default function ProductDetails() {
                   </small>
                 </section>
               </article>
-              <aside className='col-12 col-md-3 mt-5 mt-md-0'>
+              <aside className='w-11/12 md:w-3/12 mt-5 mt-md-0'>
                 <PropDeetsAside
                   styles={styles}
                   PropertyType={PropertyType}

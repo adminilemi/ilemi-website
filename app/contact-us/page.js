@@ -24,9 +24,9 @@ export default function ContactUs() {
     <main className={styles.contact}>
       <HeroPageReUseable text='Contact us' />
       <section
-        className={`container ${styles.contactContent} mt-5 d-flex flex-column flex-lg-row justify-content-between`}
+        className={`container ${styles.contactContent} mt-5 flex flex-col lg:flex-row justify-between`}
       >
-        <article className='col-12 col-lg-5'>
+        <article className='w-11/12 lg:w-5'>
           <h2 className='my-3'>
             Get in <span>Touch</span>
           </h2>
@@ -37,7 +37,7 @@ export default function ContactUs() {
           <section className='mt-5'>
             <form
               onSubmit={handleSubmit}
-              className='d-flex flex-column justify-content-between'
+              className='flex flex-col justify-between'
             >
               <div className={styles.inputWrapper}>
                 <input
@@ -106,44 +106,44 @@ export default function ContactUs() {
                 ></textarea>
               </div>
               <div className={styles.inputWrapper}>
-                <button type='submit' className='main-btn col-12'>
+                <button type='submit' className='main-btn w-11/12'>
                   Send
                 </button>
               </div>
             </form>
           </section>
 
-          <section className='d-flex flex-column'>
+          <section className='flex flex-col'>
             <p className='my-3'>For more information reach out to us via: </p>
 
-            <div className={`d-flex flex-column ${styles.moreInfo}`}>
-              {/* <div className='d-flex gap-1 col-12 my-3'>
-                <figure className='col-1 '>
+            <div className={`flex flex-col ${styles.moreInfo}`}>
+              {/* <div className='flex gap-1 w-11/12 my-3'>
+                <figure className='w-1/12 '>
                   <Image src={addressImage} className='' alt='logo' />
                 </figure>
-                <div className='d-flex flex-column'>
+                <div className='flex flex-col'>
                   <p>ADDRESS</p>
                   <span>17 Olujobi Street, Gbagada Shomolu, Lagos Nigeria</span>
                 </div>
               </div> */}
-              <div className='d-flex flex-column flex-lg-row gap-2'>
-                <div className='d-flex gap-1 col-12 col-lg-5  my-3 my-lg-0'>
-                  <figure className='col-1 col-lg-2'>
+              <div className='flex flex-col lg:flex-row gap-2'>
+                <div className='flex gap-1 w-11/12 lg:w-5  my-3 lg:my-0'>
+                  <figure className='w-1/12 lg:w-2'>
                     <Image src={phoneImage} className='' alt='logo' />
                   </figure>
 
-                  <div className='d-flex flex-column'>
+                  <div className='flex flex-col'>
                     <p> PHONE</p>
                     <a href='tel:+234 904 500 5000'>+234 904 500 5000</a>
                   </div>
                 </div>
 
-                <div className='d-flex gap-1 col-12 col-lg-5 '>
-                  <figure className='col-1 col-lg-2'>
+                <div className='flex gap-1 w-11/12 lg:w-5 '>
+                  <figure className='w-1/12 lg:w-2'>
                     <Image src={emailImage} className='' alt='logo' />
                   </figure>
 
-                  <div className='d-flex flex-column'>
+                  <div className='flex flex-col'>
                     <p>EMAIL</p>
 
                     <a href='mailto:enquiries@property4u.ng'>
@@ -156,7 +156,7 @@ export default function ContactUs() {
           </section>
         </article>
 
-        <aside className='col-12 col-lg-6 mt-5 mt-lg-0'>
+        <aside className='w-11/12 lg:w-6 mt-5 mt-lg-0'>
           <figure>
             <Image src={map} alt='' />
           </figure>

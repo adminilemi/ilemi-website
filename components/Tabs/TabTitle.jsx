@@ -21,8 +21,8 @@ function TabTitle({
       className={activeTab === id ? activeClass : notActiveClass}
     >
       <ul className=' tabTitle'>
-        <li id={id} className='d-flex flex-row align-items-center '>
-          {icon && <h4 className='me-2 '>{icon}</h4>}
+        <li id={id} className='flex flex-row items-center '>
+          {icon && <h4 className='mr-2 '>{icon}</h4>}
           <h4>{title}</h4>
         </li>
       </ul>

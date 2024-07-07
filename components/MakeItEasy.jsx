@@ -43,12 +43,12 @@ const MakeItEasy = ({ styles }) => {
 
   return (
     <section className={styles.makeItEasy}>
-      <article className='container d-flex flex-column flex-md-row justify-content-between'>
-        <h3 className='col-12 col-md-5'>
+      <article className='container flex flex-col md:flex-row justify-between'>
+        <h3 className='w-11/12 md:w-5/12'>
           We make it easy for <em> tenants </em>and<em> landlords.</em>
         </h3>
 
-        <p className='col-12 col-md-5 py-4 py-md-0'>
+        <p className='w-11/12 md:w-5/12 py-4 py-md-0'>
           Whether it&apos;s selling your current property, getting fan office
           space, or buying a new property, we make it easy and efficient. The
           best part? you&apos;ll save a bunch of money and time with our
@@ -57,13 +57,13 @@ const MakeItEasy = ({ styles }) => {
       </article>
 
       <article className='py-5'>
-        <Slider className='col-12 col-md-9 mx-auto ' {...settings}>
+        <Slider className='w-11/12 md:w-9 mx-auto ' {...settings}>
           {makeItEasyData.map(({ id, title, desc, icon }) => (
             <section
               key={id}
               className={` ${styles.contents} ${
                 id === 1 ? styles.bg1 : id === 2 ? styles.bg2 : styles.bg3
-              }  d-flex gap-4 align-items-start`}
+              }  flex gap-4 items-start`}
             >
               <figure>
                 <Image src={icon} alt='' />
@@ -79,7 +79,7 @@ const MakeItEasy = ({ styles }) => {
 
       <hr />
       <article
-        className={`${styles.perce} container d-flex flex-wrap justify-content-center gap-5 text-center my-5`}
+        className={`${styles.perce} container flex flex-wrap justify-center gap-5 text-center my-5`}
       >
         <div>
           <h4>7.4%</h4>

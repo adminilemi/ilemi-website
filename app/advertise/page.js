@@ -7,18 +7,18 @@ export default function Advertise() {
   return (
     <main className={styles.advertise}>
       <section className='container  text-center'>
-        <article className='d-flex flex-column'>
+        <article className='flex flex-col'>
           <div className='my-4'>
             <h2>COMING SOON!!</h2>
             <p>Stay tuned for something amazing</p>
           </div>
 
-          <figure className='col-12 col-md-8 mx-auto my-5'>
+          <figure className='w-11/12 md:w-8 mx-auto my-5'>
             <Image src={comingSoon} alt='' />
           </figure>
 
           <h5>Subscribe to our mailing list to get latest updates</h5>
-          <form className='col-12 col-md-8 mx-auto my-4 d-flex justify-content-between align-items-center'>
+          <form className='w-11/12 md:w-8 mx-auto my-4 flex justify-between items-center'>
             <input type='email' id='email' name='email' placeholder='email' />
             <button className='main-btn' type='submit'>
               Subscribe

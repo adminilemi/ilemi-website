@@ -4,6 +4,7 @@ import { Plus_Jakarta_Sans } from 'next/font/google';
 import NavBar from '@/components/Navbar/NavBar';
 import Footer from '@/components/Footer/Footer';
 import { ContextProvider } from '@/utils/ContextProvider';
+import NextTopLoader from 'nextjs-toploader';
 
 const PJS = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
           async
         ></script>
         <ContextProvider>
+          <NextTopLoader showSpinner={false} />
           <NavBar />
           <AOSAnimation>{children}</AOSAnimation>
           <Footer />

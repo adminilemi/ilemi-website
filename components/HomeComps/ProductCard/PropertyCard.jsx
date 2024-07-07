@@ -27,7 +27,7 @@ function PropertyCard({
     <Link
       href={`${url}/${_id}`}
       key={_id}
-      className={`${styles.productCard}  d-flex flex-column`}
+      className={`${styles.productCard}  flex flex-col`}
     >
       <figure>
         <Image
@@ -40,9 +40,9 @@ function PropertyCard({
           style={{ objectFit: 'cover' }}
         />
       </figure>
-      <section className='d-flex justify-content-between py-3 px-4'>
+      <section className='flex justify-between py-3 px-4'>
         <div className='flex-fill'>
-          <div className='d-flex justify-content-between align-items-center'>
+          <div className='flex justify-between items-center'>
             <h3 className='viewMore'>
               ₦{formatNumInThousands(MonthlyRent)} <span>/Yearly</span>{' '}
             </h3>
@@ -62,7 +62,7 @@ function PropertyCard({
           <p>{StreetAddress.slice(0, 20)}... </p>
         </div>
       </section>
-      <section className='border-top px-3 py-3 d-flex justify-content-between'>
+      <section className='border-top px-3 py-3 flex justify-between'>
         <small>
           {' '}
           <span>

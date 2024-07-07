@@ -10,22 +10,22 @@ export default function AboutUs() {
   return (
     <main className={styles.About}>
       <section
-        className={`${styles.aboutHero} d-flex justify-content-center align-items-center p-3`}
+        className={`${styles.aboutHero} flex justify-center items-center p-3`}
       >
-        <h2 className='col-12 col-md-8 mx-auto'>
+        <h2 className='w-11/12 md:w-8 mx-auto'>
           Revolutionizing real estate for seamless transitions between
           properties, making the process easier than ever before.
         </h2>
       </section>
 
       <section
-        className={`container mt-5 d-flex flex-column flex-md-row justify-content-between ${styles.everyOne}  align-items-center`}
+        className={`container mt-5 flex flex-col md:flex-row justify-between ${styles.everyOne}  items-center`}
       >
-        <figure data-aos='zoom-in' className='col-12 col-md-5 my-5 my-md-0'>
+        <figure data-aos='zoom-in' className='w-11/12 md:w-5/12 my-5 my-md-0'>
           <Image src={everyOneImage} alt='' />
         </figure>
 
-        <div className='col-12 col-md-6 content text-center text-md-start'>
+        <div className='w-11/12 md:w-6 content text-center text-md-start'>
           <h3>Everyone deserves a home they love!</h3>
           <p className='my-4'>
             Aplace of comfort, belonging, and joy. We strive to make the dream
@@ -43,9 +43,9 @@ export default function AboutUs() {
       </section>
 
       <section
-        className={`${styles.findNew} mx-auto d-flex flex-column flex-md-row justify-content-between align-items-center`}
+        className={`${styles.findNew} mx-auto flex flex-col md:flex-row justify-between items-center`}
       >
-        <article data-aos='fade-left' className='content col-12 col-md-5'>
+        <article data-aos='fade-left' className='content w-11/12 md:w-5/12'>
           <h2 className='mb-3'>
             Crafting a transactional journey without friction.
           </h2>
@@ -55,28 +55,26 @@ export default function AboutUs() {
           </p>
         </article>
 
-        <article
-          className={` ${styles.homeImage} col-12 col-lg-7 mb-4 mb-lg-0`}
-        >
-          <figure data-aos='zoom-in' className='d-none d-md-flex'>
+        <article className={` ${styles.homeImage} w-11/12 lg:w-7 mb-4 mb-lg-0`}>
+          <figure data-aos='zoom-in' className='d-none d-mflex'>
             <Image src={craftiingImage} alt='' />
           </figure>
-          <figure className={` ${styles.mobileHome} d-flex d-md-none`}>
+          <figure className={` ${styles.mobileHome} flex d-md-none`}>
             <Image src={craftiingImage} alt='' className=' ' />
           </figure>
         </article>
       </section>
 
       <section
-        className={`container ${styles.createChange} d-flex flex-column flex-md-row justify-content-between align-items-center mt-5`}
+        className={`container ${styles.createChange} flex flex-col md:flex-row justify-between items-center mt-5`}
       >
-        <figure data-aos='zoom-in' className='col-12 col-md-6 my-5 my-md-0'>
+        <figure data-aos='zoom-in' className='w-11/12 md:w-6 my-5 my-md-0'>
           <Image src={creatingChangeImage} alt='happy family' />
         </figure>
 
         <div
           data-aos='fade-right'
-          className=' col-12 col-md-5 align-items-center content text-center text-md-start'
+          className=' w-11/12 md:w-5/12 items-center content text-center text-md-start'
         >
           <h3>Creating change in our communities.</h3>
           <p className='my-4'>

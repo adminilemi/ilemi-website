@@ -14,11 +14,11 @@ export default async function Home() {
       <AddGifBanner images={images.gif} />
       <section className={styles.BG}>
         <section
-          className={`${styles.findSection} container d-flex flex-column flex-md-row justify-content-between`}
+          className={`${styles.findSection} container flex flex-col md:flex-row justify-between`}
         >
           <article
             data-aos='zoom-in'
-            className={`${styles.homeBg} col-12 col-md-5`}
+            className={`${styles.homeBg} w-11/12 md:w-5/12`}
           >
             <h3>The new way to find your new office</h3>
             <p className='my-3'>
@@ -34,10 +34,10 @@ export default async function Home() {
           </article>
 
           <article
-            className={`${styles.benefits} d-flex flex-wrap justify-content-between gap-3 col-12 col-md-6  mt-5 mt-md-0`}
+            className={`${styles.benefits} flex flex-wrap justify-between gap-3 w-11/12 md:w-6  mt-5 mt-md-0`}
           >
-            <div data-aos='fade-in' className='col-12 col-md-5'>
-              <figure className='col-3'>
+            <div data-aos='fade-in' className='w-11/12 md:w-5/12'>
+              <figure className='w-3/12'>
                 <Image src={images.propInsurance} alt='' />
               </figure>
               <h4 className='my-2'>Property Insurance</h4>
@@ -46,8 +46,8 @@ export default async function Home() {
                 and insurance for their better life.
               </p>
             </div>
-            <div data-aos='fade-in' className='col-12 col-md-5'>
-              <figure className='col-3'>
+            <div data-aos='fade-in' className='w-11/12 md:w-5/12'>
+              <figure className='w-3/12'>
                 <Image src={images.bestPrice} alt='' />
               </figure>
               <h4 className='my-2'>Best Price</h4>
@@ -56,8 +56,8 @@ export default async function Home() {
                 to worry, let us do the numbers for you.
               </p>
             </div>
-            <div data-aos='fade-in' className='col-12 col-md-5'>
-              <figure className='col-3'>
+            <div data-aos='fade-in' className='w-11/12 md:w-5/12'>
+              <figure className='w-3/12'>
                 <Image src={images.lowest} alt='' />
               </figure>
               <h4 className='my-2'>Lowest Commission</h4>
@@ -66,8 +66,8 @@ export default async function Home() {
                 other agents it only cost 2%!
               </p>
             </div>
-            <div data-aos='fade-in' className='col-12 col-md-5'>
-              <figure className='col-3'>
+            <div data-aos='fade-in' className='w-11/12 md:w-5/12'>
+              <figure className='w-3/12'>
                 <Image src={images.control} alt='' />
               </figure>
               <h4 className='my-2'>Overall Control</h4>
@@ -78,7 +78,7 @@ export default async function Home() {
             </div>
           </article>
         </section>
-        <section className='container d-flex flex-column my-5 py-5'>
+        <section className='container flex flex-col my-5 py-5'>
           <div className='text-center my-5'>
             <h3>Based on your location</h3>
             <p className='my-2'>

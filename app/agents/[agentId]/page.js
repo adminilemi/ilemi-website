@@ -18,7 +18,7 @@ export default async function page({ params }) {
         <section className={` my-4 text-center`}>
           <small>Listed properties by: </small>
 
-          <div className='d-flex flex-column justify-content-between my-3 col-12 text-center'>
+          <div className='flex flex-col justify-between my-3 w-11/12 text-center'>
             <h5>{CompanyName}</h5>
           </div>
         </section>
@@ -29,7 +29,7 @@ export default async function page({ params }) {
               <p> No product from this agent yet</p>
             </div>
           ) : (
-            <section className='d-flex flex-wrap gap-3 '>
+            <section className='flex flex-wrap gap-3 '>
               {data?.map((item) => (
                 <PropertyCard key={item._id} url='agentId' property={item} />
               ))}
