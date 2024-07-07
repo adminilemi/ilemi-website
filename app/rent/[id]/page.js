@@ -7,6 +7,7 @@ import { BsShare } from 'react-icons/bs';
 import Image from 'next/image';
 import { ImageSlider } from '@/components/ImageSlider';
 import { MdOutlineHelpOutline } from 'react-icons/md';
+import noImage from '@/public/assets/noAvatar.png';
 
 import { images } from '@/exports/images';
 import { PropDeetsAside } from '@/components/PropDeetsAside/PropDeetsAside';
@@ -109,19 +110,19 @@ export default async function ProductDetails({ params }) {
                 <div>
                   <button>
                     {' '}
-                    <BsShare color='text-mainColor' /> Share
+                    <BsShare className='text-mainColor' /> Share
                   </button>
                 </div>
                 <div>
                   <button>
                     {' '}
-                    <FaRegHeart color='text-mainColor' /> Favourite
+                    <FaRegHeart className='text-mainColor' /> Favourite
                   </button>
                 </div>
 
                 <div>
                   <button>
-                    <BiSearch color='text-mainColor' />
+                    <BiSearch className='text-mainColor' />
                     Browse nearby listings
                   </button>
                 </div>
@@ -138,9 +139,9 @@ export default async function ProductDetails({ params }) {
           </section>
 
           <section className='flex flex-col md:flex-row justify-between'>
-            <article className='w-1/12 md:w-8/12'>
+            <article className='w-full md:w-8/12'>
               <ul
-                className={`${styles.propBanner}  mt-4 py-2 px-3 flex flex-wrap gap-2 justify-between w-1/12`}
+                className={`${styles.propBanner}  mt-4 py-2 px-3 flex flex-wrap gap-2 justify-between w-full`}
               >
                 <li>
                   <h5> Property Type</h5>
@@ -424,15 +425,15 @@ export default async function ProductDetails({ params }) {
               </section>
 
               <hr />
-              <section className={`${styles.agentDeets} my-4`}>
+              <section className='border-[#e0def7] border-[1px] rounded-md bg-grey-400 my-5 p-3'>
                 <small>Listed by property owner</small>
 
-                <div className='flex flex-col lg:flex-row justify-between my-3'>
-                  <div className='flex gap-3'>
+                <ul className='flex flex-col lg:flex-row justify-between my-3'>
+                  <li className='flex gap-3 flex-1'>
                     <div className='w-3/12'>
-                      <figure className='relative w-[48px] h-[48px] overflow-hidden'>
+                      <figure className='relative !w-[48px] !h-[48px] overflow-hidden'>
                         <Image
-                          src={profilePic}
+                          src={profilePic || noImage}
                           alt='Ilemi Agent Images'
                           placeholder='blur'
                           blurDataURL='data:image/jpeg...'
@@ -449,9 +450,9 @@ export default async function ProductDetails({ params }) {
                       </h5>
                       <small>{CompanyName} </small>
                     </div>
-                  </div>
+                  </li>
 
-                  <div className={`${styles.propDeetsBtns} flex gap-2`}>
+                  <li className={`${styles.propDeetsBtns} flex gap-2`}>
                     <div>
                       <button> Ask a question</button>{' '}
                     </div>
@@ -461,8 +462,8 @@ export default async function ProductDetails({ params }) {
                         <MdOutlineHelpOutline /> Get more info
                       </button>
                     </div>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </section>
               <hr />
 
@@ -521,7 +522,7 @@ export default async function ProductDetails({ params }) {
                 </small>
               </section>
             </article>
-            <aside className='w-1/12 md:w-3/12 mt-5 md:mt-0'>
+            <aside className='w-full md:w-3/12 mt-5 md:mt-0'>
               <PropDeetsAside
                 styles={styles}
                 PropertyType={PropertyType}

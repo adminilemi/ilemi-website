@@ -6,7 +6,7 @@ import { images } from '@/exports/images';
 import FilterForm from '@/components/FilterForm/FilterForm';
 import PropertyCard from '@/components/HomeComps/ProductCard/PropertyCard';
 import { useClientFetch } from '@/utils/fetchDataOnCLient';
-import { Spinner } from 'react-bootstrap';
+import PageSkeleton from '@/components/PageSkeleton';
 
 export default function Shortlets() {
   const [pageFilterData, setPageFilterData] = useState({
@@ -22,7 +22,7 @@ export default function Shortlets() {
   }, [pageFilterData, refetch]);
 
   if (isLoading) {
-    return <Spinner />;
+    return <PageSkeleton />;
   }
 
   return (
@@ -30,9 +30,9 @@ export default function Shortlets() {
       <AddGifBanner images={images.gif} />
       <section className='container'>
         <hgroup className='mt-5 flex flex-col md:flex-row justify-between items-center'>
-          <h2 className='pageTitle'> Search properties for shortlets</h2>
-          <div className='w-11/12 md:w-4'>
-            <select className='form-select'>
+          <h2 className='pageTitle flex-1'> Search properties for shortlets</h2>
+          <div className='w-11/12 md:w-4/12'>
+            <select className='w-full'>
               <option>Search with Search Bar</option>
             </select>
           </div>

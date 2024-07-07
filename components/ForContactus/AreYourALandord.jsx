@@ -11,7 +11,7 @@ function AreYourALandord() {
           Discover ways to increase your home value and get listed No Spam
         </p>
 
-        <div className='w-11/12 md:w-6 mx-auto'>
+        <div className='w-11/12 md:w-6/12 mx-auto'>
           <Button title='JOIN OUR WAIT  LIST' url='/join-form' />
         </div>
         <p>

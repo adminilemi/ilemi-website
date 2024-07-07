@@ -3,13 +3,13 @@ import Image from 'next/image';
 import { images } from '@/exports/images';
 import SearchTab from './SearchTab/SearchTab';
 
-function HomeHero({ styles }) {
+const HomeHero = ({ styles }) => {
   return (
     <main className={`${styles.homeHero} w-full`}>
       <section className=' flex flex-col lg:flex-row justify-between relative'>
         <article
           data-aos='fade-left'
-          className='flex flex-col  text-center lg:text-start justify-between w-11/12 md:w-8/12 mx-auto lg:w-5/12 order-last lg:order-first mt-5 lg:mt-0'
+          className='flex flex-col  text-center lg:text-start justify-between w-11/12 md:w-8/12 mx-auto lg:w-5/12/12 order-last lg:order-first mt-5 lg:mt-0'
         >
           <div className='flex flex-col justify-between '>
             <h1 className='my-3'>Buy, rent, or sell your property easily</h1>
@@ -47,6 +47,6 @@ function HomeHero({ styles }) {
       </section>
     </main>
   );
-}
+};
 
 export default HomeHero;

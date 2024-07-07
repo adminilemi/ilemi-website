@@ -26,7 +26,7 @@ export default function ContactUs() {
       <section
         className={`container ${styles.contactContent} mt-5 flex flex-col lg:flex-row justify-between`}
       >
-        <article className='w-11/12 lg:w-5'>
+        <article className='w-11/12 lg:w-5/12'>
           <h2 className='my-3'>
             Get in <span>Touch</span>
           </h2>
@@ -127,7 +127,7 @@ export default function ContactUs() {
                 </div>
               </div> */}
               <div className='flex flex-col lg:flex-row gap-2'>
-                <div className='flex gap-1 w-11/12 lg:w-5  my-3 lg:my-0'>
+                <div className='flex gap-1 w-11/12 lg:w-5/12  my-3 lg:my-0'>
                   <figure className='w-1/12 lg:w-2'>
                     <Image src={phoneImage} className='' alt='logo' />
                   </figure>
@@ -138,7 +138,7 @@ export default function ContactUs() {
                   </div>
                 </div>
 
-                <div className='flex gap-1 w-11/12 lg:w-5 '>
+                <div className='flex gap-1 w-11/12 lg:w-5/12 '>
                   <figure className='w-1/12 lg:w-2'>
                     <Image src={emailImage} className='' alt='logo' />
                   </figure>
@@ -156,7 +156,7 @@ export default function ContactUs() {
           </section>
         </article>
 
-        <aside className='w-11/12 lg:w-6 mt-5 mt-lg-0'>
+        <aside className='w-11/12 lg:w-6 mt-5 lg:mt-0'>
           <figure>
             <Image src={map} alt='' />
           </figure>

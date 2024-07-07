@@ -9,10 +9,10 @@ import IlemiLogo from '../SVGs/IlemiLogo';
 function Footer() {
   return (
     <footer className='flex flex-col'>
-      <main className='container flex flex-col lg:flex-row   justify-between  py-5 my-5'>
+      <main className='container flex flex-col lg:flex-row justify-between py-5 my-5'>
         <article className={`${styles.logo}  flex flex-col w-3/12 `}>
           <div
-            className='w-11/12 md:w-4 mb-5'
+            className='w-11/12 md:w-4/12 mb-5'
             data-aos='zoom-out'
             data-aos-duration='1500'
           >
@@ -25,7 +25,7 @@ function Footer() {
         </article>
 
         <article
-          className='flex flex-col md:flex-row w-11/12 lg:w-8 mx-auto justify-between'
+          className='flex flex-col md:flex-row w-11/12 lg:w-8/12 mx-auto justify-between'
           data-aos='fade-in'
         >
           <ul className='flex flex-col gap-3'>
@@ -87,9 +87,7 @@ function Footer() {
       </main>
       <hr />
       <section className=' container my-5 flex justify-between'>
-        <small style={{ color: 'var(--Grey6)' }}>
-          © 2023 Thistle Technologies
-        </small>{' '}
+        <small className='text-Grey6'>© 2023 Thistle Technologies</small>{' '}
         <div className='flex gap-2 items-center'>
           <a
             href='https://web.facebook.com/profile.php?id=61553724364511'

@@ -59,7 +59,7 @@ function Reviews({ styles }) {
             className={`${styles.contents} w-11/12 flex flex-col lg:flex-row justify-between  p-3`}
             key={id}
           >
-            <figure className='w-11/12 lg:w-5 my-5 lg:my-0'>
+            <figure className='w-11/12 lg:w-5/12 my-5 lg:my-0'>
               <Image src={imageUrl} alt='Emdo Review user' />
             </figure>
             <div className='w-11/12 lg:w-6 mt-3 mt-lg-4'>

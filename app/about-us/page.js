@@ -25,7 +25,7 @@ export default function AboutUs() {
           <Image src={everyOneImage} alt='' />
         </figure>
 
-        <div className='w-11/12 md:w-6 content text-center text-md-start'>
+        <div className='w-11/12 md:w-6/12 content text-center text-md-start'>
           <h3>Everyone deserves a home they love!</h3>
           <p className='my-4'>
             Aplace of comfort, belonging, and joy. We strive to make the dream
@@ -68,7 +68,7 @@ export default function AboutUs() {
       <section
         className={`container ${styles.createChange} flex flex-col md:flex-row justify-between items-center mt-5`}
       >
-        <figure data-aos='zoom-in' className='w-11/12 md:w-6 my-5 my-md-0'>
+        <figure data-aos='zoom-in' className='w-11/12 md:w-6/12 my-5 my-md-0'>
           <Image src={creatingChangeImage} alt='happy family' />
         </figure>
 

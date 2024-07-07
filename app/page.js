@@ -34,7 +34,7 @@ export default async function Home() {
           </article>
 
           <article
-            className={`${styles.benefits} flex flex-wrap justify-between gap-3 w-11/12 md:w-6  mt-5 mt-md-0`}
+            className={`${styles.benefits} flex flex-wrap justify-between gap-3 w-11/12 md:w-6/12 mt-5 md:mt-0`}
           >
             <div data-aos='fade-in' className='w-11/12 md:w-5/12'>
               <figure className='w-3/12'>

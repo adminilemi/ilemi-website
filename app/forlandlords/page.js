@@ -19,7 +19,7 @@ export default function ForLandLords() {
         </figure>
 
         <article
-          className={` ${styles.contents} w-11/12 md:w-6 content text-center text-md-start`}
+          className={` ${styles.contents} w-11/12 md:w-6/12 content text-center text-md-start`}
         >
           <h3 className='my-5'>
             Your investment, our expertise – a perfect partnership for property

@@ -47,7 +47,7 @@ export const PropDeetsAside = ({
           <h4> Request a home tour</h4>
 
           <div className='flex flex-col lg:flex-row justify-between items-center mt-3'>
-            <div className='w-11/12 lg:w-5'>
+            <div className='w-11/12 lg:w-5/12'>
               <button
                 className={`${styles.selected}  flex gap-2 items-center  justify-center w-11/12 `}
               >
@@ -55,7 +55,7 @@ export const PropDeetsAside = ({
                 <BiHomeAlt2 size={20} /> In Person
               </button>
             </div>
-            <div className='w-11/12 lg:w-5 mt-2 mt-lg-0'>
+            <div className='w-11/12 lg:w-5/12 mt-2 lg:mt-0'>
               <button
                 className={`${styles.selected}  flex gap-2 items-center  justify-center w-11/12`}
               >
@@ -92,7 +92,7 @@ export const PropDeetsAside = ({
           </a> */}
         </div>
       </section>
-      <section className='safetyTips'>
+      <section className='safetyTips '>
         <h4 className='text-center my-2'> Rental Tips</h4>
         <ol>
           <li>

@@ -22,7 +22,7 @@ function AreYourALandord({ styles }) {
         </p>
 
         <form
-          className={`${styles.newsletterForm} w-11/12 md:w-6 mx-auto flex justify-between my-3`}
+          className={`${styles.newsletterForm} w-11/12 md:w-6/12 mx-auto flex justify-between my-3`}
         >
           <input
             type='email'
