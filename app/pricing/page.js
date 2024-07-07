@@ -16,7 +16,7 @@ export default function Pricing() {
     <main className={styles.subscription}>
       <section className='container'>
         <header
-          className={`${styles.plan} text-center my-5 w-11/12 md:w-7 mx-auto`}
+          className={`${styles.plan} text-center my-5 w-11/12 md:w-7/12 mx-auto`}
         >
           <h2>Choose the right Agent subscription for you</h2>
           <p className='my-3'>

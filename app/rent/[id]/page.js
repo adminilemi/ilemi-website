@@ -139,7 +139,7 @@ export default async function ProductDetails({ params }) {
           </section>
 
           <section className='flex flex-col md:flex-row justify-between'>
-            <article className='w-full md:w-8/12'>
+            <article className='w-full md:w-8/12/12'>
               <ul
                 className={`${styles.propBanner}  mt-4 py-2 px-3 flex flex-wrap gap-2 justify-between w-full`}
               >
@@ -475,7 +475,7 @@ export default async function ProductDetails({ params }) {
                     {rentalFeatures.map(({ id, title, icon, val }) => (
                       <div key={id} className={` w-11/12 md:w-5/12`}>
                         <div className='flex justify-between my-2 border-bottom pb-1'>
-                          <small className='flex justify-between w-7/12 md:w-8/12 items-center'>
+                          <small className='flex justify-between w-7/12 md:w-8/12/12 items-center'>
                             <span>{title}</span>
                             {icon && (
                               <div>

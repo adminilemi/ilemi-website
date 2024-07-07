@@ -12,7 +12,7 @@ export default function AboutUs() {
       <section
         className={`${styles.aboutHero} flex justify-center items-center p-3`}
       >
-        <h2 className='w-11/12 md:w-8 mx-auto'>
+        <h2 className='w-11/12 md:w-8/12 mx-auto'>
           Revolutionizing real estate for seamless transitions between
           properties, making the process easier than ever before.
         </h2>
@@ -21,11 +21,11 @@ export default function AboutUs() {
       <section
         className={`container mt-5 flex flex-col md:flex-row justify-between ${styles.everyOne}  items-center`}
       >
-        <figure data-aos='zoom-in' className='w-11/12 md:w-5/12 my-5 my-md-0'>
+        <figure data-aos='zoom-in' className='w-11/12 md:w-5/12 my-5 md:my-0'>
           <Image src={everyOneImage} alt='' />
         </figure>
 
-        <div className='w-11/12 md:w-6/12 content text-center text-md-start'>
+        <div className='w-11/12 md:w-6/12 content text-center md:text-start'>
           <h3>Everyone deserves a home they love!</h3>
           <p className='my-4'>
             Aplace of comfort, belonging, and joy. We strive to make the dream
@@ -43,9 +43,9 @@ export default function AboutUs() {
       </section>
 
       <section
-        className={`${styles.findNew} mx-auto flex flex-col md:flex-row justify-between items-center`}
+        className={`${styles.findNew}  flex flex-col md:flex-row justify-between items-center`}
       >
-        <article data-aos='fade-left' className='content w-11/12 md:w-5/12'>
+        <article data-aos='fade-left' className='px-3 w-11/12 md:w-5/12'>
           <h2 className='mb-3'>
             Crafting a transactional journey without friction.
           </h2>
@@ -55,11 +55,13 @@ export default function AboutUs() {
           </p>
         </article>
 
-        <article className={` ${styles.homeImage} w-11/12 lg:w-7 mb-4 mb-lg-0`}>
-          <figure data-aos='zoom-in' className='d-none d-mflex'>
+        <article
+          className={` ${styles.homeImage} w-11/12 lg:w-7/12 mb-4 lg:mb-0`}
+        >
+          <figure data-aos='zoom-in' className='hidden md:flex'>
             <Image src={craftiingImage} alt='' />
           </figure>
-          <figure className={` ${styles.mobileHome} flex d-md-none`}>
+          <figure className={` ${styles.mobileHome} flex md:hidden`}>
             <Image src={craftiingImage} alt='' className=' ' />
           </figure>
         </article>
@@ -68,13 +70,13 @@ export default function AboutUs() {
       <section
         className={`container ${styles.createChange} flex flex-col md:flex-row justify-between items-center mt-5`}
       >
-        <figure data-aos='zoom-in' className='w-11/12 md:w-6/12 my-5 my-md-0'>
+        <figure data-aos='zoom-in' className='w-11/12 md:w-6/12 my-5 md:my-0'>
           <Image src={creatingChangeImage} alt='happy family' />
         </figure>
 
         <div
           data-aos='fade-right'
-          className=' w-11/12 md:w-5/12 items-center content text-center text-md-start'
+          className=' w-11/12 md:w-5/12 items-center content text-center md:text-start'
         >
           <h3>Creating change in our communities.</h3>
           <p className='my-4'>

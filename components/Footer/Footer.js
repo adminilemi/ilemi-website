@@ -29,7 +29,7 @@ function Footer() {
           data-aos='fade-in'
         >
           <ul className='flex flex-col gap-3'>
-            <h5>BUY, RENT AND SELL</h5>
+            <h5 className='font-semibold'>BUY, RENT AND SELL</h5>
             <li>
               <Link href='/buy'>Buy and sell properties</Link>
             </li>
@@ -43,20 +43,23 @@ function Footer() {
           </ul>
 
           <ul className='flex flex-col gap-3'>
-            <h5>ABOUT</h5>
+            <h5 className='font-semibold'>ABOUT</h5>
             <li>
               <Link href='/about-us'>Company</Link>
             </li>
             <li>
-              <Link href='/pricing'>Pricing</Link>
+              <Link href='/pricing'>Packages</Link>
             </li>
             <li>
-              <Link href='/advertise'>Place Ads</Link>
+              <Link href='/advertise'>Advertise With Us</Link>
+            </li>
+            <li>
+              <Link href='/forlandlords'>For Landlords</Link>
             </li>
           </ul>
 
           <ul className='flex flex-col gap-3'>
-            <h5>RESOURCES</h5>
+            <h5 className='font-semibold'>RESOURCES</h5>
             <li>
               <Link href='#'>News</Link>
             </li>
@@ -72,7 +75,7 @@ function Footer() {
           </ul>
 
           <ul className='flex flex-col gap-3'>
-            <h5>TERMS & PRIVACY</h5>
+            <h5 className='font-semibold'>TERMS & PRIVACY</h5>
             {/* <li>
               <Link href='#'>Trust & Safety</Link>
             </li> */}

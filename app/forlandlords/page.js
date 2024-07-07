@@ -14,20 +14,20 @@ export default function ForLandLords() {
       <section
         className={`container mt-5 flex flex-col md:flex-row justify-between ${styles.everyOne}  items-center`}
       >
-        <figure data-aos='zoom-in' className='w-11/12 md:w-5/12 my-5 my-md-0'>
+        <figure data-aos='zoom-in' className='w-11/12 md:w-5/12 my-5 md:my-0'>
           <Image src={manageProp} alt='' />
         </figure>
 
         <article
-          className={` ${styles.contents} w-11/12 md:w-6/12 content text-center text-md-start`}
+          className={` ${styles.contents} w-full md:w-6/12 content text-center md:text-start`}
         >
           <h3 className='my-5'>
             Your investment, our expertise – a perfect partnership for property
             success.
           </h3>
 
-          <div data-aos='fade-in' className='w-11/12 md:w-8 '>
-            <hgroup className='w-11/12 md:w-7 '>
+          <div data-aos='fade-in' className='w-full md:w-8/12 '>
+            <hgroup className='w-full md:w-7/12 '>
               <h4>SELL MY PROPERTY</h4>
             </hgroup>
             <p className=' my-4'>
@@ -47,8 +47,8 @@ export default function ForLandLords() {
               </a>
             </div>
           </div>
-          <div data-aos='fade-right' className='w-11/12 md:w-8 mt-5'>
-            <hgroup className='w-11/12 md:w-7 '>
+          <div data-aos='fade-right' className='w-full md:w-8/12 mt-5'>
+            <hgroup className='w-11/12 md:w-7/12 '>
               <h4>RENT MY PROPERTY</h4>
             </hgroup>
             <p className=' my-4'>
@@ -59,7 +59,7 @@ export default function ForLandLords() {
               regulatory dues are met.
             </p>
 
-            <div>
+            <div className='my-10'>
               <a
                 href='https://wa.me/+2349045005000'
                 className='main-btn flex gap-2 justify-center items-center my-3'

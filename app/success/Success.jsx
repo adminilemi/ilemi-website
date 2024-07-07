@@ -16,7 +16,7 @@ function Success() {
           <Image src={succ} alt='' />
         </figure>
         <p
-          className={`w-11/12 md:w-7 mx-auto text-center my-5 ${styles.success} `}
+          className={`w-11/12 md:w-7/12 mx-auto text-center my-5 ${styles.success} `}
         >
           Thank you for registering! Expect regular updates on our products. We
           appreciate your connection and look forward to staying in touch.

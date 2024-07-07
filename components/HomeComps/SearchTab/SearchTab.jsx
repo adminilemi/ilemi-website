@@ -12,7 +12,7 @@ const SearchTab = () => {
   return (
     <main className={`${styles.searchTab} flex flex-col w-11/12 mx-auto`}>
       <section
-        className={`${styles.tabTitleContainer} flex gap-2 w-11/12 md:w-7/12 `}
+        className={`${styles.tabTitleContainer} flex gap-2 w-11/12 md:w-7/12/12 `}
       >
         {searchTabData.tabTitle.map(({ id, title }) => (
           <div key={id} className={`${styles.tabTitle}`}>

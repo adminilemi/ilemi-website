@@ -13,12 +13,12 @@ export default function Advertise() {
             <p>Stay tuned for something amazing</p>
           </div>
 
-          <figure className='w-11/12 md:w-8 mx-auto my-5'>
+          <figure className='w-11/12 md:w-8/12 mx-auto my-5'>
             <Image src={comingSoon} alt='' />
           </figure>
 
           <h5>Subscribe to our mailing list to get latest updates</h5>
-          <form className='w-11/12 md:w-8 mx-auto my-4 flex justify-between items-center'>
+          <form className='w-11/12 md:w-8/12 mx-auto my-4 flex justify-between items-center'>
             <input type='email' id='email' name='email' placeholder='email' />
             <button className='main-btn' type='submit'>
               Subscribe

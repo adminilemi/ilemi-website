@@ -184,7 +184,7 @@ export default function ProductDetails() {
             </section>
 
             <section className='flex flex-col md:flex-row justify-between'>
-              <article className='w-11/12 md:w-8'>
+              <article className='w-11/12 md:w-8/12'>
                 <ul
                   className={`${styles.propBanner}  mt-4 py-2 px-3 flex flex-wrap gap-2 justify-between w-11/12`}
                 >
@@ -523,7 +523,7 @@ export default function ProductDetails() {
                       {rentalFeatures.map(({ id, title, icon, val }) => (
                         <div key={id} className={` w-11/12 md:w-5/12`}>
                           <div className='flex justify-between my-2 border-bottom pb-1'>
-                            <small className='flex justify-between w-7/12 md:w-8 items-center'>
+                            <small className='flex justify-between w-7/12 md:w-8/12 items-center'>
                               <span>{title}</span>
                               {icon && (
                                 <div>

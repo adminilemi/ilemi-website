@@ -26,7 +26,7 @@ function NavBar() {
       title: 'Post a Property',
       url: 'https://agent.property4u.ng/addproperty',
     },
-    { id: 5, title: 'Advertise with Us', url: '/advertise' },
+    // { id: 5, title: 'Advertise with Us', url: '/advertise' },
     // {
     //   id: 3,
     //   title: 'Shortlets',
@@ -37,8 +37,8 @@ function NavBar() {
     //   //   { id: 5, title: 'Listing', url: 'shortlets' },
     //   // ],
     // },
-    { id: 6, title: 'Packages', url: '/pricing' },
-    { id: 7, title: 'For Landlords', url: '/forlandlords' },
+    // { id: 6, title: 'Packages', url: '/pricing' },
+    // { id: 7, title: 'For Landlords', url: '/forlandlords' },
   ];
 
   return (
@@ -70,7 +70,7 @@ function NavBar() {
                 data-aos-duration='1500'
                 className={` ${styles.navItems} flex flex-col lg:flex-row  w-full justify-between items-center `}
               >
-                <ul className='flex flex-col lg:flex-row w-full lg:w-9/12 mx-auto justify-between text-center lg:text-start '>
+                <ul className='flex flex-col lg:flex-row w-full lg:w-6/12 mx-auto justify-between text-center lg:text-start '>
                   {linkList.map(({ id, title, url, dropwDown }) => (
                     <li
                       key={id}
