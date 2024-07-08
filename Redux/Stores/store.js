@@ -12,7 +12,6 @@ import {
 } from 'redux-persist';
 
 import storage from 'redux-persist/lib/storage';
-
 import globalSlice from '../Features/globalSlice';
 import userAuthSlice from '../Features/userAuthSlice';
 import userDatasSlice from '../Features/userDatasSlice';

@@ -4,13 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 // import IlemiLogo from './SVGs/IlemiLogo';
 
-function BrandLogo() {
+const BrandLogo = ({ className }) => {
   return (
-    <Link href='/'>
+    <Link href='/' className={`${className} flex`}>
       <Image src={Logo} alt='Ilemi logo' />
       {/* <IlemiLogo /> */}
     </Link>
   );
-}
+};
 
 export default BrandLogo;

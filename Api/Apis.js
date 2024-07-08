@@ -1,4 +1,4 @@
-const baseUrl = 'https://property-4u-befe5e00eae1.herokuapp.com';
+export const baseUrl = 'https://property-4u-befe5e00eae1.herokuapp.com';
 
 export const getPropByType = async (formData) => {
   const rentData = await fetch(

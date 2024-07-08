@@ -9,9 +9,12 @@ import Link from 'next/link';
 import { useGlobalHooks } from '@/Hooks/globalHooks';
 import { usePathname } from 'next/navigation';
 import BrandLogo from '../BrandLogo';
+import { useSelector } from 'react-redux';
+import { selectGlobal } from '@/Redux/Features/globalSlice';
 
-function NavBar() {
-  const { handleToggle, toggle } = useGlobalHooks();
+const NavBar = () => {
+  const toggle = useSelector(selectGlobal);
+  const { handleShow } = useGlobalHooks();
   const currentRoute = usePathname();
 
   const [drop, setDrop] = useState(false);
@@ -89,7 +92,7 @@ function NavBar() {
                               {dropwDown.map(({ id, title, url }) => (
                                 <div key={id}>
                                   <Link
-                                    onClick={() => handleToggle('navbar')}
+                                    onClick={() => handleShow('navbar')}
                                     href={url}
                                   >
                                     {title}
@@ -100,7 +103,7 @@ function NavBar() {
                           )}
                         </p>
                       ) : (
-                        <Link onClick={() => handleToggle('navbar')} href={url}>
+                        <Link onClick={() => handleShow('navbar')} href={url}>
                           {title}
                         </Link>
                       )}
@@ -109,20 +112,18 @@ function NavBar() {
                 </ul>
                 <li className='flex justify-center lg:justify-end w-11/12 md:w-6/12 lg:w-2/12'>
                   <div className='flex flex-col lg:flex-row gap-2 w-full'>
-                    <a
-                      href='https://agent.property4u.ng/signin'
-                      target='_blank'
+                    <Link
+                      href='/login-account'
                       className={`${styles.login} text-center`}
                     >
                       Login{' '}
-                    </a>
-                    <a
-                      href='https://agent.property4u.ng/signup'
-                      target='_blank'
+                    </Link>
+                    <Link
+                      href='create-account'
                       className={`${styles.signup} text-center`}
                     >
                       Signup{' '}
-                    </a>
+                    </Link>
                   </div>
                 </li>
               </ul>
@@ -130,7 +131,7 @@ function NavBar() {
           </div>
           {/* Hambuger icon */}
           <div
-            onClick={() => handleToggle('navbar')}
+            onClick={() => handleShow('navbar')}
             className={toggle['navbar'] ? styles.open : styles.ham}
             id='navbar'
           >
@@ -142,6 +143,6 @@ function NavBar() {
       </section>
     </div>
   );
-}
+};
 
 export default NavBar;

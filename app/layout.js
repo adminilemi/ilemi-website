@@ -1,10 +1,8 @@
-import AOSAnimation from '@/utils/AosInit';
 import './globals.css';
 import { Plus_Jakarta_Sans } from 'next/font/google';
-import NavBar from '@/components/Navbar/NavBar';
-import Footer from '@/components/Footer/Footer';
-import { ContextProvider } from '@/utils/ContextProvider';
 import NextTopLoader from 'nextjs-toploader';
+import AOSAnimation from '@/utils/AosInit';
+import ReduxProvider from '@/Redux/ReduxProvider';
 
 const PJS = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
@@ -25,12 +23,11 @@ export default function RootLayout({ children }) {
           src='//code.tidio.co/3lq6hmnhq8hcynm5vr6nkcuyessvzkvh.js'
           async
         ></script>
-        <ContextProvider>
+        <ReduxProvider>
           <NextTopLoader showSpinner={false} />
-          <NavBar />
-          <AOSAnimation>{children}</AOSAnimation>
-          <Footer />
-        </ContextProvider>
+
+          {children}
+        </ReduxProvider>
       </body>
     </html>
   );

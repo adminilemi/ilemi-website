@@ -1,0 +1,58 @@
+.userSignup {
+  header {
+    width: 100%;
+    background: var(--mainColor);
+  }
+  .aside {
+    width: 100%;
+    h2 {
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    .form {
+      width: 100%;
+      p {
+        color: var(--lightGrey);
+      }
+      h5 {
+        margin: 0;
+      }
+
+      .formInput {
+        padding: 16px;
+        border: solid 1px var(--Grey6);
+
+        &::placeholder {
+          color: var(--Grey6);
+        }
+      }
+
+      .Login {
+        color: var(--Grey1);
+      }
+    }
+
+    .charLong {
+      font-size: 0.6rem;
+      color: var(--Grey6);
+    }
+
+    .password {
+      position: relative;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    .aside {
+      width: 55%;
+
+      h2 {
+        font-size: 2.1rem;
+      }
+
+      // .form {
+      //   width: 85%;
+      // }
+    }
+  }
+}
