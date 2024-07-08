@@ -26,10 +26,15 @@ export const searchTabData = {
   ],
 
   tabComps: [
-    { id: 'tab1', comp: <RentSearch /> },
-    { id: 'tab2', comp: <BuySearch /> },
-    { id: 'tab3', comp: <SellSearch /> },
+    { id: 'tab1', comp: '' },
+    { id: 'tab2', comp: ''},
+    { id: 'tab3', comp: ''},
   ],
+  // tabComps: [
+  //   { id: 'tab1', comp: <RentSearch /> },
+  //   { id: 'tab2', comp: <BuySearch /> },
+  //   { id: 'tab3', comp: <SellSearch /> },
+  // ],
 };
 
 export const nigeriaStates = [

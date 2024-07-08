@@ -41,9 +41,9 @@ const HomeHero = ({ styles }) => {
         <aside data-aos='fade-right' className='w-full lg:w-6/12  mb-5 lg:mb-0'>
           <Image className='image1' src={bigCard} alt='' />
         </aside>
-        <div className={styles.tabs}>
+        {/* <div className={styles.tabs}>
           <SearchTab />
-        </div>
+        </div> */}
       </section>
     </main>
   );

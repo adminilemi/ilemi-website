@@ -5,15 +5,12 @@ import { useDispatch } from 'react-redux';
 import Spinner from '@/spinner/Spinner';
 import { useGlobalHooks } from '@/Hooks/globalHooks';
 
-import {
-  getCurrentUser,
-  getCurrentUserData,
-} from '@/Redux/Features/userDatasSlice';
+import { getCurrentUserData } from '@/Redux/Features/userDatasSlice';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import toast from 'react-hot-toast';
 import { CreateUser } from '@/Api/AuthApis';
-import { getUserEmail } from '@/Redux/Features/userAuthSlice';
+import { getUserEmail, userAuthData } from '@/Redux/Features/userAuthSlice';
 
 const initialState = {
   firstName: '',
@@ -129,9 +126,14 @@ const SignUpForm = () => {
       } else {
         toast.success(rsp?.message);
 
+        const userId = rsp?.data?.user?._id;
+        const userEmail = rsp?.data?.user?.email;
+        const userName = `${rsp?.data?.user.firstName} ${rsp?.data?.user.lastName} `;
+
         dispatch(getCurrentUserData(rsp?.data?.user));
+        dispatch(userAuthData({ userId, userEmail, userName }));
         dispatch(getUserEmail(userData?.email));
-        // route.push('/auth/verify-email');
+        route.push('/auth/verify-email');
       }
     } catch (err) {
       console.log(err);

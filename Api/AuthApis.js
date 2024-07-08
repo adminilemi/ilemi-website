@@ -78,7 +78,7 @@ export const LoginUser = async (formData) => {
 
 export const passwordChangeReq = async (email) => {
   const passwordData = await fetch(
-    `${baseUrl}Agent/verification/initiate-forgot-password-flow/${email}`,
+    `${baseUrl}/tenant/verification/initiate-forgot-password-flow/${email}`,
     {
       method: 'GET',
       headers: {
@@ -100,7 +100,7 @@ export const passwordChangeReq = async (email) => {
 
 export const resetPassword = async (formData) => {
   const passwordData = await fetch(
-    `${baseUrl}/Agent/verification/change-password`,
+    `${baseUrl}/tenant/verification/change-password`,
     {
       method: 'POST',
       body: JSON.stringify(formData),
@@ -123,7 +123,7 @@ export const resetPassword = async (formData) => {
 
 export const resendOTP = async (userId) => {
   const LoginData = await fetch(
-    `${baseUrl}/Agent/agentResend-otp-code/${userId}`,
+    `${baseUrl}/tenant/TenatResend-otp-code/${userId}`,
     {
       method: 'GET',
 
@@ -175,8 +175,8 @@ export const LogoutUser = async () => {
 export const updateUser = async (formData) => {
   const headers = await fetchHeaders();
 
-  const rsp = await fetch(`${baseUrl}/user/update-profile`, {
-    method: 'POST',
+  const rsp = await fetch(`${baseUrl}/tenant/update-Tenant`, {
+    method: 'PUT',
     body: JSON.stringify(formData),
     headers,
   });

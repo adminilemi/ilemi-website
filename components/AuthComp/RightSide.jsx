@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function RightSide() {
   return (
-    <section className='right w-[45%] hidden lg:flex flex-col'>
+    <section className='right w-[45%] hidden lg:flex flex-col justify-center items-center'>
       <figure className='w-8/12 mx-auto'>
         <Image src={propImage} alt='' />
       </figure>

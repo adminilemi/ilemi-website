@@ -8,8 +8,6 @@ const initialState = {
     userRole: '',
   },
 
-  isLoggedIn: false,
-  isLoginVerified: false,
   userEmail: '',
 };
 
@@ -20,11 +18,6 @@ export const userAuthSlice = createSlice({
   reducers: {
     userAuthData: (state, action) => {
       state.authUser = action.payload;
-      state.isLoggedIn = true;
-    },
-
-    verifyLogins: (state, action) => {
-      state.isLoginVerified = action.payload;
     },
 
     getUserEmail: (state, action) => {
@@ -33,8 +26,7 @@ export const userAuthSlice = createSlice({
   },
 });
 
-export const { userAuthData, verifyLogins, getUserEmail } =
-  userAuthSlice.actions;
+export const { userAuthData, getUserEmail } = userAuthSlice.actions;
 
 export const selectUserData = (state) => state.userAuthSlice;
 

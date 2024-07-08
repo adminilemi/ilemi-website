@@ -150,7 +150,7 @@ const SigninForm = () => {
 
       <div className=' w-full text-center'>
         <button className='main-btn w-full mt-1' type='submit'>
-          {loading ? <Spinner /> : 'Log In'}
+          {loading['singin'] ? <Spinner /> : 'Log In'}
         </button>
 
         <span className='error_message'> {errors?.errMessage} </span>

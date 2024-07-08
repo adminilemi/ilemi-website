@@ -28,7 +28,7 @@ export default function page() {
               tenantsTitle='Register As A Tenants'
               agentsTitle='Register As Property Manager'
               agentsUrl='https://agent.property4u.ng/signin'
-              tenantsUrl='/auth/signin'
+              tenantsUrl='/auth/signup'
             />
           </section>
         </aside>{' '}
