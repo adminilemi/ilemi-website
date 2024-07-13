@@ -69,7 +69,7 @@ const VerifyEmail = () => {
     setLoading(() => ({ ['verify']: true }));
 
     if (Object.keys(verifyCode).some((code) => code === '')) {
-      handleError('Enter the code sent to your email');
+      handleError('Enter the code sent to your email', true);
     }
 
     const verificationCode = Object.values(verifyCode).join('');

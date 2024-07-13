@@ -1,18 +1,22 @@
+'use client';
+
 import { useRef, useState } from 'react';
-import './Auths.scss';
-import { useSweetAlert } from '@/Hooks/useSweetAlert';
-import { useNavigate } from 'react-router-dom';
-import Spinner from '@/spinner/Spinner';
-import RightSide from '@/components/RightSide';
-import BrandLogo from '@/components/BrandLogo';
+import '../Auths.scss';
+
+import { useRouter } from 'next/navigation';
 import { useGlobalHooks } from '@/Hooks/globalHooks';
+import BrandLogo from '@/components/BrandLogo';
+import Spinner from '@/spinner/Spinner';
+import RightSide from '@/components/AuthComp/RightSide';
+import { passwordChangeReq } from '@/Api/AuthApis';
+import toast from 'react-hot-toast';
 
 function ResetPasswordRequest() {
-  const { errors, setErrors, loading, setLoading } = useGlobalHooks();
+  const { errors, setErrors, loading, setLoading, handleError } =
+    useGlobalHooks();
   const [resetEmail, setResetEmail] = useState({ email: '' });
-  const navigate = useNavigate();
+  const route = useRouter();
   const inputRef = useRef(null);
-  const { showAlert } = useSweetAlert();
 
   // get the form input data
   const handleChange = (e) => {
@@ -21,44 +25,32 @@ function ResetPasswordRequest() {
 
   const handleResetPassword = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    setLoading(() => ({ ['reset']: true }));
 
-    // API.requestPasswordChange(resetEmail.email)
-    //   .then((res) => {
-    //     const successMessage = {
-    //       success: true,
-    //       message: res.data.message,
-    //     };
-    //     showAlert(successMessage.message);
-    //     setLoading(false);
-    //     navigate('/resetpassword');
-    //   })
-    //   .catch((err) => {
-    //     setLoading(false);
+    try {
+      const rsp = await passwordChangeReq(resetEmail.email);
 
-    //     const erroMessage = {
-    //       success: false,
-    //       message:
-    //         err && err.response
-    //           ? err.response.data.message
-    //           : 'We encounter an error',
-    //     };
-
-    //     console.log(erroMessage);
-    //     setErrors({ error: true, errMessage: erroMessage.message });
-    //   });
+      if (rsp.code === 200) {
+        toast.success(rsp?.message);
+        route.push('/auth/reset-password');
+      }
+      setLoading(() => ({ ['reset']: false }));
+    } catch (error) {
+      console.log(error);
+      setLoading(() => ({ ['reset']: false }));
+    }
   };
 
   return (
     <div className={` reset flex flex-col md:flex-row `}>
-      <section className='flex flex-col aside py-3'>
-        <header className='border-bottom py-2 mb-3 '>
+      <section className='flex flex-col aside '>
+        <header className='border-bottom py-2 mb-3 bg-mainColor'>
           <div className='container'>
             <BrandLogo className='w-[10%]' />
           </div>
         </header>
 
-        <aside className='w-9/12 mx-auto'>
+        <aside className='w-9/12 mt-10 mx-auto'>
           <form
             className={` form flex flex-col`}
             onSubmit={handleResetPassword}
@@ -89,7 +81,7 @@ function ResetPasswordRequest() {
 
             <div className=' w-full text-center'>
               <button className='main-btn w-full mt-3'>
-                {loading ? <Spinner /> : 'Reset'}
+                {loading['reset'] ? <Spinner /> : 'Reset'}
               </button>
               {errors.errMessage === 'empty' ? (
                 <span className='error_message'>

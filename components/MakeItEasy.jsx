@@ -63,13 +63,13 @@ const MakeItEasy = ({ styles }) => {
               key={id}
               className={` ${styles.contents} ${
                 id === 1 ? styles.bg1 : id === 2 ? styles.bg2 : styles.bg3
-              }  !flex gap-4 items-start`}
+              }  !flex flex-col lg:flex-row gap-4 items-center lg:items-start lg:text-start text-center `}
             >
               <figure>
                 <Image src={icon} alt='' />
               </figure>
               <div className='flex-1'>
-                <h5> {title}</h5>
+                <h5 className=''> {title}</h5>
                 <p> {desc}</p>
               </div>
             </section>

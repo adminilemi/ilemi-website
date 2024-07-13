@@ -27,8 +27,8 @@ export const useGlobalHooks = () => {
     dispatch(toggleShow(id));
   };
 
-  const handleError = (message) => {
-    setErrors({ error: true, errMessage: message });
+  const handleError = (message, verb) => {
+    setErrors({ error: verb, errMessage: message });
   };
 
   const btnTaps = () => {

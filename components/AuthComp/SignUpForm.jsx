@@ -122,7 +122,7 @@ const SignUpForm = () => {
       setLoading(() => ({ ['signup']: false }));
 
       if (rsp?.error) {
-        handleError(rsp?.message);
+        handleError(rsp?.message, true);
       } else {
         toast.success(rsp?.message);
 

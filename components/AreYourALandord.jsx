@@ -10,7 +10,7 @@ function AreYourALandord({ styles }) {
         <h4>No Spam Promise</h4>
         <h2>Are you a landlord or Looking for an apartment?</h2>
 
-        <div className='mt-4'>
+        <div className='my-9'>
           <Link href='/contact-us' className='main-btn'>
             {' '}
             Contact Us

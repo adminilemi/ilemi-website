@@ -1,35 +1,25 @@
 'use client';
-import React, { useRef, useState } from 'react';
-import { BsFillEyeSlashFill, BsFillEyeFill } from 'react-icons/bs';
-import { useDispatch } from 'react-redux';
-import Spinner from '@/spinner/Spinner';
+import { LoginUser } from '@/Api/AuthApis';
 import { useGlobalHooks } from '@/Hooks/globalHooks';
-import { useCookies } from '@/Hooks/cookiesHook';
-import { getUserAvatar, userAuthData } from '@/Redux/Features/userAuthSlice';
-import { getCurrentUser } from '@/Redux/Features/userDatasSlice';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
+import { getUserEmail, userAuthData } from '@/Redux/Features/userAuthSlice';
+import { getCurrentUserData } from '@/Redux/Features/userDatasSlice';
+import Spinner from '@/spinner/Spinner';
 import { GoogleIcon } from '@/SVGs/SVGFiles';
-
-const initialState = {
-  firstName: '',
-  lastName: '',
-  email: '',
-  phoneNumber: '',
-  HouseAddress: '',
-  password: '',
-  confirmPass: '',
-  FSOReferral: '',
-};
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import React, { useRef, useState } from 'react';
+import toast from 'react-hot-toast';
+import { BsFillEyeFill, BsFillEyeSlashFill } from 'react-icons/bs';
+import { useDispatch } from 'react-redux';
 
 const SigninForm = () => {
   const [passwordType, setPasswordType] = useState(false);
-  const { loading, setLoading, errors, setErrors } = useGlobalHooks();
+  const { loading, setLoading, errors, setErrors, handleError } =
+    useGlobalHooks();
   const [userData, setUserData] = useState({ email: '', password: '' });
 
   const inputRef = useRef(null);
-  const navigate = useRouter();
-  const { setCookies } = useCookies();
+  const route = useRouter();
   const dispatch = useDispatch();
 
   const showPassword = (id) => {
@@ -43,52 +33,32 @@ const SigninForm = () => {
 
   const handleSignIn = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    setLoading(() => ({ ['signin']: true }));
 
-    // API.SignIn(userData)
-    //   .then((res) => {
-    //     const successMessage = {
-    //       success: true,
-    //       message: res.data.message,
-    //     };
+    try {
+      const rsp = await LoginUser(userData);
+      console.log(rsp);
 
-    //     const userToken = res.data.data.token;
-    //     const userId = res.data.data.user._id;
-    //     const userEmail = res.data.data.user.email;
-    //     const userName = res.data.data.user.CompanyName;
-    //     const profileImage = res.data.data.user.profilePic;
-    //     const isOnboarded = res.data.data.user.onBoarded;
+      setLoading(() => ({ ['signin']: false }));
 
-    //     showAlert(successMessage.message);
+      if (rsp?.error) {
+        handleError(rsp?.message, true);
+      } else {
+        toast.success(rsp?.message);
 
-    //     setCookies('ilemiUserToken', userToken);
+        const userId = rsp?.data?.user?._id;
+        const userEmail = rsp?.data?.user?.email;
+        const userName = `${rsp?.data?.user.firstName} ${rsp?.data?.user.lastName} `;
 
-    //     dispatch(getUserAvatar(profileImage));
-    //     dispatch(updateIsOnboarded(isOnboarded));
-    //     dispatch(userAuthData({ userId, userEmail, userName }));
-    //     dispatch(getCurrentUser(res.data.data.user));
-
-    //     setLoading(false);
-    //     setSession();
-
-    //     if (!isOnboarded) {
-    //       navigate('/onboarding');
-    //     } else {
-    //       navigate('/');
-    //     }
-    //   })
-    //   .catch((err) => {
-    //     setLoading(false);
-    //     const erroMessage = {
-    //       success: false,
-    //       message:
-    //         err && err.response
-    //           ? err.response.data.message
-    //           : 'We encounter an error',
-    //     };
-
-    //     setErrors({ error: true, errMessage: erroMessage.message });
-    //   });
+        dispatch(getCurrentUserData(rsp?.data?.user));
+        dispatch(userAuthData({ userId, userEmail, userName }));
+        dispatch(getUserEmail(userData?.email));
+        route.push('/auth/verify-email');
+      }
+    } catch (err) {
+      console.log(err);
+      setLoading(() => ({ ['signin']: false }));
+    }
   };
   return (
     <form
@@ -150,7 +120,7 @@ const SigninForm = () => {
 
       <div className=' w-full text-center'>
         <button className='main-btn w-full mt-1' type='submit'>
-          {loading['singin'] ? <Spinner /> : 'Log In'}
+          {loading['signin'] ? <Spinner /> : 'Log In'}
         </button>
 
         <span className='error_message'> {errors?.errMessage} </span>

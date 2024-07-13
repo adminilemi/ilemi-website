@@ -1,22 +1,25 @@
+'use client';
+
 import { useRef, useState } from 'react';
-import './Auths.scss';
-import { useSweetAlert } from '@/Hooks/useSweetAlert';
-import BrandLogo from '@/components/BrandLogo';
-import Spinner from '@/spinner/Spinner';
-import RightSide from '@/components/RightSide';
-import { useNavigate } from 'react-router-dom';
+import '../Auths.scss';
+import { useRouter } from 'next/navigation';
 import { useGlobalHooks } from '@/Hooks/globalHooks';
+import RightSide from '@/components/AuthComp/RightSide';
+import Spinner from '@/spinner/Spinner';
+import BrandLogo from '@/components/BrandLogo';
+import { resetPassword } from '@/Api/AuthApis';
+import toast from 'react-hot-toast';
 
 const ResetPassword = () => {
-  const { errors, setErrors, loading, setLoading } = useGlobalHooks();
+  const { errors, setErrors, loading, setLoading, handleError } =
+    useGlobalHooks();
   const [updatePassword, setUpdatePassword] = useState({
     uniqueVerificationCode: '',
     newPassword: '',
   });
 
-  const navigate = useNavigate();
+  const route = useRouter();
   const inputRef = useRef(null);
-  const { showAlert } = useSweetAlert();
 
   // get the form input data
   const handleChange = (e) => {
@@ -25,41 +28,32 @@ const ResetPassword = () => {
 
   const changePassword = async (e) => {
     e.preventDefault();
-    setLoading(true);
 
-    // API.passwordChange(updatePassword)
-    //   .then((res) => {
-    //     const successMessage = {
-    //       success: true,
-    //       message: res.data.message,
-    //     };
+    setLoading(() => ({ ['passchange']: true }));
 
-    //     showAlert(successMessage.message);
+    try {
+      const rsp = await resetPassword(updatePassword);
+      console.log(rsp);
 
-    //     setLoading(false);
-    //     navigate('/signin');
-    //   })
-    //   .catch((err) => {
-    //     setLoading(false);
-    //     const erroMessage = {
-    //       success: false,
-    //       message:
-    //         err && err.response
-    //           ? err.response.data.message
-    //           : 'We encounter an error',
-    //     };
-
-    //     console.log(erroMessage);
-    //     setErrors({ error: true, errMessage: erroMessage.message });
-    //   });
+      if (rsp.error) {
+        handleError(rsp?.message, true);
+      } else {
+        toast.success(rsp?.message);
+        route.push('/auth/signin');
+      }
+      setLoading(() => ({ ['passchange']: false }));
+    } catch (error) {
+      console.log(error);
+      setLoading(() => ({ ['passchange']: false }));
+    }
   };
 
   return (
     <div
       className={` changePassword flex flex-col md:flex-row justify-between`}
     >
-      <section className='flex flex-col aside py-3'>
-        <header className='border-bottom py-2 mb-3 '>
+      <section className='flex flex-col aside '>
+        <header className='border-bottom py-2 mb-3 bg-mainColor'>
           <div className='container'>
             <BrandLogo className='w-[10%]' />
           </div>
@@ -142,7 +136,7 @@ const ResetPassword = () => {
 
             <div className=' w-full text-center'>
               <button className='main-btn w-full mt-3' type='submit'>
-                {loading ? <Spinner /> : 'Reset'}
+                {loading['passchange'] ? <Spinner /> : 'Reset'}
               </button>
               {errors.errMessage === 'empty' ? (
                 <span className='error_message'>
