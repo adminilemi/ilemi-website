@@ -21,7 +21,7 @@ export const UserGoogleAuth = async (formData) => {
 
   const userId = rsp?.data?.access_token;
 
-  createSession(userId);
+  await createSession(userId);
 
   return await rsp;
 };
@@ -47,7 +47,7 @@ export const CreateUser = async (formData) => {
   const rsp = await signUpData.json();
   const userId = rsp?.data?.token;
 
-  createSession(userId);
+  await createSession(userId);
 
   return await rsp;
 };

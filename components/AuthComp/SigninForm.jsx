@@ -45,6 +45,7 @@ const SigninForm = () => {
         handleError(rsp?.message, true);
       } else {
         toast.success(rsp?.message);
+        handleError('', false);
 
         const userId = rsp?.data?.user?._id;
         const userEmail = rsp?.data?.user?.email;
