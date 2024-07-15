@@ -19,8 +19,8 @@ export default function page() {
               <h3 className='text-bold mb-2'>Welcome</h3>
               <h5>
                 Thank you for choosing to join us. Please complete your
-                registration below to get started. We're excited to have you on
-                board!.
+                registration below to get started. We&apos;re excited to have
+                you on board!.
               </h5>
             </hgroup>
 
