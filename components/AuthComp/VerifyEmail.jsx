@@ -64,7 +64,7 @@ const VerifyEmail = () => {
   };
 
   const handleVerifyEmail = async (e) => {
-    // e.preventDefault();
+    e && e.preventDefault();
 
     setLoading(() => ({ ['verify']: true }));
 
@@ -81,8 +81,9 @@ const VerifyEmail = () => {
       });
 
       if (rsp.error) {
-        handleError(rsp?.message);
+        handleError(rsp?.message, true);
       } else {
+        handleError('', false);
         toast.success(rsp?.message);
         route.push('/dashboard');
       }
@@ -122,7 +123,7 @@ const VerifyEmail = () => {
     <section className='w-11/12 lg:w-6/12 '>
       <form
         className={` form flex flex-col justify-center text-start w-full md:2`}
-        // onSubmit={handleVerifyEmail}
+        onSubmit={handleVerifyEmail}
       >
         <h3 className='font-bold'>Verify your email</h3>
         <p className='mt-2'>
