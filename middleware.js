@@ -1,8 +1,7 @@
 import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
 import { verifySession } from './libs/session';
 
-export async function middleware(req: NextRequest) {
+export async function middleware(req) {
   const { pathname } = req.nextUrl;
 
   // console.log(`Middleware called for path: ${pathname}`);

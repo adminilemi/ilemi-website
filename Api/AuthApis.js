@@ -146,7 +146,7 @@ export const resendOTP = async (userId) => {
 
 export const verifyWithOTP = async (formData) => {
   const LoginData = await fetch(
-    `${baseUrl}/Agent/agentification/verify-signup-or-login-code`,
+    `${baseUrl}/tenant/Tenatification/verify-signup-or-login-code`,
     {
       method: 'POST',
       body: JSON.stringify(formData),
