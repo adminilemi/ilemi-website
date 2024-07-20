@@ -6,11 +6,14 @@ import AreYourALandord from '@/components/AreYourALandord';
 import MakeItEasy from '@/components/MakeItEasy';
 import AddGifBanner from '@/components/AddGifBanner';
 import ProductTabs from '@/components/HomeComps/Products/ProductTabs';
+import Reviews from '@/components/Reviews';
+import { MovingItems } from '@/components/MoveIt/MovingItems';
 
 export default async function Home() {
   return (
     <main className={styles.home}>
       <HomeHero styles={styles} />
+      <MovingItems />
       <AddGifBanner images={images.gif} />
       <section className={styles.BG}>
         <section
@@ -92,6 +95,8 @@ export default async function Home() {
         <section className={styles.newsLetter}>
           <AreYourALandord styles={styles} />
         </section>
+
+        <Reviews styles={styles} />
       </section>
     </main>
   );

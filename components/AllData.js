@@ -27,8 +27,8 @@ export const searchTabData = {
 
   tabComps: [
     { id: 'tab1', comp: '' },
-    { id: 'tab2', comp: ''},
-    { id: 'tab3', comp: ''},
+    { id: 'tab2', comp: '' },
+    { id: 'tab3', comp: '' },
   ],
   // tabComps: [
   //   { id: 'tab1', comp: <RentSearch /> },
@@ -1060,6 +1060,25 @@ export const nigeriaStates = [
       'Zurmi',
     ],
     region: 'North West',
+  },
+];
+
+export const reviewsData = [
+  {
+    id: 1,
+    title: ' - Bisola, Lagos State',
+    desc: 'You can communicate directly with landlords and we provide you with virtual tour before you buy or rent the property.',
+  },
+  {
+    id: 2,
+    title: ' - Yekini , Ogun State',
+    desc: 'You can communicate directly with landlords and we provide you with virtual tour before you buy or rent the property. ',
+  },
+
+  {
+    id: 3,
+    title: '  - Bisola, Lagos State',
+    desc: 'You can communicate directly with landlords and we provide you with virtual tour before you buy or rent the property. ',
   },
 ];
 

@@ -78,22 +78,22 @@ const MakeItEasy = ({ styles }) => {
       </article>
 
       <hr />
-      <article
-        className={`${styles.perce} container flex flex-wrap justify-center gap-5 text-center my-5`}
+      <ul
+        className={`${styles.perce} container flex flex-wrap justify-center gap-5 text-center my-5 divide-x-2 divide-slate-500 space-x-3 `}
       >
-        <div>
+        <li>
           <h4>7.4%</h4>
           <p>Property Return Rate</p>
-        </div>
-        <div>
+        </li>
+        <li className='px-5'>
           <h4>3,856</h4>
           <p>Property in Sell & Rent</p>
-        </div>
-        <div>
+        </li>
+        <li className='px-5'>
           <h4>2,540</h4>
           <p>Daily Completed Transactions</p>
-        </div>
-      </article>
+        </li>
+      </ul>
     </section>
   );
 };
