@@ -15,16 +15,17 @@ import storage from 'redux-persist/lib/storage';
 import globalSlice from '../Features/globalSlice';
 import userAuthSlice from '../Features/userAuthSlice';
 import userDatasSlice from '../Features/userDatasSlice';
-import shippingSlice from '../Features/shippingSlice';
 import notifsSlice from '../Features/notifsSlice';
 import { apiSLice } from '@/Api/apiSlice';
+import createPropertySlice from '../Features/createPropertySlice';
 
 const rootReducers = combineReducers({
+  createPropertySlice,
   globalSlice,
   notifsSlice,
   userAuthSlice,
   userDatasSlice,
-  shippingSlice,
+
   [apiSLice.reducerPath]: apiSLice.reducer,
 });
 

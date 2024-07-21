@@ -7,7 +7,7 @@ export async function middleware(req) {
   // console.log(`Middleware called for path: ${pathname}`);
 
   // Allow the user to access auth routes without authentication
-  if (!pathname.startsWith('/dashboard/')) {
+  if (!pathname.startsWith('/dashboard')) {
     // console.log('Auth route accessed, allowing without authentication');
     return NextResponse.next();
   }
