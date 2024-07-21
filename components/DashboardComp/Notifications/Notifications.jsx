@@ -6,9 +6,11 @@ import { BsCheck2All } from 'react-icons/bs';
 import { selectNotifs } from '@/Redux/Features/notifsSlice';
 import EmptyState from '../EmptyState/EmptyState';
 import NotifsCard from './NotifsCard';
+import { useSelector } from 'react-redux';
+import { useGlobalHooks } from '@/Hooks/globalHooks';
 // import { selectUserName } from '../../Redux/Features/userAuthSlice';
 
-function Notifications({ popUp, home }) {
+const Notifications = ({ popUp, home }) => {
   const notifs = useSelector(selectNotifs);
   const { getJobCreationDate } = useGlobalHooks();
   // const userName = useSelector(selectUserName);
@@ -69,6 +71,6 @@ function Notifications({ popUp, home }) {
       <p className='viewMore w-11/12 mx-auto py-3'>View all notification</p>
     </main>
   );
-}
+};
 
 export default Notifications;

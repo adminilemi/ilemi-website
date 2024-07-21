@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .container {
-  @apply w-[92%] lg:w-[87%] mx-auto;
+  @apply w-[97%] lg:w-[95%] mx-auto;
 }
 
 :root {
@@ -85,7 +85,8 @@ body {
 }
 
 .card {
-  border: solid 2px var(--mainLight) !important;
+  border: solid 1px var(--mainLight) !important;
+  border-radius: 8px;
   background-color: transparent;
 }
 
@@ -183,6 +184,26 @@ h4 {
   color: var(--Grey2);
 }
 
+/* React date picker */
+.react-datepicker-wrapper,
+.react-datepicker__input-container {
+  display: flex !important;
+}
+
+.react-datepicker-wrapper {
+  display: flex !important;
+  width: 100%;
+}
+
+.react-datepicker__input-container .react-datepicker__calendar-icon {
+  top: 27%;
+  right: 0;
+}
+
+.react-datepicker__view-calendar-icon input {
+  padding: 0.77em 1em !important;
+}
+
 /* ===Dashboard title start=== */
 
 .sidebarActive {
@@ -199,9 +220,11 @@ h4 {
   padding: 0.6em 1em;
   margin: 0.5em 0;
 }
+
 .sidebarActive h4 {
   color: var(--mainColor);
 }
+
 .sidebarActive svg [stroke] {
   stroke: none;
 }
@@ -370,16 +393,14 @@ button:disabled {
 
 .search input {
   display: flex;
-  padding: 0.75rem 3.375rem 0.75rem 3.1875rem;
-  border-radius: 0.5rem;
   padding-left: 3rem !important;
-  border: 2px solid var(--Line);
+  border: 1px solid var(--Line);
 }
 
 .searchIcon {
   position: absolute;
   font-size: 1.5rem;
-  left: 5%;
+  left: 2%;
 }
 
 .tabTitle {
