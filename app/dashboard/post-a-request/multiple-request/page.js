@@ -1,3 +1,4 @@
+import MultipleRequest from '@/components/DashboardComp/MultipleRequest/MultipleRequest';
 import React from 'react';
 
 export default function page() {
@@ -23,7 +24,7 @@ export default function page() {
       </section>
 
       <section className=' mb-5 w-full md:10 mx-auto'>
-        <StepForm />
+        <MultipleRequest />
       </section>
     </main>
   );
