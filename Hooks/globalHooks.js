@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 // import * as API from '../api/apis';
 import { useDispatch } from 'react-redux';

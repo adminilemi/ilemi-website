@@ -21,3 +21,15 @@ export const handleCopyToClipboard = (id, val, message) => {
 export const generateRandomIntId = () => {
   return Math.floor(Math.random() * 1000);
 };
+
+export const greetings = () => {
+  const hour = dayjs().hour();
+
+  if (hour < 12) {
+    return 'Good morning';
+  } else if (hour < 18) {
+    return 'Good afternoon';
+  } else {
+    return 'Good evening';
+  }
+};

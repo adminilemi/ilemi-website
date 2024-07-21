@@ -41,7 +41,7 @@ const Reviews = ({ styles }) => {
   };
 
   return (
-    <section className={styles.makeItEasy}>
+    <section className={`${styles.makeItEasy} mt-7`}>
       <hgroup className='container text-center'>
         <h3 className='w-full'>
           Here what our <em>clients </em> says about <em> us</em> and our{' '}

@@ -16,10 +16,12 @@ import globalSlice from '../Features/globalSlice';
 import userAuthSlice from '../Features/userAuthSlice';
 import userDatasSlice from '../Features/userDatasSlice';
 import shippingSlice from '../Features/shippingSlice';
+import notifsSlice from '../Features/notifsSlice';
 import { apiSLice } from '@/Api/apiSlice';
 
 const rootReducers = combineReducers({
   globalSlice,
+  notifsSlice,
   userAuthSlice,
   userDatasSlice,
   shippingSlice,

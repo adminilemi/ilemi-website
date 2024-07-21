@@ -1,0 +1,33 @@
+import React from 'react';
+import { FaChevronDown } from 'react-icons/fa';
+import './UserPop.scss';
+import { useGlobalHooks } from '@/Hooks/globalHooks';
+
+function UserLogo({ coyLogo, userName, chev }) {
+  const { handleShow } = useGlobalHooks();
+
+  return (
+    <div
+      onClick={() => handleShow('user')}
+      id='user'
+      className='flex gap-3 items-center userLogo'
+    >
+      <figure className='userInitials flex justify-center items-center me-2'>
+        {coyLogo ? (
+          <img src={coyLogo} alt='' />
+        ) : (
+          <img
+            src='https://cdn-icons-png.flaticon.com/512/3177/3177440.png'
+            alt=''
+          />
+        )}
+      </figure>
+
+      <h4> {userName} </h4>
+
+      {chev && <FaChevronDown className='Icons' />}
+    </div>
+  );
+}
+
+export default UserLogo;

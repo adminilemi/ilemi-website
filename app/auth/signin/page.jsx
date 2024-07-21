@@ -13,7 +13,7 @@ const Signin = () => {
           </div>
         </header>
 
-        <aside className='w-7/12 mx-auto'>
+        <aside className='w-11/12 md:w-7/12 mx-auto'>
           <h2> Welcome back,</h2>
           <p>Welcome back! Please enter your details.</p>
 

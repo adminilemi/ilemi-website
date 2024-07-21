@@ -43,6 +43,17 @@ const SigninForm = () => {
 
       if (rsp?.error) {
         handleError(rsp?.message, true);
+      } else if (!rsp?.data?.user?.status) {
+        route.push('/auth/verify-email');
+        handleError('', false);
+
+        const userId = rsp?.data?.user?._id;
+        const userEmail = rsp?.data?.user?.email;
+        const userName = `${rsp?.data?.user.firstName} ${rsp?.data?.user.lastName} `;
+
+        dispatch(getCurrentUserData(rsp?.data?.user));
+        dispatch(userAuthData({ userId, userEmail, userName }));
+        dispatch(getUserEmail(userData?.email));
       } else {
         toast.success(rsp?.message);
         handleError('', false);
@@ -54,7 +65,7 @@ const SigninForm = () => {
         dispatch(getCurrentUserData(rsp?.data?.user));
         dispatch(userAuthData({ userId, userEmail, userName }));
         dispatch(getUserEmail(userData?.email));
-        route.push('/auth/verify-email');
+        route.push('/dashboard');
       }
     } catch (err) {
       console.log(err);
