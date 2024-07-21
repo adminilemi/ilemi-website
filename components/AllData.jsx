@@ -13,6 +13,9 @@ import {
   ShortletIcon,
   TownIcon,
 } from '@/SVGs/SVGFiles';
+import Due from '@/public/assets/due.png';
+import Active from '@/public/assets/active.png';
+import Chat from '@/public/assets/chat.png';
 
 export const Inputs = (val, state, lga) => {
   return [
@@ -1682,6 +1685,29 @@ export const amenitiesList = [
 ];
 
 export const bedAndCo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+export const rents = (sent, expired, active) => {
+  return [
+    {
+      id: 3,
+      title: `${sent} Request Sent `,
+      subTitle: 'Total sent request. ',
+      icon: Chat,
+    },
+    {
+      id: 2,
+      title: `${expired} Active Request `,
+      subTitle: 'Active request.',
+      icon: Active,
+    },
+    {
+      id: 4,
+      title: `${active} Expired Request`,
+      subTitle: 'Expired request.',
+      icon: Due,
+    },
+  ];
+};
 
 // export const propertyType = [
 //   {

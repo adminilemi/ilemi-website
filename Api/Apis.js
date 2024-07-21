@@ -76,3 +76,17 @@ export const createTenantRequest = async (formData) => {
 
   return await tenantReq.json();
 };
+
+export const getReqStats = async (id) => {
+  const reqData = await fetch(`${baseUrl}/tenantrequest/tenant/${id}/stats`, {
+    next: {
+      revalidate: 0, // don't cache this data at all
+    },
+  });
+
+  if (!reqData.ok) {
+    throw new Error(`Failed to fetch the data`);
+  }
+
+  return await reqData.json();
+};

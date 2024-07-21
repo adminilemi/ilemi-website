@@ -1,10 +1,7 @@
 import React from 'react';
-import './ListingInfo.scss';
+import './ListingReview.scss';
 import { useSelector } from 'react-redux';
-import {
-  addListingInfo,
-  selectProperty,
-} from '@/Redux/Features/createPropertySlice';
+import { selectProperty } from '@/Redux/Features/createPropertySlice';
 import { formatNumInThousands } from '@/utils/ReUseAblefunctions';
 import { useGlobalHooks } from '@/Hooks/globalHooks';
 import { createTenantRequest } from '@/Api/Apis';
@@ -91,7 +88,7 @@ const ListingReview = ({ onPrevious }) => {
   };
 
   return (
-    <section className='mb-5 listingInfo card py-3 px-6 divide-y '>
+    <section className='mb-5 reviewListing card py-3 px-6 divide-y '>
       <ul className='py-3 flex gap-5 '>
         {previewData?.purpose.map(({ title, value }) => (
           <li key={title} className=' '>
@@ -136,12 +133,12 @@ const ListingReview = ({ onPrevious }) => {
         </ul>
       </article>
 
-      <article className='py-3'>
+      <article className='py-3 Amenities'>
         <h6 className='font-semibold text-sm'>Amenities</h6>
-        <ul className=' flex flex-col justify-between gap-5 mt-5 w-full'>
+        <ul className=' flex flex-wrap gap-2 mt-5 w-full'>
           {Amenities.map(({ title }) => (
             <li key={title} className=''>
-              <h4 className=' !text-sm text-grey-100 font-semibold '>
+              <h4 className=' !text-sm text-grey-100 font-semibold selected'>
                 {title}
               </h4>
             </li>

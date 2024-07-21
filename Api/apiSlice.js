@@ -33,81 +33,11 @@ export const apiSLice = createApi({
       providesTags: [{ type: 'sub', id: 'LIST' }],
     }),
 
-    // Update user data in server
-    updateAgent: builder.mutation({
-      query: (formData) => ({
-        url: `/Agent/update-agent
-        `,
-        method: 'PUT',
-        body: formData,
-      }),
-    }),
-
-    // Create property
-    createProperty: builder.mutation({
-      query: (formData) => ({
-        url: `/property`,
-        method: 'POST',
-        body: formData,
-      }),
-
-      //   after updating user data, refetch the getEmployer endpoints to update the screen without reload
-      invalidatesTags: [{ type: 'allProperty', id: 'LIST' }],
-    }),
-
-    getAllProperties: builder.query({
-      query: (id) => `/property/${id}`,
-
-      //   the param here is the id, hence the reason for id: arg
-      providesTags: [{ type: 'allProperty', id: 'LIST' }],
-    }),
-
-    changePassword: builder.mutation({
-      query: (formData) => ({
-        url: `/Agent/change-password`,
-        method: 'POST',
-        body: formData,
-      }),
-    }),
-
-    // Subscriptions
-    createSubscriptions: builder.mutation({
-      query: (formData) => ({
-        url: `/payments/make-payment`,
-        method: 'POST',
-        body: formData,
-      }),
-      invalidatesTags: [{ type: 'sub', id: 'LIST' }],
-    }),
-
-    checkSubValidity: builder.query({
-      query: (id) => `/payments/${id}`,
-
-      //   the param here is the id, hence the reason for id: arg
-      providesTags: [{ type: 'sub', id: 'LIST' }],
-    }),
-
-    // Charts
-    getAgentStats: builder.query({
-      query: (id) => `/property/statistics/${id}`,
-
-      providesTags: [{ type: 'allProperty', id: 'LIST' }],
-    }),
-
-    getAgentMonthlyStats: builder.query({
-      query: (id) => `/property/count-by-month/${id} `,
+    getReqStats: builder.query({
+      query: (id) => `/tenantrequest/tenant/${id}/stats`,
+      // providesTags: [{ type: 'sub', id: 'LIST' }],
     }),
   }),
 });
 
-export const {
-  useGetAgentQuery,
-  useGetAgentMonthlyStatsQuery,
-  useGetAgentStatsQuery,
-  useCreatePropertyMutation,
-  useGetAllPropertiesQuery,
-  useUpdateAgentMutation,
-  useChangePasswordMutation,
-  useCreateSubscriptionsMutation,
-  useCheckSubValidityQuery,
-} = apiSLice;
+export const { useGetAgentQuery, useGetReqStatsQuery } = apiSLice;

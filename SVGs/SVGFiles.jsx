@@ -428,3 +428,48 @@ export const PostAReqIcon = (props) => (
     />
   </svg>
 );
+
+export const PostARequestIcon = (props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width={48}
+    height={52}
+    fill='none'
+    {...props}
+  >
+    <rect width={40} height={48} fill='#100A55' rx={8} />
+    <path
+      fill='#E0DEF7'
+      d='M18.666 18.334c-.273 0-.5.226-.5.5v1c0 .273.227.5.5.5.274 0 .5-.227.5-.5v-1c0-.274-.226-.5-.5-.5Z'
+    />
+    <path
+      fill='#E0DEF7'
+      d='M26.667 22.167H26v-7.514c0-.413-.186-.8-.513-1.053L20.82 9.973c-.48-.38-1.16-.38-1.64 0L14.514 13.6c-.327.254-.514.64-.514 1.047l-.033 7.52h-.633a.5.5 0 1 0 0 1h13.333a.5.5 0 1 0 0-1ZM19 12.5h2c.273 0 .5.227.5.5 0 .274-.227.5-.5.5h-2a.504.504 0 0 1-.5-.5c0-.273.227-.5.5-.5Zm4.334 9.667h-6.667v-5.834c0-.553.446-1 1-1h4.666c.554 0 1 .447 1 1v5.834Z'
+    />
+    <path
+      stroke='#E0DEF7'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeMiterlimit={10}
+      strokeWidth={2}
+      d='M8 32h18'
+    />
+    <path
+      stroke='#E0DEF7'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeMiterlimit={10}
+      strokeWidth={2}
+      d='M8 38h10'
+      opacity={0.5}
+    />
+    <rect width={16} height={18} x={32} y={34} fill='#5F259F' rx={3} />
+    <path
+      stroke='#fff'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={1.5}
+      d='M39.791 46.75a3.958 3.958 0 1 0 0-7.917 3.958 3.958 0 0 0 0 7.917ZM44.166 47.166l-.833-.833'
+    />
+  </svg>
+);

@@ -1,4 +1,4 @@
-.listingInfo {
+.reviewListing {
   .uploadedImage {
     position: relative;
     width: 200px;
@@ -43,25 +43,12 @@
   }
 
   .Amenities {
-    border: solid 1.5px var(--Line);
-    border-radius: 8px;
-    padding: 1em;
-    .notSelected {
-      border: solid 1.5px var(--Line);
-      border-radius: 8px;
-      padding: 0.4em 0.7em;
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--Grey6);
-      cursor: pointer;
-    }
-
     .selected {
       background: #e8e6f9;
       border: solid 1.5px var(--mainColor);
       border-radius: 8px;
       padding: 0.4em 0.7em;
-      font-size: 1rem;
+      font-size: 0.7rem;
       font-weight: 500;
       color: var(--mainColor);
       cursor: pointer;
