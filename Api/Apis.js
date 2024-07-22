@@ -1,3 +1,5 @@
+import { fetchHeaders } from '@/libs/session';
+
 export const baseUrl = 'https://property-4u-befe5e00eae1.herokuapp.com';
 
 export const getPropByType = async (formData) => {
@@ -55,4 +57,36 @@ export const getPropertiesByAgentId = async (id) => {
   }
 
   return await agentsProperties.json();
+};
+
+export const createTenantRequest = async (formData) => {
+  const headers = await fetchHeaders();
+  const tenantReq = await fetch(`${baseUrl}/tenantrequest`, {
+    method: 'POST',
+    body: JSON.stringify(formData),
+    headers,
+    next: {
+      revalidate: 0, // don't cache this data at all
+    },
+  });
+
+  if (!tenantReq.ok) {
+    throw new Error(`Failed to fetch the data`);
+  }
+
+  return await tenantReq.json();
+};
+
+export const getReqStats = async (id) => {
+  const reqData = await fetch(`${baseUrl}/tenantrequest/tenant/${id}/stats`, {
+    next: {
+      revalidate: 0, // don't cache this data at all
+    },
+  });
+
+  if (!reqData.ok) {
+    throw new Error(`Failed to fetch the data`);
+  }
+
+  return await reqData.json();
 };

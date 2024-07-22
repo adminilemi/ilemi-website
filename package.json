@@ -10,6 +10,8 @@
     "pages:build": "npx @cloudflare/next-on-pages"
   },
   "dependencies": {
+    "@cloudinary/react": "^1.13.0",
+    "@cloudinary/url-gen": "^1.19.0",
     "@formspree/react": "^2.5.1",
     "@react-google-maps/api": "^2.19.3",
     "@reduxjs/toolkit": "^1.9.5",

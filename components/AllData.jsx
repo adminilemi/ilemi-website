@@ -6,6 +6,54 @@ import Buy from './HomeComps/Products/ProductTabComps/Buy/Buy';
 import Sell from './HomeComps/Products/ProductTabComps/Sell/Sell';
 import Shortlets from './HomeComps/Products/ProductTabComps/Shortlets/Shortlets';
 import Rent from './HomeComps/Products/ProductTabComps/Rent/Rent';
+import {
+  ApartmentIcon,
+  DormIcon,
+  HomeIcon,
+  ShortletIcon,
+  TownIcon,
+} from '@/SVGs/SVGFiles';
+import Due from '@/public/assets/due.png';
+import Active from '@/public/assets/active.png';
+import Chat from '@/public/assets/chat.png';
+
+export const Inputs = (val, state, lga) => {
+  return [
+    {
+      id: 'State',
+      label: 'State',
+      value: val?.State,
+      placeholder: 'Select state',
+      options: state,
+      required: true,
+    },
+    {
+      id: 'City',
+      label: 'City',
+      value: val?.City,
+      placeholder: 'Select LGA',
+      options: lga,
+      required: true,
+    },
+    {
+      id: 'PostingDuration',
+      label: 'Posting Duration*',
+      value: val?.PostingDuration,
+      placeholder: 'Select duration',
+      options: ['6 Months', '12 Months', '2 Years', '3 Years'],
+      required: true,
+    },
+    {
+      id: 'ElectricityBand',
+      type: 'text',
+      label: 'Electricity Band',
+      value: val?.ElectricityBand,
+      placeholder: 'Select Electricity Band',
+      options: ['Band A', 'Band B', 'Band C', 'Band D'],
+      required: true,
+    },
+  ];
+};
 
 export const searchTabData = {
   tabTitle: [
@@ -1254,74 +1302,107 @@ export const TabsData = {
   ],
 };
 
-export const propertyType = [
-  {
-    id: 1,
-    title: 'Shop',
-  },
+export const propertyCategories = [
   {
     id: 2,
-    title: 'Office space',
+    title: 'Rent',
   },
   {
     id: 3,
-    title: 'Flats and apartments',
+    title: 'Sell',
+  },
+  // {
+  //   id: 4,
+  //   title: 'Buy',
+  // },
+  {
+    id: 5,
+    title: 'Shortlet',
+  },
+];
+
+export const paymentType = [
+  {
+    id: 1,
+    title: 'Monthly',
+  },
+  {
+    id: 2,
+    title: 'Yearly',
+  },
+  {
+    id: 3,
+    title: 'Daily',
   },
   {
     id: 4,
-    title: 'Lands',
+    title: 'SQM',
+  },
+];
+
+export const propertyType = [
+  {
+    id: 1,
+    title: 'Home',
+    icon: <HomeIcon />,
+  },
+  {
+    id: 2,
+    title: 'Shortlets',
+    icon: <ShortletIcon />,
+  },
+  {
+    id: 3,
+    title: 'Apartment',
+    icon: <ApartmentIcon />,
+  },
+  {
+    id: 4,
+    title: 'Town House',
+    icon: <TownIcon />,
   },
   {
     id: 5,
-    title: 'Semi detached bungalow',
+    title: 'Dorm / Room / Student housing',
+    icon: <DormIcon />,
   },
   {
     id: 6,
-    title: 'Semi detached duplex',
+    title: 'Others',
+    icon: <DormIcon />,
+  },
+];
+
+export const propertySubType = [
+  {
+    id: 1,
+    title: 'Blocks of Flats',
+    icon: <HomeIcon />,
   },
   {
-    id: 7,
-    title: 'Co-working space',
+    id: 2,
+    title: 'Detached Bungalow',
+    icon: <ShortletIcon />,
   },
   {
-    id: 8,
-    title: 'Detached bungalow',
+    id: 3,
+    title: 'Detached Duplex',
+    icon: <ApartmentIcon />,
   },
   {
-    id: 9,
-    title: 'Warehouse',
+    id: 4,
+    title: 'Semi-Detached Bungalow',
+    icon: <TownIcon />,
   },
   {
-    id: 10,
-    title: 'Shop in a mall',
+    id: 5,
+    title: 'Semi-Detached Duplex',
+    icon: <DormIcon />,
   },
   {
-    id: 11,
-    title: 'Self contain',
-  },
-  {
-    id: 12,
-    title: 'Mini flats',
-  },
-  {
-    id: 13,
-    title: 'Detached duplex',
-  },
-  {
-    id: 14,
-    title: 'Houses',
-  },
-  {
-    id: 15,
-    title: 'Terraced bungalow',
-  },
-  {
-    id: 16,
-    title: 'Commercial properties',
-  },
-  {
-    id: 17,
-    title: 'Terraced duplex',
+    id: 6,
+    title: 'Terraced Bungalow',
+    icon: <DormIcon />,
   },
 ];
 
@@ -1550,6 +1631,82 @@ export const pricingPlan = {
       ],
     },
   ],
+};
+
+export const amenitiesList = [
+  {
+    title: 'Boys Quater',
+  },
+  {
+    title: 'Child care',
+  },
+  {
+    title: 'Dranaige System',
+  },
+  {
+    title: 'Front Desk Service',
+  },
+  {
+    title: 'Big Compound',
+  },
+  {
+    title: '24 Hours Security',
+  },
+  {
+    title: 'All Room Ensuit',
+  },
+  {
+    title: 'Big Compound',
+  },
+  {
+    title: 'C of O',
+  },
+  {
+    title: 'CCTV Cameras',
+  },
+  {
+    title: 'Church Nearby',
+  },
+  {
+    title: 'Elevator',
+  },
+  {
+    title: 'GYM',
+  },
+  {
+    title: 'A/C',
+  },
+  {
+    title: 'Swimming Pool',
+  },
+  {
+    title: 'Free WiFi',
+  },
+];
+
+export const bedAndCo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+export const rents = (sent, expired, active) => {
+  return [
+    {
+      id: 3,
+      title: `${sent} Request Sent `,
+      subTitle: 'Total sent request. ',
+      icon: Chat,
+    },
+    {
+      id: 2,
+      title: `${expired} Active Request `,
+      subTitle: 'Active request.',
+      icon: Active,
+    },
+    {
+      id: 4,
+      title: `${active} Expired Request`,
+      subTitle: 'Expired request.',
+      icon: Due,
+    },
+  ];
 };
 
 // export const propertyType = [
